@@ -1,0 +1,17 @@
+title: Gyuwon's Study Log
+description: 일본어 단어와 CCNA를 매일 기록하는 학습 블로그 / Daily Japanese vocab & CCNA study log
+lang: ko
+timezone: Asia/Seoul
+theme: minima
+
+header_pages:
+  - japanese.md
+  - ccna.md
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+exclude:
+  - automation
+  - README.md
