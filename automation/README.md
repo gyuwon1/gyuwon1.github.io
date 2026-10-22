@@ -50,8 +50,8 @@
 1. `TZ=Asia/Seoul date`로 오늘 날짜와 현재 시각을 확인한다. 오늘 날짜(KST)의 글이 `_posts/`에 이미 있으면 글은 새로 만들지 않고 4번으로 간다.
 2. 위 규칙대로 일본어 글과 CCNA 글을 쓴다 (그림, 후리가나, 복습 단어, `vocab_log.md` 기록 포함).
 3. main에 커밋하고 push한다.
-4. **다음 날 예약 확인·생성**: `list_triggers`로 이름이 `학습 블로그 포스팅 YYYY-MM-DD (예약 대상 날짜)`인 예약이 이미 있는지 본다. 없으면 `create_trigger`로 만든다.
+4. **다음 날 예약 확인·생성**: `list_triggers`로 이름이 `학습 블로그 포스팅 YYYY-MM-DD` (날짜는 예약 대상일)인 예약이 이미 있는지 본다. 없으면 `create_trigger`로 만든다.
    - `run_once_at`: 내일(KST) 09:00~20:00 사이의 임의 시각. python `random`으로 분 단위로 뽑고, UTC(RFC3339, `Z`)로 변환해서 넣는다.
-   - `name`: `학습 블로그 포스팅 YYYY-MM-DD (예약 대상 날짜)`, `initiation`: `human_schedule`, `notifications`: `{"push": true}`
+   - `name`: `학습 블로그 포스팅 YYYY-MM-DD` (날짜는 예약 대상일), `initiation`: `human_schedule`, `notifications`: `{"push": true}`
    - `prompt`: 이 예약 작업 자신의 프롬프트와 같은 내용 (저장소 clone → 이 README의 일일 포스팅 절차를 따른다).
 5. 마지막에 오늘의 Day 번호, CCNA 주제, 복습 단어 개수, 다음 예약 시각을 한 줄로 보고한다. push나 예약 생성이 실패하면 원인을 그대로 보고하고 재시도 루프를 돌지 않는다.
