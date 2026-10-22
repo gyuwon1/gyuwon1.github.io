@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360" role="img" aria-labelledby="t d">
+  <title id="t">작은 사무실 네트워크 구성</title>
+  <desc id="d">인터넷에서 방화벽, 라우터, 스위치를 거쳐 PC, 서버, 무선 AP로 이어지는 구성도</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 14px; fill: #1f2933; }
+    .small { font-size: 12px; fill: #52606d; }
+    .title { font-size: 15px; font-weight: 700; }
+    .line { stroke: #52606d; stroke-width: 2; fill: none; }
+    .wifi { stroke: #52606d; stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+  </style>
+  <rect width="760" height="360" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+
+  <!-- 연결선 -->
+  <line class="line" x1="130" y1="180" x2="160" y2="180"/>
+  <line class="line" x1="240" y1="180" x2="290" y2="180"/>
+  <line class="line" x1="370" y1="180" x2="430" y2="180"/>
+  <line class="line" x1="520" y1="180" x2="590" y2="80"/>
+  <line class="line" x1="520" y1="180" x2="590" y2="180"/>
+  <line class="line" x1="520" y1="180" x2="590" y2="280"/>
+  <line class="wifi" x1="660" y1="280" x2="705" y2="280"/>
+
+  <!-- 인터넷 -->
+  <ellipse cx="70" cy="180" rx="60" ry="38" fill="#e6f0fa" stroke="#7aa5d2" stroke-width="2"/>
+  <text x="70" y="185" text-anchor="middle" class="title">인터넷</text>
+
+  <!-- 방화벽 -->
+  <rect x="160" y="150" width="80" height="60" rx="6" fill="#fde7d9" stroke="#e08a56" stroke-width="2"/>
+  <text x="200" y="185" text-anchor="middle" class="title">방화벽</text>
+
+  <!-- 라우터 -->
+  <rect x="290" y="150" width="80" height="60" rx="30" fill="#dbe9fb" stroke="#4f8fd9" stroke-width="2"/>
+  <text x="330" y="185" text-anchor="middle" class="title">라우터</text>
+
+  <!-- 스위치 -->
+  <rect x="430" y="155" width="90" height="50" rx="6" fill="#dcf3e1" stroke="#5aa86e" stroke-width="2"/>
+  <text x="475" y="185" text-anchor="middle" class="title">스위치</text>
+
+  <!-- 호스트들 -->
+  <rect x="590" y="60" width="70" height="40" rx="6" fill="#f1f5f9" stroke="#829ab1" stroke-width="2"/>
+  <text x="625" y="85" text-anchor="middle">PC</text>
+  <rect x="590" y="160" width="70" height="40" rx="6" fill="#f1f5f9" stroke="#829ab1" stroke-width="2"/>
+  <text x="625" y="185" text-anchor="middle">서버</text>
+  <rect x="590" y="260" width="70" height="40" rx="20" fill="#f3e8fb" stroke="#a46bd1" stroke-width="2"/>
+  <text x="625" y="285" text-anchor="middle">AP</text>
+  <rect x="705" y="260" width="40" height="40" rx="8" fill="#f1f5f9" stroke="#829ab1" stroke-width="2"/>
+  <text x="725" y="285" text-anchor="middle" class="small">폰</text>
+
+  <!-- 설명 -->
+  <text x="200" y="232" text-anchor="middle" class="small">허용된 것만 통과</text>
+  <text x="330" y="232" text-anchor="middle" class="small">네트워크 사이 연결</text>
+  <text x="475" y="232" text-anchor="middle" class="small">같은 네트워크 안 연결</text>
+  <text x="680" y="250" text-anchor="middle" class="small">무선</text>
+  <text x="380" y="335" text-anchor="middle" class="small">굵은 선은 유선 케이블, 점선은 무선 연결</text>
+</svg>

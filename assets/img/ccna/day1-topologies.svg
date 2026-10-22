@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" role="img" aria-labelledby="t d">
+  <title id="t">대표적인 토폴로지 네 가지</title>
+  <desc id="d">스타, 버스, 링, 메시 토폴로지를 비교한 그림</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 14px; fill: #1f2933; }
+    .title { font-size: 15px; font-weight: 700; }
+    .small { font-size: 12px; fill: #52606d; }
+    .line { stroke: #52606d; stroke-width: 2; fill: none; }
+    .node { fill: #f1f5f9; stroke: #829ab1; stroke-width: 2; }
+    .hub { fill: #dcf3e1; stroke: #5aa86e; stroke-width: 2; }
+  </style>
+  <rect width="800" height="460" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+  <line x1="400" y1="20" x2="400" y2="440" stroke="#e4e7eb"/>
+  <line x1="20" y1="232" x2="780" y2="232" stroke="#e4e7eb"/>
+
+  <!-- 스타 -->
+  <text x="200" y="38" text-anchor="middle" class="title">스타</text>
+  <line class="line" x1="200" y1="125" x2="110" y2="75"/>
+  <line class="line" x1="200" y1="125" x2="290" y2="75"/>
+  <line class="line" x1="200" y1="125" x2="110" y2="185"/>
+  <line class="line" x1="200" y1="125" x2="290" y2="185"/>
+  <rect class="hub" x="175" y="108" width="50" height="34" rx="6"/>
+  <text x="200" y="130" text-anchor="middle" class="small">스위치</text>
+  <circle class="node" cx="110" cy="75" r="14"/>
+  <circle class="node" cx="290" cy="75" r="14"/>
+  <circle class="node" cx="110" cy="185" r="14"/>
+  <circle class="node" cx="290" cy="185" r="14"/>
+  <text x="200" y="215" text-anchor="middle" class="small">가운데 장비에 모두 연결</text>
+
+  <!-- 버스 -->
+  <text x="600" y="38" text-anchor="middle" class="title">버스</text>
+  <line class="line" x1="430" y1="125" x2="770" y2="125"/>
+  <line class="line" x1="480" y1="125" x2="480" y2="80"/>
+  <line class="line" x1="560" y1="125" x2="560" y2="170"/>
+  <line class="line" x1="640" y1="125" x2="640" y2="80"/>
+  <line class="line" x1="720" y1="125" x2="720" y2="170"/>
+  <circle class="node" cx="480" cy="70" r="14"/>
+  <circle class="node" cx="560" cy="180" r="14"/>
+  <circle class="node" cx="640" cy="70" r="14"/>
+  <circle class="node" cx="720" cy="180" r="14"/>
+  <text x="600" y="215" text-anchor="middle" class="small">선 하나에 줄줄이 연결</text>
+
+  <!-- 링 -->
+  <text x="200" y="262" text-anchor="middle" class="title">링</text>
+  <polygon class="line" points="200,290 266.6,338.4 241.1,416.6 158.9,416.6 133.4,338.4"/>
+  <circle class="node" cx="200" cy="290" r="14"/>
+  <circle class="node" cx="266.6" cy="338.4" r="14"/>
+  <circle class="node" cx="241.1" cy="416.6" r="14"/>
+  <circle class="node" cx="158.9" cy="416.6" r="14"/>
+  <circle class="node" cx="133.4" cy="338.4" r="14"/>
+  <text x="200" y="448" text-anchor="middle" class="small">원형으로 이어짐</text>
+
+  <!-- 메시 -->
+  <text x="600" y="262" text-anchor="middle" class="title">풀 메시</text>
+  <g class="line">
+    <line x1="600" y1="290" x2="666.6" y2="338.4"/>
+    <line x1="600" y1="290" x2="641.1" y2="416.6"/>
+    <line x1="600" y1="290" x2="558.9" y2="416.6"/>
+    <line x1="600" y1="290" x2="533.4" y2="338.4"/>
+    <line x1="666.6" y1="338.4" x2="641.1" y2="416.6"/>
+    <line x1="666.6" y1="338.4" x2="558.9" y2="416.6"/>
+    <line x1="666.6" y1="338.4" x2="533.4" y2="338.4"/>
+    <line x1="641.1" y1="416.6" x2="558.9" y2="416.6"/>
+    <line x1="641.1" y1="416.6" x2="533.4" y2="338.4"/>
+    <line x1="558.9" y1="416.6" x2="533.4" y2="338.4"/>
+  </g>
+  <circle class="node" cx="600" cy="290" r="14"/>
+  <circle class="node" cx="666.6" cy="338.4" r="14"/>
+  <circle class="node" cx="641.1" cy="416.6" r="14"/>
+  <circle class="node" cx="558.9" cy="416.6" r="14"/>
+  <circle class="node" cx="533.4" cy="338.4" r="14"/>
+  <text x="600" y="448" text-anchor="middle" class="small">모든 장치끼리 연결</text>
+</svg>
