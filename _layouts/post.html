@@ -1,0 +1,89 @@
+---
+layout: default
+---
+<style>
+  /* 글 안의 표: 넓은 화면에서는 표, 좁은 화면에서는 단어별 카드로 보여준다 */
+  .post-content table {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-collapse: collapse;
+    font-size: 15px;
+  }
+  .post-content table th,
+  .post-content table td {
+    padding: 6px 10px;
+    white-space: nowrap;
+    word-break: keep-all;
+    vertical-align: middle;
+  }
+  .post-content table th:last-child,
+  .post-content table td:last-child {
+    white-space: normal;
+    min-width: 18em;
+  }
+  .post-content table td:last-child { line-height: 2; }
+  .post-content table rt { font-size: 0.55em; }
+
+  @media (max-width: 640px) {
+    .post-content table {
+      display: block;
+      overflow: visible;
+      border: 0;
+      font-size: 16px;
+    }
+    .post-content table thead { display: none; }
+    .post-content table tbody { display: block; }
+    .post-content table tr {
+      display: grid;
+      grid-template-columns: auto auto auto 1fr;
+      column-gap: 10px;
+      align-items: baseline;
+      padding: 12px 8px;
+      border-bottom: 1px solid #e8e8e8;
+    }
+    .post-content table td {
+      display: block;
+      padding: 0;
+      border: 0;
+      min-width: 0;
+    }
+    .post-content table td:nth-child(1) { color: #828282; font-size: 13px; }
+    .post-content table td:nth-child(2) { font-size: 1.3em; font-weight: 700; }
+    .post-content table td:nth-child(3) { color: #555; }
+    .post-content table td:nth-child(4) { white-space: normal; font-weight: 600; }
+    .post-content table td:last-child {
+      grid-column: 1 / -1;
+      min-width: 0;
+      margin-top: 6px;
+      white-space: normal;
+      line-height: 2;
+    }
+  }
+</style>
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        {{ page.date | date: date_format }}
+      </time>
+      {%- if page.author -%}
+        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
+      {%- endif -%}</p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+
+  {%- if site.disqus.shortname -%}
+    {%- include disqus_comments.html -%}
+  {%- endif -%}
+
+  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+</article>
