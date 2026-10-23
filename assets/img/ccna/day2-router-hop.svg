@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" role="img" aria-labelledby="t d">
+  <title id="t">라우터를 지나는 프레임</title>
+  <desc id="d">PC에서 서버로 가는 데이터가 라우터를 거칠 때 이더넷 헤더는 구간마다 새로 붙고 IP 주소는 그대로 유지되는 모습</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 12px; fill: #52606d; }
+    .head { font-size: 15px; font-weight: 700; }
+    .line { stroke: #52606d; stroke-width: 2; fill: none; marker-end: url(#arr); }
+  </style>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#52606d"/>
+    </marker>
+  </defs>
+  <rect width="800" height="380" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+
+  <text x="130" y="32" text-anchor="middle" class="head">PC</text>
+  <text x="400" y="32" text-anchor="middle" class="head">라우터</text>
+  <text x="670" y="32" text-anchor="middle" class="head">서버</text>
+
+  <!-- PC -->
+  <rect x="40" y="50" width="180" height="40" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="2"/>
+  <text x="130" y="75" text-anchor="middle">응용</text>
+  <rect x="40" y="100" width="180" height="40" fill="#fff3d6" stroke="#e0b04f" stroke-width="2"/>
+  <text x="130" y="125" text-anchor="middle">전송</text>
+  <rect x="40" y="150" width="180" height="40" fill="#dcf3e1" stroke="#5aa86e" stroke-width="2"/>
+  <text x="130" y="175" text-anchor="middle">인터넷</text>
+  <rect x="40" y="200" width="180" height="40" fill="#f3e3f7" stroke="#a475b5" stroke-width="2"/>
+  <text x="130" y="225" text-anchor="middle">네트워크 접근</text>
+
+  <!-- 라우터 -->
+  <rect x="310" y="150" width="180" height="40" fill="#dcf3e1" stroke="#5aa86e" stroke-width="2"/>
+  <text x="400" y="175" text-anchor="middle">인터넷</text>
+  <rect x="310" y="200" width="88" height="40" fill="#f3e3f7" stroke="#a475b5" stroke-width="2"/>
+  <text x="354" y="225" text-anchor="middle">접근 (수신)</text>
+  <rect x="402" y="200" width="88" height="40" fill="#f3e3f7" stroke="#a475b5" stroke-width="2"/>
+  <text x="446" y="225" text-anchor="middle">접근 (송신)</text>
+  <path class="line" d="M354 200 L354 192"/>
+  <path class="line" d="M446 192 L446 198"/>
+  <text x="400" y="116" text-anchor="middle" class="small">응용, 전송 계층은 보지 않는다</text>
+
+  <!-- 서버 -->
+  <rect x="580" y="50" width="180" height="40" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="2"/>
+  <text x="670" y="75" text-anchor="middle">응용</text>
+  <rect x="580" y="100" width="180" height="40" fill="#fff3d6" stroke="#e0b04f" stroke-width="2"/>
+  <text x="670" y="125" text-anchor="middle">전송</text>
+  <rect x="580" y="150" width="180" height="40" fill="#dcf3e1" stroke="#5aa86e" stroke-width="2"/>
+  <text x="670" y="175" text-anchor="middle">인터넷</text>
+  <rect x="580" y="200" width="180" height="40" fill="#f3e3f7" stroke="#a475b5" stroke-width="2"/>
+  <text x="670" y="225" text-anchor="middle">네트워크 접근</text>
+
+  <!-- 프레임 이동 -->
+  <path class="line" d="M220 222 L308 222"/>
+  <path class="line" d="M492 222 L578 222"/>
+  <text x="264" y="262" text-anchor="middle">프레임 1</text>
+  <text x="535" y="262" text-anchor="middle">프레임 2</text>
+
+  <!-- 설명 -->
+  <text x="40" y="305" class="small">프레임 1  출발 MAC = PC, 도착 MAC = 라우터</text>
+  <text x="40" y="327" class="small">프레임 2  출발 MAC = 라우터, 도착 MAC = 서버</text>
+  <text x="40" y="355" class="small">두 프레임 모두 IP 헤더는 같다. 출발 IP = PC, 도착 IP = 서버</text>
+</svg>

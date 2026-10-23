@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" role="img" aria-labelledby="t d">
+  <title id="t">OSI 7계층과 TCP/IP 4계층 대응</title>
+  <desc id="d">OSI 7계층이 TCP/IP 4계층에 어떻게 대응하는지와 계층별 대표 프로토콜, 데이터 단위를 보여주는 그림</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 14px; fill: #1f2933; }
+    .small { font-size: 12px; fill: #52606d; }
+    .head { font-size: 15px; font-weight: 700; }
+  </style>
+  <rect width="800" height="440" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+  <text x="130" y="32" text-anchor="middle" class="head">OSI 7계층</text>
+  <text x="360" y="32" text-anchor="middle" class="head">TCP/IP 4계층</text>
+  <text x="630" y="32" text-anchor="middle" class="head">대표 프로토콜 / 데이터 단위</text>
+
+  <!-- OSI -->
+  <rect x="30" y="45" width="200" height="50" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="2"/>
+  <text x="130" y="75" text-anchor="middle">7  응용 (Application)</text>
+  <rect x="30" y="95" width="200" height="50" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="2"/>
+  <text x="130" y="125" text-anchor="middle">6  표현 (Presentation)</text>
+  <rect x="30" y="145" width="200" height="50" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="2"/>
+  <text x="130" y="175" text-anchor="middle">5  세션 (Session)</text>
+  <rect x="30" y="195" width="200" height="50" fill="#fff3d6" stroke="#e0b04f" stroke-width="2"/>
+  <text x="130" y="225" text-anchor="middle">4  전송 (Transport)</text>
+  <rect x="30" y="245" width="200" height="50" fill="#dcf3e1" stroke="#5aa86e" stroke-width="2"/>
+  <text x="130" y="275" text-anchor="middle">3  네트워크 (Network)</text>
+  <rect x="30" y="295" width="200" height="50" fill="#f3e3f7" stroke="#a475b5" stroke-width="2"/>
+  <text x="130" y="325" text-anchor="middle">2  데이터 링크 (Data Link)</text>
+  <rect x="30" y="345" width="200" height="50" fill="#f3e3f7" stroke="#a475b5" stroke-width="2"/>
+  <text x="130" y="375" text-anchor="middle">1  물리 (Physical)</text>
+
+  <!-- TCP/IP -->
+  <rect x="260" y="45" width="200" height="150" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="2"/>
+  <text x="360" y="125" text-anchor="middle">응용 (Application)</text>
+  <rect x="260" y="195" width="200" height="50" fill="#fff3d6" stroke="#e0b04f" stroke-width="2"/>
+  <text x="360" y="225" text-anchor="middle">전송 (Transport)</text>
+  <rect x="260" y="245" width="200" height="50" fill="#dcf3e1" stroke="#5aa86e" stroke-width="2"/>
+  <text x="360" y="275" text-anchor="middle">인터넷 (Internet)</text>
+  <rect x="260" y="295" width="200" height="100" fill="#f3e3f7" stroke="#a475b5" stroke-width="2"/>
+  <text x="360" y="340" text-anchor="middle">네트워크 접근</text>
+  <text x="360" y="360" text-anchor="middle" class="small">(Network Access)</text>
+
+  <!-- 프로토콜 -->
+  <rect x="490" y="45" width="280" height="150" fill="#ffffff" stroke="#bcccdc" stroke-width="2"/>
+  <text x="630" y="110" text-anchor="middle">HTTP, DNS, DHCP, SSH</text>
+  <text x="630" y="132" text-anchor="middle" class="small">데이터 (Data)</text>
+  <rect x="490" y="195" width="280" height="50" fill="#ffffff" stroke="#bcccdc" stroke-width="2"/>
+  <text x="630" y="217" text-anchor="middle">TCP, UDP</text>
+  <text x="630" y="235" text-anchor="middle" class="small">세그먼트 (Segment)</text>
+  <rect x="490" y="245" width="280" height="50" fill="#ffffff" stroke="#bcccdc" stroke-width="2"/>
+  <text x="630" y="267" text-anchor="middle">IP, ICMP</text>
+  <text x="630" y="285" text-anchor="middle" class="small">패킷 (Packet)</text>
+  <rect x="490" y="295" width="280" height="100" fill="#ffffff" stroke="#bcccdc" stroke-width="2"/>
+  <text x="630" y="338" text-anchor="middle">이더넷, Wi-Fi</text>
+  <text x="630" y="360" text-anchor="middle" class="small">프레임 (Frame) / 비트 (Bit)</text>
+
+  <text x="400" y="425" text-anchor="middle" class="small">같은 색이 서로 대응하는 계층이다. OSI의 5~7계층은 TCP/IP에서 응용 계층 하나로 합쳐진다.</text>
+</svg>

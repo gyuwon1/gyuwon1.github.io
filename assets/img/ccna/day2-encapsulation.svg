@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" role="img" aria-labelledby="t d">
+  <title id="t">캡슐화 과정</title>
+  <desc id="d">응용 데이터에 TCP 헤더, IP 헤더, 이더넷 헤더와 FCS가 차례로 붙어 비트로 변환되는 과정</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 11px; fill: #52606d; }
+    .head { font-size: 15px; font-weight: 700; }
+    .lab { font-size: 14px; }
+  </style>
+  <rect width="800" height="340" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+  <text x="400" y="28" text-anchor="middle" class="head">송신 쪽에서 위에서 아래로 헤더가 붙는다</text>
+
+  <!-- 계층 이름 -->
+  <text x="20" y="77" class="lab">응용</text>
+  <text x="20" y="132" class="lab">전송</text>
+  <text x="20" y="187" class="lab">네트워크</text>
+  <text x="20" y="242" class="lab">데이터 링크</text>
+  <text x="20" y="297" class="lab">물리</text>
+
+  <!-- 응용 -->
+  <rect x="420" y="50" width="220" height="40" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="2"/>
+  <text x="530" y="74" text-anchor="middle">데이터</text>
+  <text x="715" y="74" class="lab">데이터</text>
+
+  <!-- 전송 -->
+  <rect x="340" y="105" width="80" height="40" fill="#fff3d6" stroke="#e0b04f" stroke-width="2"/>
+  <text x="380" y="122" text-anchor="middle">TCP</text>
+  <text x="380" y="137" text-anchor="middle" class="small">포트 번호</text>
+  <rect x="420" y="105" width="220" height="40" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="2"/>
+  <text x="530" y="129" text-anchor="middle">데이터</text>
+  <text x="715" y="129" class="lab">세그먼트</text>
+
+  <!-- 네트워크 -->
+  <rect x="260" y="160" width="80" height="40" fill="#dcf3e1" stroke="#5aa86e" stroke-width="2"/>
+  <text x="300" y="177" text-anchor="middle">IP</text>
+  <text x="300" y="192" text-anchor="middle" class="small">IP 주소</text>
+  <rect x="340" y="160" width="80" height="40" fill="#fff3d6" stroke="#e0b04f" stroke-width="2"/>
+  <text x="380" y="177" text-anchor="middle">TCP</text>
+  <text x="380" y="192" text-anchor="middle" class="small">포트 번호</text>
+  <rect x="420" y="160" width="220" height="40" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="2"/>
+  <text x="530" y="184" text-anchor="middle">데이터</text>
+  <text x="715" y="184" class="lab">패킷</text>
+
+  <!-- 데이터 링크 -->
+  <rect x="170" y="215" width="90" height="40" fill="#f3e3f7" stroke="#a475b5" stroke-width="2"/>
+  <text x="215" y="232" text-anchor="middle">이더넷</text>
+  <text x="215" y="247" text-anchor="middle" class="small">MAC 주소</text>
+  <rect x="260" y="215" width="80" height="40" fill="#dcf3e1" stroke="#5aa86e" stroke-width="2"/>
+  <text x="300" y="232" text-anchor="middle">IP</text>
+  <text x="300" y="247" text-anchor="middle" class="small">IP 주소</text>
+  <rect x="340" y="215" width="80" height="40" fill="#fff3d6" stroke="#e0b04f" stroke-width="2"/>
+  <text x="380" y="232" text-anchor="middle">TCP</text>
+  <text x="380" y="247" text-anchor="middle" class="small">포트 번호</text>
+  <rect x="420" y="215" width="220" height="40" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="2"/>
+  <text x="530" y="239" text-anchor="middle">데이터</text>
+  <rect x="640" y="215" width="60" height="40" fill="#f3e3f7" stroke="#a475b5" stroke-width="2"/>
+  <text x="670" y="232" text-anchor="middle">FCS</text>
+  <text x="670" y="247" text-anchor="middle" class="small">오류 검사</text>
+  <text x="715" y="239" class="lab">프레임</text>
+
+  <!-- 물리 -->
+  <rect x="170" y="270" width="530" height="40" fill="#f1f5f9" stroke="#829ab1" stroke-width="2"/>
+  <text x="435" y="295" text-anchor="middle">1 0 1 1 0 0 1 0 1 1 0 1 0 0 1 1 0 1 ...</text>
+  <text x="715" y="294" class="lab">비트</text>
+</svg>
