@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 260" role="img" aria-labelledby="t d">
+  <title id="t">이더넷 프레임 구조</title>
+  <desc id="d">프리앰블, 도착지 MAC, 출발지 MAC, 타입, 데이터, FCS 순서로 이루어진 이더넷 II 프레임과 각 필드의 크기</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 12px; fill: #52606d; }
+    .head { font-size: 15px; font-weight: 700; }
+    .line { stroke: #52606d; stroke-width: 2; fill: none; marker-end: url(#arr); }
+  </style>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#52606d"/>
+    </marker>
+  </defs>
+  <rect width="800" height="260" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+  <text x="400" y="32" text-anchor="middle" class="head">이더넷 II 프레임</text>
+
+  <rect x="20" y="55" width="90" height="60" fill="#eceff3" stroke="#9aa5b1" stroke-width="2"/>
+  <text x="65" y="82" text-anchor="middle">프리앰블</text>
+  <text x="65" y="101" text-anchor="middle" class="small">8바이트</text>
+
+  <rect x="110" y="55" width="120" height="60" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="2"/>
+  <text x="170" y="82" text-anchor="middle">도착지 MAC</text>
+  <text x="170" y="101" text-anchor="middle" class="small">6바이트</text>
+
+  <rect x="230" y="55" width="120" height="60" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="2"/>
+  <text x="290" y="82" text-anchor="middle">출발지 MAC</text>
+  <text x="290" y="101" text-anchor="middle" class="small">6바이트</text>
+
+  <rect x="350" y="55" width="80" height="60" fill="#fff3d6" stroke="#e0b04f" stroke-width="2"/>
+  <text x="390" y="82" text-anchor="middle">타입</text>
+  <text x="390" y="101" text-anchor="middle" class="small">2바이트</text>
+
+  <rect x="430" y="55" width="270" height="60" fill="#dcf3e1" stroke="#5aa86e" stroke-width="2"/>
+  <text x="565" y="82" text-anchor="middle">데이터 (IP 패킷)</text>
+  <text x="565" y="101" text-anchor="middle" class="small">46~1500바이트</text>
+
+  <rect x="700" y="55" width="80" height="60" fill="#f3e3f7" stroke="#a475b5" stroke-width="2"/>
+  <text x="740" y="82" text-anchor="middle">FCS</text>
+  <text x="740" y="101" text-anchor="middle" class="small">4바이트</text>
+
+  <path d="M110 128 L110 138 L780 138 L780 128" stroke="#52606d" stroke-width="2" fill="none"/>
+  <text x="445" y="158" text-anchor="middle">프레임 크기: 헤더 14 + 데이터 46~1500 + FCS 4 = 64~1518바이트</text>
+
+  <text x="20" y="195" class="small">프리앰블  수신 쪽이 비트 타이밍을 맞추기 위한 신호 (프레임 크기에는 넣지 않는다)</text>
+  <text x="20" y="215" class="small">타입  데이터가 어떤 프로토콜인지 표시 (0x0800 = IPv4, 0x86DD = IPv6)</text>
+  <text x="20" y="235" class="small">FCS  수신 쪽이 오류를 검사하는 값. 오류가 있으면 프레임을 버린다</text>
+</svg>

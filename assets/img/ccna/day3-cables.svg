@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img" aria-labelledby="t d">
+  <title id="t">스트레이트 케이블과 크로스 케이블</title>
+  <desc id="d">서로 다른 종류의 장비를 잇는 스트레이트 케이블과 같은 종류의 장비를 잇는 크로스 케이블의 핀 연결 방식 비교</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 12px; fill: #52606d; }
+    .head { font-size: 15px; font-weight: 700; }
+    .line { stroke: #52606d; stroke-width: 2; fill: none; marker-end: url(#arr); }
+  </style>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#52606d"/>
+    </marker>
+  </defs>
+  <rect width="800" height="400" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+
+  <text x="200" y="32" text-anchor="middle" class="head">스트레이트 (PC - 스위치)</text>
+  <text x="600" y="32" text-anchor="middle" class="head">크로스 (스위치 - 스위치)</text>
+
+  <text x="50" y="62" class="small">PC</text>
+  <text x="350" y="62" text-anchor="end" class="small">스위치</text>
+  <text x="450" y="62" class="small">스위치</text>
+  <text x="750" y="62" text-anchor="end" class="small">스위치</text>
+
+  <!-- 스트레이트 -->
+  <text x="50" y="92">1 TX+</text>
+  <text x="350" y="92" text-anchor="end">RX+ 1</text>
+  <path class="line" d="M110 88 L290 88"/>
+  <text x="50" y="132">2 TX-</text>
+  <text x="350" y="132" text-anchor="end">RX- 2</text>
+  <path class="line" d="M110 128 L290 128"/>
+  <text x="50" y="172">3 RX+</text>
+  <text x="350" y="172" text-anchor="end">TX+ 3</text>
+  <path class="line" d="M110 168 L290 168"/>
+  <text x="50" y="212">6 RX-</text>
+  <text x="350" y="212" text-anchor="end">TX- 6</text>
+  <path class="line" d="M110 208 L290 208"/>
+
+  <!-- 크로스 -->
+  <text x="450" y="92">1 TX+</text>
+  <text x="750" y="92" text-anchor="end">RX+ 1</text>
+  <text x="450" y="132">2 TX-</text>
+  <text x="750" y="132" text-anchor="end">RX- 2</text>
+  <text x="450" y="172">3 RX+</text>
+  <text x="750" y="172" text-anchor="end">TX+ 3</text>
+  <text x="450" y="212">6 RX-</text>
+  <text x="750" y="212" text-anchor="end">TX- 6</text>
+  <path class="line" d="M510 88 L690 168"/>
+  <path class="line" d="M510 128 L690 208"/>
+  <path class="line" d="M510 168 L690 88"/>
+  <path class="line" d="M510 208 L690 128"/>
+
+  <text x="200" y="256" text-anchor="middle" class="small">양쪽 핀이 같은 번호로 이어진다</text>
+  <text x="600" y="256" text-anchor="middle" class="small">1, 2번과 3, 6번이 서로 엇갈린다</text>
+
+  <line x1="30" y1="280" x2="770" y2="280" stroke="#d9e2ec"/>
+  <text x="40" y="308" class="head">스트레이트</text>
+  <text x="140" y="308">PC - 스위치, 라우터 - 스위치, 스위치 - AP처럼 다른 종류의 장비</text>
+  <text x="40" y="338" class="head">크로스</text>
+  <text x="140" y="338">PC - PC, 스위치 - 스위치, 라우터 - 라우터처럼 같은 종류의 장비</text>
+  <text x="40" y="368" class="small">최근 장비는 Auto MDI-X로 케이블 종류를 자동 감지하므로 어느 쪽을 써도 동작하는 경우가 많다</text>
+  <text x="40" y="388" class="small">(10/100 Mbps 기준, 기가비트는 4쌍 8핀을 모두 사용)</text>
+</svg>

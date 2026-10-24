@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" role="img" aria-labelledby="t d">
+  <title id="t">CSMA/CD 동작 순서</title>
+  <desc id="d">전송 전에 회선 사용 여부를 확인하고, 충돌이 감지되면 잼 신호를 보낸 뒤 무작위 시간을 기다려 다시 전송하는 흐름</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 12px; fill: #52606d; }
+    .head { font-size: 15px; font-weight: 700; }
+    .line { stroke: #52606d; stroke-width: 2; fill: none; marker-end: url(#arr); }
+  </style>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#52606d"/>
+    </marker>
+  </defs>
+  <rect width="800" height="420" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+  <text x="400" y="32" text-anchor="middle" class="head">CSMA/CD 흐름</text>
+
+  <rect x="40" y="60" width="200" height="50" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="2"/>
+  <text x="140" y="90" text-anchor="middle">보낼 프레임이 있다</text>
+
+  <path class="line" d="M240 85 L298 85"/>
+
+  <rect x="300" y="60" width="200" height="50" fill="#fff3d6" stroke="#e0b04f" stroke-width="2"/>
+  <text x="400" y="82" text-anchor="middle">회선이 비어 있나?</text>
+  <text x="400" y="100" text-anchor="middle" class="small">(Carrier Sense)</text>
+
+  <path class="line" d="M500 85 L558 85"/>
+  <text x="530" y="76" text-anchor="middle" class="small">예</text>
+
+  <rect x="560" y="60" width="200" height="50" fill="#dcf3e1" stroke="#5aa86e" stroke-width="2"/>
+  <text x="660" y="90" text-anchor="middle">전송 시작</text>
+
+  <path class="line" d="M400 110 L400 148 L140 148 L140 130 L140 112"/>
+  <text x="270" y="140" text-anchor="middle" class="small">아니오: 비게 될 때까지 기다린다</text>
+
+  <path class="line" d="M660 110 L660 168"/>
+  <rect x="560" y="170" width="200" height="50" fill="#fff3d6" stroke="#e0b04f" stroke-width="2"/>
+  <text x="660" y="192" text-anchor="middle">전송 중 충돌이 있나?</text>
+  <text x="660" y="210" text-anchor="middle" class="small">(Collision Detection)</text>
+
+  <path class="line" d="M660 220 L660 268"/>
+  <text x="672" y="248" class="small">아니오</text>
+  <rect x="560" y="270" width="200" height="50" fill="#dcf3e1" stroke="#5aa86e" stroke-width="2"/>
+  <text x="660" y="300" text-anchor="middle">전송 완료</text>
+
+  <path class="line" d="M560 195 L500 195"/>
+  <text x="530" y="187" text-anchor="middle" class="small">예</text>
+  <rect x="300" y="170" width="200" height="50" fill="#fbe3e3" stroke="#d07070" stroke-width="2"/>
+  <text x="400" y="190" text-anchor="middle">잼(jam) 신호 전송</text>
+  <text x="400" y="208" text-anchor="middle" class="small">모든 호스트에 충돌을 알린다</text>
+
+  <path class="line" d="M400 220 L400 268"/>
+  <rect x="300" y="270" width="200" height="50" fill="#f3e3f7" stroke="#a475b5" stroke-width="2"/>
+  <text x="400" y="290" text-anchor="middle">무작위 시간 대기</text>
+  <text x="400" y="308" text-anchor="middle" class="small">(backoff) 재시도마다 범위가 커진다</text>
+
+  <path class="line" d="M300 295 L140 295 L140 114"/>
+  <text x="220" y="287" text-anchor="middle" class="small">다시 시도</text>
+
+  <text x="40" y="360" class="small">충돌은 두 호스트가 거의 동시에 전송할 때 생긴다. 충돌한 프레임은 모두 버려지고 다시 보낸다</text>
+  <text x="40" y="382" class="small">스위치와 전이중 연결에서는 충돌이 없으므로 CSMA/CD를 사용하지 않는다</text>
+</svg>
