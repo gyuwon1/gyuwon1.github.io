@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" role="img" aria-labelledby="t d">
+  <title id="t">TCP 3-way handshake</title>
+  <desc id="d">클라이언트와 서버가 SYN, SYN+ACK, ACK 세 개의 세그먼트를 주고받아 연결을 맺는 순서</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 12px; fill: #52606d; }
+    .head { font-size: 15px; font-weight: 700; }
+    .line { stroke: #52606d; stroke-width: 2; fill: none; marker-end: url(#arr); }
+  </style>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#52606d"/>
+    </marker>
+  </defs>
+  <rect width="800" height="420" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+  <text x="400" y="32" text-anchor="middle" class="head">TCP 3-way handshake</text>
+
+  <rect x="80" y="55" width="160" height="40" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="2"/>
+  <text x="160" y="80" text-anchor="middle">클라이언트</text>
+  <rect x="560" y="55" width="160" height="40" fill="#dcf3e1" stroke="#5aa86e" stroke-width="2"/>
+  <text x="640" y="80" text-anchor="middle">서버</text>
+  <path d="M160 95 L160 400" stroke="#9aa5b1" stroke-width="2" stroke-dasharray="6 5"/>
+  <path d="M640 95 L640 400" stroke="#9aa5b1" stroke-width="2" stroke-dasharray="6 5"/>
+
+  <path class="line" d="M162 135 L636 185"/>
+  <text x="400" y="145" text-anchor="middle">1. SYN (seq=100)</text>
+  <text x="400" y="163" text-anchor="middle" class="small">연결하고 싶다</text>
+
+  <path class="line" d="M638 235 L164 285"/>
+  <text x="400" y="232" text-anchor="middle">2. SYN + ACK (seq=300, ack=101)</text>
+  <text x="400" y="250" text-anchor="middle" class="small">알겠다, 나도 연결하겠다</text>
+
+  <path class="line" d="M162 325 L636 375"/>
+  <text x="400" y="322" text-anchor="middle">3. ACK (seq=101, ack=301)</text>
+  <text x="400" y="340" text-anchor="middle" class="small">확인했다, 이제 데이터를 보낸다</text>
+
+  <text x="160" y="412" text-anchor="middle" class="small">ESTABLISHED</text>
+  <text x="640" y="412" text-anchor="middle" class="small">ESTABLISHED</text>
+</svg>

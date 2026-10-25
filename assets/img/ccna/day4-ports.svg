@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" role="img" aria-labelledby="t d">
+  <title id="t">포트 번호와 소켓</title>
+  <desc id="d">한 PC가 웹 서버의 80번 포트와 DNS 서버의 53번 포트에 서로 다른 임시 포트로 접속하는 모습. IP 주소와 포트 번호의 조합으로 연결을 구분한다</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 12px; fill: #52606d; }
+    .head { font-size: 15px; font-weight: 700; }
+    .line { stroke: #52606d; stroke-width: 2; fill: none; marker-end: url(#arr); }
+  </style>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#52606d"/>
+    </marker>
+  </defs>
+  <rect width="800" height="380" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+  <text x="400" y="32" text-anchor="middle" class="head">포트 번호로 애플리케이션 구분</text>
+
+  <rect x="40" y="70" width="220" height="250" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="2"/>
+  <text x="150" y="95" text-anchor="middle" class="head">PC 192.168.1.10</text>
+  <rect x="65" y="120" width="170" height="50" fill="#ffffff" stroke="#7aa5d2" stroke-width="2"/>
+  <text x="150" y="141" text-anchor="middle">웹 브라우저</text>
+  <text x="150" y="159" text-anchor="middle" class="small">TCP 포트 50001</text>
+  <rect x="65" y="230" width="170" height="50" fill="#ffffff" stroke="#7aa5d2" stroke-width="2"/>
+  <text x="150" y="251" text-anchor="middle">DNS 조회</text>
+  <text x="150" y="269" text-anchor="middle" class="small">UDP 포트 50002</text>
+
+  <rect x="540" y="60" width="220" height="110" fill="#dcf3e1" stroke="#5aa86e" stroke-width="2"/>
+  <text x="650" y="85" text-anchor="middle" class="head">웹 서버 203.0.113.5</text>
+  <text x="650" y="125" text-anchor="middle">HTTP 서버</text>
+  <text x="650" y="145" text-anchor="middle" class="small">TCP 포트 80</text>
+
+  <rect x="540" y="210" width="220" height="110" fill="#fff3d6" stroke="#e0b04f" stroke-width="2"/>
+  <text x="650" y="235" text-anchor="middle" class="head">DNS 서버 198.51.100.53</text>
+  <text x="650" y="275" text-anchor="middle">DNS 서비스</text>
+  <text x="650" y="295" text-anchor="middle" class="small">UDP 포트 53</text>
+
+  <path class="line" d="M235 140 L538 115"/>
+  <path class="line" d="M235 255 L538 265"/>
+  <text x="390" y="122" text-anchor="middle" class="small">203.0.113.5:80</text>
+  <text x="390" y="253" text-anchor="middle" class="small">198.51.100.53:53</text>
+  <text x="400" y="356" text-anchor="middle" class="small">연결 하나는 출발지 IP·포트와 목적지 IP·포트 조합으로 구분한다</text>
+</svg>

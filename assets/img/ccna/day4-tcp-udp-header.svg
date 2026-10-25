@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img" aria-labelledby="t d">
+  <title id="t">TCP와 UDP 헤더 비교</title>
+  <desc id="d">UDP 헤더는 4개 필드 8바이트이고, TCP 헤더는 순서 번호, 확인 응답 번호, 플래그, 윈도우 크기 등을 더해 최소 20바이트이다</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 12px; fill: #52606d; }
+    .head { font-size: 15px; font-weight: 700; }
+    .line { stroke: #52606d; stroke-width: 2; fill: none; marker-end: url(#arr); }
+  </style>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#52606d"/>
+    </marker>
+  </defs>
+  <rect width="800" height="400" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+  <text x="400" y="30" text-anchor="middle" class="head">UDP 헤더 (8바이트)</text>
+  <rect x="100" y="45" width="300" height="40" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="2"/>
+  <text x="250" y="70" text-anchor="middle">출발지 포트 (2)</text>
+  <rect x="400" y="45" width="300" height="40" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="2"/>
+  <text x="550" y="70" text-anchor="middle">목적지 포트 (2)</text>
+  <rect x="100" y="85" width="300" height="40" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="2"/>
+  <text x="250" y="110" text-anchor="middle">길이 (2)</text>
+  <rect x="400" y="85" width="300" height="40" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="2"/>
+  <text x="550" y="110" text-anchor="middle">체크섬 (2)</text>
+
+  <text x="400" y="162" text-anchor="middle" class="head">TCP 헤더 (최소 20바이트)</text>
+  <rect x="100" y="175" width="300" height="38" fill="#dcf3e1" stroke="#5aa86e" stroke-width="2"/>
+  <text x="250" y="199" text-anchor="middle">출발지 포트 (2)</text>
+  <rect x="400" y="175" width="300" height="38" fill="#dcf3e1" stroke="#5aa86e" stroke-width="2"/>
+  <text x="550" y="199" text-anchor="middle">목적지 포트 (2)</text>
+  <rect x="100" y="213" width="600" height="38" fill="#fff3d6" stroke="#e0b04f" stroke-width="2"/>
+  <text x="400" y="237" text-anchor="middle">순서 번호 Sequence Number (4)</text>
+  <rect x="100" y="251" width="600" height="38" fill="#fff3d6" stroke="#e0b04f" stroke-width="2"/>
+  <text x="400" y="275" text-anchor="middle">확인 응답 번호 Acknowledgment Number (4)</text>
+  <rect x="100" y="289" width="150" height="38" fill="#dcf3e1" stroke="#5aa86e" stroke-width="2"/>
+  <text x="175" y="313" text-anchor="middle">헤더 길이 (4비트)</text>
+  <rect x="250" y="289" width="250" height="38" fill="#fde2e2" stroke="#d98080" stroke-width="2"/>
+  <text x="375" y="313" text-anchor="middle">플래그 SYN ACK FIN RST</text>
+  <rect x="500" y="289" width="200" height="38" fill="#fff3d6" stroke="#e0b04f" stroke-width="2"/>
+  <text x="600" y="313" text-anchor="middle">윈도우 크기 (2)</text>
+  <rect x="100" y="327" width="300" height="38" fill="#dcf3e1" stroke="#5aa86e" stroke-width="2"/>
+  <text x="250" y="351" text-anchor="middle">체크섬 (2)</text>
+  <rect x="400" y="327" width="300" height="38" fill="#dcf3e1" stroke="#5aa86e" stroke-width="2"/>
+  <text x="550" y="351" text-anchor="middle">긴급 포인터 (2)</text>
+  <text x="400" y="388" text-anchor="middle" class="small">노란색은 신뢰성(순서, 확인 응답, 흐름 제어)을 위한 필드로 UDP에는 없다</text>
+</svg>
