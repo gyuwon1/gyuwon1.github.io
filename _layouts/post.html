@@ -81,6 +81,10 @@ layout: default
     {{ content }}
   </div>
 
+  {%- if page.categories contains 'japanese' -%}
+    {%- include vocab-quiz.html -%}
+  {%- endif -%}
+
   {%- if site.disqus.shortname -%}
     {%- include disqus_comments.html -%}
   {%- endif -%}
