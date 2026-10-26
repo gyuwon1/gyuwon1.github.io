@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" role="img" aria-labelledby="t d">
+  <title id="t">IPv4 주소 클래스</title>
+  <desc id="d">클래스 A부터 E까지 첫 비트 패턴, 첫 옥텟 범위, 네트워크 비트와 호스트 비트의 길이를 비교한 표. A는 8비트, B는 16비트, C는 24비트가 네트워크 부분이다</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 12px; fill: #52606d; }
+    .head { font-size: 15px; font-weight: 700; }
+    .mono { font-family: "Consolas", "Menlo", monospace; font-size: 16px; }
+    .line { stroke: #52606d; stroke-width: 2; fill: none; marker-end: url(#arr); }
+  </style>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#52606d"/>
+    </marker>
+  </defs>
+  <rect width="800" height="420" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+  <text x="400" y="30" text-anchor="middle" class="head">IPv4 클래스 (클래스풀 주소 체계)</text>
+  <text x="30" y="64" class="small">클래스</text><text x="100" y="64" class="small">앞쪽 비트</text><text x="190" y="64" class="small">첫 옥텟</text><text x="330" y="64" class="small">32비트 중 네트워크 / 호스트</text><text x="680" y="64" class="small">기본 마스크</text>
+  <text x="42" y="108" class="head">A</text>
+  <text x="100" y="108" class="mono">0</text>
+  <text x="190" y="108">1~126</text>
+  <rect x="330" y="88" width="80" height="30" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="2"/>
+  <rect x="410" y="88" width="240" height="30" fill="#dcf3e1" stroke="#5aa86e" stroke-width="2"/>
+  <text x="370.0" y="108" text-anchor="middle" class="small">네트워크 8</text>
+  <text x="530.0" y="108" text-anchor="middle" class="small">호스트 24</text>
+  <text x="680" y="108">255.0.0.0</text>
+  <text x="42" y="166" class="head">B</text>
+  <text x="100" y="166" class="mono">10</text>
+  <text x="190" y="166">128~191</text>
+  <rect x="330" y="146" width="160" height="30" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="2"/>
+  <rect x="490" y="146" width="160" height="30" fill="#dcf3e1" stroke="#5aa86e" stroke-width="2"/>
+  <text x="410.0" y="166" text-anchor="middle" class="small">네트워크 16</text>
+  <text x="570.0" y="166" text-anchor="middle" class="small">호스트 16</text>
+  <text x="680" y="166">255.255.0.0</text>
+  <text x="42" y="224" class="head">C</text>
+  <text x="100" y="224" class="mono">110</text>
+  <text x="190" y="224">192~223</text>
+  <rect x="330" y="204" width="240" height="30" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="2"/>
+  <rect x="570" y="204" width="80" height="30" fill="#dcf3e1" stroke="#5aa86e" stroke-width="2"/>
+  <text x="450.0" y="224" text-anchor="middle" class="small">네트워크 24</text>
+  <text x="610.0" y="224" text-anchor="middle" class="small">호스트 8</text>
+  <text x="680" y="224">255.255.255.0</text>
+  <text x="42" y="282" class="head">D</text>
+  <text x="100" y="282" class="mono">1110</text>
+  <text x="190" y="282">224~239</text>
+  <rect x="330" y="262" width="320" height="30" fill="#f5f7fa" stroke="#9aa5b1" stroke-width="2"/>
+  <text x="490" y="282" text-anchor="middle" class="small">호스트에 할당하지 않음</text>
+  <text x="680" y="282">멀티캐스트</text>
+  <text x="42" y="340" class="head">E</text>
+  <text x="100" y="340" class="mono">1111</text>
+  <text x="190" y="340">240~255</text>
+  <rect x="330" y="320" width="320" height="30" fill="#f5f7fa" stroke="#9aa5b1" stroke-width="2"/>
+  <text x="490" y="340" text-anchor="middle" class="small">일반 용도로 쓰지 않음</text>
+  <text x="680" y="340">연구용 예약</text>
+  <text x="400" y="392" text-anchor="middle" class="small">127.0.0.0/8은 자기 자신을 가리키는 루프백 주소라서 클래스 A 범위에서 빠진다</text>
+</svg>

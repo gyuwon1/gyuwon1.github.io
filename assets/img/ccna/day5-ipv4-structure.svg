@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 370" role="img" aria-labelledby="t d">
+  <title id="t">IPv4 주소 구조</title>
+  <desc id="d">32비트 IPv4 주소를 8비트씩 네 옥텟으로 나눠 점으로 구분해 쓰는 방식. 192.168.10.5의 2진수 표기와 첫 옥텟 192가 128 더하기 64로 계산되는 과정</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 12px; fill: #52606d; }
+    .head { font-size: 15px; font-weight: 700; }
+    .mono { font-family: "Consolas", "Menlo", monospace; font-size: 16px; }
+    .line { stroke: #52606d; stroke-width: 2; fill: none; marker-end: url(#arr); }
+  </style>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#52606d"/>
+    </marker>
+  </defs>
+  <rect width="800" height="370" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+  <text x="400" y="30" text-anchor="middle" class="head">IPv4 주소 = 32비트 = 8비트 x 4옥텟</text>
+  <rect x="40" y="55" width="170" height="44" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="2"/>
+  <text x="125" y="84" text-anchor="middle" class="mono">192</text>
+  <rect x="40" y="120" width="170" height="44" fill="#f5f7fa" stroke="#9aa5b1" stroke-width="2"/>
+  <text x="125" y="149" text-anchor="middle" class="mono">11000000</text>
+  <text x="125" y="186" text-anchor="middle" class="small">옥텟 1 (8비트)</text>
+  <rect x="230" y="55" width="170" height="44" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="2"/>
+  <text x="315" y="84" text-anchor="middle" class="mono">168</text>
+  <rect x="230" y="120" width="170" height="44" fill="#f5f7fa" stroke="#9aa5b1" stroke-width="2"/>
+  <text x="315" y="149" text-anchor="middle" class="mono">10101000</text>
+  <text x="315" y="186" text-anchor="middle" class="small">옥텟 2 (8비트)</text>
+  <rect x="420" y="55" width="170" height="44" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="2"/>
+  <text x="505" y="84" text-anchor="middle" class="mono">10</text>
+  <rect x="420" y="120" width="170" height="44" fill="#f5f7fa" stroke="#9aa5b1" stroke-width="2"/>
+  <text x="505" y="149" text-anchor="middle" class="mono">00001010</text>
+  <text x="505" y="186" text-anchor="middle" class="small">옥텟 3 (8비트)</text>
+  <rect x="610" y="55" width="170" height="44" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="2"/>
+  <text x="695" y="84" text-anchor="middle" class="mono">5</text>
+  <rect x="610" y="120" width="170" height="44" fill="#f5f7fa" stroke="#9aa5b1" stroke-width="2"/>
+  <text x="695" y="149" text-anchor="middle" class="mono">00000101</text>
+  <text x="695" y="186" text-anchor="middle" class="small">옥텟 4 (8비트)</text>
+  <text x="220" y="84" text-anchor="middle" class="mono">.</text>
+  <text x="220" y="149" text-anchor="middle" class="mono">.</text>
+  <text x="410" y="84" text-anchor="middle" class="mono">.</text>
+  <text x="410" y="149" text-anchor="middle" class="mono">.</text>
+  <text x="600" y="84" text-anchor="middle" class="mono">.</text>
+  <text x="600" y="149" text-anchor="middle" class="mono">.</text>
+  <text x="14" y="84" class="small" text-anchor="start" opacity="0"> </text>
+  <text x="400" y="222" text-anchor="middle" class="head">첫 옥텟 192를 계산하는 방법</text>
+  <text x="190" y="254" text-anchor="middle" class="small">128</text>
+  <rect x="160" y="262" width="60" height="38" fill="#dcf3e1" stroke="#5aa86e" stroke-width="2"/>
+  <text x="190" y="288" text-anchor="middle" class="mono">1</text>
+  <text x="250" y="254" text-anchor="middle" class="small">64</text>
+  <rect x="220" y="262" width="60" height="38" fill="#dcf3e1" stroke="#5aa86e" stroke-width="2"/>
+  <text x="250" y="288" text-anchor="middle" class="mono">1</text>
+  <text x="310" y="254" text-anchor="middle" class="small">32</text>
+  <rect x="280" y="262" width="60" height="38" fill="#f5f7fa" stroke="#9aa5b1" stroke-width="2"/>
+  <text x="310" y="288" text-anchor="middle" class="mono">0</text>
+  <text x="370" y="254" text-anchor="middle" class="small">16</text>
+  <rect x="340" y="262" width="60" height="38" fill="#f5f7fa" stroke="#9aa5b1" stroke-width="2"/>
+  <text x="370" y="288" text-anchor="middle" class="mono">0</text>
+  <text x="430" y="254" text-anchor="middle" class="small">8</text>
+  <rect x="400" y="262" width="60" height="38" fill="#f5f7fa" stroke="#9aa5b1" stroke-width="2"/>
+  <text x="430" y="288" text-anchor="middle" class="mono">0</text>
+  <text x="490" y="254" text-anchor="middle" class="small">4</text>
+  <rect x="460" y="262" width="60" height="38" fill="#f5f7fa" stroke="#9aa5b1" stroke-width="2"/>
+  <text x="490" y="288" text-anchor="middle" class="mono">0</text>
+  <text x="550" y="254" text-anchor="middle" class="small">2</text>
+  <rect x="520" y="262" width="60" height="38" fill="#f5f7fa" stroke="#9aa5b1" stroke-width="2"/>
+  <text x="550" y="288" text-anchor="middle" class="mono">0</text>
+  <text x="610" y="254" text-anchor="middle" class="small">1</text>
+  <rect x="580" y="262" width="60" height="38" fill="#f5f7fa" stroke="#9aa5b1" stroke-width="2"/>
+  <text x="610" y="288" text-anchor="middle" class="mono">0</text>
+  <text x="400" y="334" text-anchor="middle">1인 자리의 값만 더한다: 128 + 64 = 192</text>
+  <text x="400" y="354" text-anchor="middle" class="small">옥텟 하나가 표현하는 범위는 0~255 (00000000~11111111)</text>
+</svg>
