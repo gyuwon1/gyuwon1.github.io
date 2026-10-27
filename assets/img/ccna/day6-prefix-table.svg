@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 430" role="img" aria-labelledby="t d">
+  <title id="t">프리픽스 길이별 호스트 수</title>
+  <desc id="d">/24부터 /30까지 프리픽스 길이에 따라 32비트 중 네트워크 비트와 호스트 비트가 달라지는 모습. 호스트 수는 2의 호스트 비트 제곱에서 2를 뺀 값이다. 24는 254, 25는 126, 26은 62, 27은 30, 28은 14, 29는 6, 30은 2개다</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 12px; fill: #52606d; }
+    .head { font-size: 15px; font-weight: 700; }
+    .mono { font-family: "Consolas", "Menlo", monospace; font-size: 16px; }
+    .monos { font-family: "Consolas", "Menlo", monospace; font-size: 13px; }
+  </style>
+  <rect width="800" height="430" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+  <text x="400" y="28" text-anchor="middle" class="head">프리픽스가 길수록 호스트 비트가 줄어든다</text>
+  <text x="30" y="66" class="small">프리픽스</text>
+  <text x="100" y="66" class="small">서브넷 마스크</text>
+  <text x="300" y="66" class="small">32비트 (파랑 네트워크 / 초록 호스트)</text>
+  <text x="600" y="66" class="small">호스트 수</text>
+  <text x="690" y="66" class="small">블록 크기</text>
+  <text x="30" y="101" class="head">/24</text>
+  <text x="100" y="101">255.255.255.0</text>
+  <rect x="300" y="82" width="192" height="26" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1.2"/>
+  <rect x="492" y="82" width="64" height="26" fill="#dcf3e1" stroke="#5aa86e" stroke-width="1.2"/>
+  <line x1="364" y1="79" x2="364" y2="111" stroke="#ffffff" stroke-width="3"/>
+  <line x1="428" y1="79" x2="428" y2="111" stroke="#ffffff" stroke-width="3"/>
+  <line x1="492" y1="79" x2="492" y2="111" stroke="#ffffff" stroke-width="3"/>
+  <text x="600" y="101">2^8 - 2 = 254</text>
+  <text x="700" y="101">256</text>
+  <text x="30" y="145" class="head">/25</text>
+  <text x="100" y="145">255.255.255.128</text>
+  <rect x="300" y="126" width="200" height="26" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1.2"/>
+  <rect x="500" y="126" width="56" height="26" fill="#dcf3e1" stroke="#5aa86e" stroke-width="1.2"/>
+  <line x1="364" y1="123" x2="364" y2="155" stroke="#ffffff" stroke-width="3"/>
+  <line x1="428" y1="123" x2="428" y2="155" stroke="#ffffff" stroke-width="3"/>
+  <line x1="492" y1="123" x2="492" y2="155" stroke="#ffffff" stroke-width="3"/>
+  <text x="600" y="145">2^7 - 2 = 126</text>
+  <text x="700" y="145">128</text>
+  <text x="30" y="189" class="head">/26</text>
+  <text x="100" y="189">255.255.255.192</text>
+  <rect x="300" y="170" width="208" height="26" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1.2"/>
+  <rect x="508" y="170" width="48" height="26" fill="#dcf3e1" stroke="#5aa86e" stroke-width="1.2"/>
+  <line x1="364" y1="167" x2="364" y2="199" stroke="#ffffff" stroke-width="3"/>
+  <line x1="428" y1="167" x2="428" y2="199" stroke="#ffffff" stroke-width="3"/>
+  <line x1="492" y1="167" x2="492" y2="199" stroke="#ffffff" stroke-width="3"/>
+  <text x="600" y="189">2^6 - 2 = 62</text>
+  <text x="700" y="189">64</text>
+  <text x="30" y="233" class="head">/27</text>
+  <text x="100" y="233">255.255.255.224</text>
+  <rect x="300" y="214" width="216" height="26" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1.2"/>
+  <rect x="516" y="214" width="40" height="26" fill="#dcf3e1" stroke="#5aa86e" stroke-width="1.2"/>
+  <line x1="364" y1="211" x2="364" y2="243" stroke="#ffffff" stroke-width="3"/>
+  <line x1="428" y1="211" x2="428" y2="243" stroke="#ffffff" stroke-width="3"/>
+  <line x1="492" y1="211" x2="492" y2="243" stroke="#ffffff" stroke-width="3"/>
+  <text x="600" y="233">2^5 - 2 = 30</text>
+  <text x="700" y="233">32</text>
+  <text x="30" y="277" class="head">/28</text>
+  <text x="100" y="277">255.255.255.240</text>
+  <rect x="300" y="258" width="224" height="26" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1.2"/>
+  <rect x="524" y="258" width="32" height="26" fill="#dcf3e1" stroke="#5aa86e" stroke-width="1.2"/>
+  <line x1="364" y1="255" x2="364" y2="287" stroke="#ffffff" stroke-width="3"/>
+  <line x1="428" y1="255" x2="428" y2="287" stroke="#ffffff" stroke-width="3"/>
+  <line x1="492" y1="255" x2="492" y2="287" stroke="#ffffff" stroke-width="3"/>
+  <text x="600" y="277">2^4 - 2 = 14</text>
+  <text x="700" y="277">16</text>
+  <text x="30" y="321" class="head">/29</text>
+  <text x="100" y="321">255.255.255.248</text>
+  <rect x="300" y="302" width="232" height="26" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1.2"/>
+  <rect x="532" y="302" width="24" height="26" fill="#dcf3e1" stroke="#5aa86e" stroke-width="1.2"/>
+  <line x1="364" y1="299" x2="364" y2="331" stroke="#ffffff" stroke-width="3"/>
+  <line x1="428" y1="299" x2="428" y2="331" stroke="#ffffff" stroke-width="3"/>
+  <line x1="492" y1="299" x2="492" y2="331" stroke="#ffffff" stroke-width="3"/>
+  <text x="600" y="321">2^3 - 2 = 6</text>
+  <text x="700" y="321">8</text>
+  <text x="30" y="365" class="head">/30</text>
+  <text x="100" y="365">255.255.255.252</text>
+  <rect x="300" y="346" width="240" height="26" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1.2"/>
+  <rect x="540" y="346" width="16" height="26" fill="#dcf3e1" stroke="#5aa86e" stroke-width="1.2"/>
+  <line x1="364" y1="343" x2="364" y2="375" stroke="#ffffff" stroke-width="3"/>
+  <line x1="428" y1="343" x2="428" y2="375" stroke="#ffffff" stroke-width="3"/>
+  <line x1="492" y1="343" x2="492" y2="375" stroke="#ffffff" stroke-width="3"/>
+  <text x="600" y="365">2^2 - 2 = 2</text>
+  <text x="700" y="365">4</text>
+  <text x="400" y="402" text-anchor="middle" class="small">호스트 수 = 2^(호스트 비트 수) - 2,  블록 크기 = 256 - 마스크의 마지막 옥텟 값</text>
+  <text x="400" y="420" text-anchor="middle" class="small">흰 세로선은 옥텟(8비트)의 경계다</text>
+</svg>

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 390" role="img" aria-labelledby="t d">
+  <title id="t">AND 연산으로 네트워크 주소 구하기</title>
+  <desc id="d">IP 주소와 서브넷 마스크를 비트 단위 AND 연산하면 네트워크 주소가 나온다. 192.168.10.77과 192.168.10.100은 결과가 64로 같아 같은 네트워크이고 192.168.10.130은 128이라 다른 네트워크다</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 12px; fill: #52606d; }
+    .head { font-size: 15px; font-weight: 700; }
+    .mono { font-family: "Consolas", "Menlo", monospace; font-size: 16px; }
+    .monos { font-family: "Consolas", "Menlo", monospace; font-size: 13px; }
+  </style>
+  <rect width="800" height="390" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+  <text x="400" y="30" text-anchor="middle" class="head">IP 주소 AND 서브넷 마스크 = 네트워크 주소  (마스크 /26, 4번째 옥텟만 계산)</text>
+  <rect x="30" y="52" width="240" height="252" fill="#f5f7fa" stroke="#9aa5b1" stroke-width="1.5"/>
+  <text x="150" y="76" text-anchor="middle" class="head">PC A</text>
+  <text x="150" y="94" text-anchor="middle" class="small">192.168.10.77</text>
+  <text x="150" y="124" text-anchor="middle" class="small">4번째 옥텟 77</text>
+  <text x="150" y="146" text-anchor="middle" class="mono">01001101</text>
+  <text x="150" y="176" text-anchor="middle" class="small">AND  마스크 192</text>
+  <text x="150" y="198" text-anchor="middle" class="mono">11000000</text>
+  <line x1="60" y1="208" x2="240" y2="208" stroke="#52606d" stroke-width="2"/>
+  <text x="150" y="230" text-anchor="middle" class="small">결과 64</text>
+  <text x="150" y="252" text-anchor="middle" class="mono">01000000</text>
+  <rect x="50" y="266" width="200" height="28" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="2"/>
+  <text x="150" y="285" text-anchor="middle">네트워크 192.168.10.64</text>
+  <rect x="280" y="52" width="240" height="252" fill="#f5f7fa" stroke="#9aa5b1" stroke-width="1.5"/>
+  <text x="400" y="76" text-anchor="middle" class="head">PC B</text>
+  <text x="400" y="94" text-anchor="middle" class="small">192.168.10.100</text>
+  <text x="400" y="124" text-anchor="middle" class="small">4번째 옥텟 100</text>
+  <text x="400" y="146" text-anchor="middle" class="mono">01100100</text>
+  <text x="400" y="176" text-anchor="middle" class="small">AND  마스크 192</text>
+  <text x="400" y="198" text-anchor="middle" class="mono">11000000</text>
+  <line x1="310" y1="208" x2="490" y2="208" stroke="#52606d" stroke-width="2"/>
+  <text x="400" y="230" text-anchor="middle" class="small">결과 64</text>
+  <text x="400" y="252" text-anchor="middle" class="mono">01000000</text>
+  <rect x="300" y="266" width="200" height="28" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="2"/>
+  <text x="400" y="285" text-anchor="middle">네트워크 192.168.10.64</text>
+  <rect x="530" y="52" width="240" height="252" fill="#f5f7fa" stroke="#9aa5b1" stroke-width="1.5"/>
+  <text x="650" y="76" text-anchor="middle" class="head">PC C</text>
+  <text x="650" y="94" text-anchor="middle" class="small">192.168.10.130</text>
+  <text x="650" y="124" text-anchor="middle" class="small">4번째 옥텟 130</text>
+  <text x="650" y="146" text-anchor="middle" class="mono">10000010</text>
+  <text x="650" y="176" text-anchor="middle" class="small">AND  마스크 192</text>
+  <text x="650" y="198" text-anchor="middle" class="mono">11000000</text>
+  <line x1="560" y1="208" x2="740" y2="208" stroke="#52606d" stroke-width="2"/>
+  <text x="650" y="230" text-anchor="middle" class="small">결과 128</text>
+  <text x="650" y="252" text-anchor="middle" class="mono">10000000</text>
+  <rect x="550" y="266" width="200" height="28" fill="#fdecec" stroke="#d08a8a" stroke-width="2"/>
+  <text x="650" y="285" text-anchor="middle">네트워크 192.168.10.128</text>
+  <text x="400" y="340" text-anchor="middle">A와 B는 결과가 같다 : 같은 네트워크라서 스위치만으로 직접 통신한다</text>
+  <text x="400" y="362" text-anchor="middle">C는 결과가 다르다 : 다른 네트워크라서 라우터(디폴트 게이트웨이)를 거쳐야 한다</text>
+</svg>

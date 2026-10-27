@@ -1,0 +1,154 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320" role="img" aria-labelledby="t d">
+  <title id="t">IP 주소와 서브넷 마스크</title>
+  <desc id="d">192.168.10.77/26의 32비트 주소와 마스크를 비트로 나란히 놓은 그림. 마스크에서 1인 앞 26비트가 네트워크 부분, 0인 뒤 6비트가 호스트 부분이다</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 12px; fill: #52606d; }
+    .head { font-size: 15px; font-weight: 700; }
+    .mono { font-family: "Consolas", "Menlo", monospace; font-size: 16px; }
+    .monos { font-family: "Consolas", "Menlo", monospace; font-size: 13px; }
+  </style>
+  <rect width="800" height="320" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+  <text x="400" y="30" text-anchor="middle" class="head">192.168.10.77/26 : 마스크의 1은 네트워크, 0은 호스트</text>
+  <text x="40" y="66" class="small">IP 주소  192.168.10.77</text>
+  <rect x="40" y="76" width="20" height="32" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1"/>
+  <text x="50" y="98" text-anchor="middle" class="monos">1</text>
+  <rect x="60" y="76" width="20" height="32" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1"/>
+  <text x="70" y="98" text-anchor="middle" class="monos">1</text>
+  <rect x="80" y="76" width="20" height="32" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1"/>
+  <text x="90" y="98" text-anchor="middle" class="monos">0</text>
+  <rect x="100" y="76" width="20" height="32" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1"/>
+  <text x="110" y="98" text-anchor="middle" class="monos">0</text>
+  <rect x="120" y="76" width="20" height="32" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1"/>
+  <text x="130" y="98" text-anchor="middle" class="monos">0</text>
+  <rect x="140" y="76" width="20" height="32" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1"/>
+  <text x="150" y="98" text-anchor="middle" class="monos">0</text>
+  <rect x="160" y="76" width="20" height="32" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1"/>
+  <text x="170" y="98" text-anchor="middle" class="monos">0</text>
+  <rect x="180" y="76" width="20" height="32" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1"/>
+  <text x="190" y="98" text-anchor="middle" class="monos">0</text>
+  <text x="210" y="98" text-anchor="middle" class="mono">.</text>
+  <rect x="220" y="76" width="20" height="32" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1"/>
+  <text x="230" y="98" text-anchor="middle" class="monos">1</text>
+  <rect x="240" y="76" width="20" height="32" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1"/>
+  <text x="250" y="98" text-anchor="middle" class="monos">0</text>
+  <rect x="260" y="76" width="20" height="32" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1"/>
+  <text x="270" y="98" text-anchor="middle" class="monos">1</text>
+  <rect x="280" y="76" width="20" height="32" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1"/>
+  <text x="290" y="98" text-anchor="middle" class="monos">0</text>
+  <rect x="300" y="76" width="20" height="32" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1"/>
+  <text x="310" y="98" text-anchor="middle" class="monos">1</text>
+  <rect x="320" y="76" width="20" height="32" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1"/>
+  <text x="330" y="98" text-anchor="middle" class="monos">0</text>
+  <rect x="340" y="76" width="20" height="32" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1"/>
+  <text x="350" y="98" text-anchor="middle" class="monos">0</text>
+  <rect x="360" y="76" width="20" height="32" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1"/>
+  <text x="370" y="98" text-anchor="middle" class="monos">0</text>
+  <text x="390" y="98" text-anchor="middle" class="mono">.</text>
+  <rect x="400" y="76" width="20" height="32" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1"/>
+  <text x="410" y="98" text-anchor="middle" class="monos">0</text>
+  <rect x="420" y="76" width="20" height="32" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1"/>
+  <text x="430" y="98" text-anchor="middle" class="monos">0</text>
+  <rect x="440" y="76" width="20" height="32" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1"/>
+  <text x="450" y="98" text-anchor="middle" class="monos">0</text>
+  <rect x="460" y="76" width="20" height="32" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1"/>
+  <text x="470" y="98" text-anchor="middle" class="monos">0</text>
+  <rect x="480" y="76" width="20" height="32" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1"/>
+  <text x="490" y="98" text-anchor="middle" class="monos">1</text>
+  <rect x="500" y="76" width="20" height="32" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1"/>
+  <text x="510" y="98" text-anchor="middle" class="monos">0</text>
+  <rect x="520" y="76" width="20" height="32" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1"/>
+  <text x="530" y="98" text-anchor="middle" class="monos">1</text>
+  <rect x="540" y="76" width="20" height="32" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1"/>
+  <text x="550" y="98" text-anchor="middle" class="monos">0</text>
+  <text x="570" y="98" text-anchor="middle" class="mono">.</text>
+  <rect x="580" y="76" width="20" height="32" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1"/>
+  <text x="590" y="98" text-anchor="middle" class="monos">0</text>
+  <rect x="600" y="76" width="20" height="32" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1"/>
+  <text x="610" y="98" text-anchor="middle" class="monos">1</text>
+  <rect x="620" y="76" width="20" height="32" fill="#dcf3e1" stroke="#5aa86e" stroke-width="1"/>
+  <text x="630" y="98" text-anchor="middle" class="monos">0</text>
+  <rect x="640" y="76" width="20" height="32" fill="#dcf3e1" stroke="#5aa86e" stroke-width="1"/>
+  <text x="650" y="98" text-anchor="middle" class="monos">0</text>
+  <rect x="660" y="76" width="20" height="32" fill="#dcf3e1" stroke="#5aa86e" stroke-width="1"/>
+  <text x="670" y="98" text-anchor="middle" class="monos">1</text>
+  <rect x="680" y="76" width="20" height="32" fill="#dcf3e1" stroke="#5aa86e" stroke-width="1"/>
+  <text x="690" y="98" text-anchor="middle" class="monos">1</text>
+  <rect x="700" y="76" width="20" height="32" fill="#dcf3e1" stroke="#5aa86e" stroke-width="1"/>
+  <text x="710" y="98" text-anchor="middle" class="monos">0</text>
+  <rect x="720" y="76" width="20" height="32" fill="#dcf3e1" stroke="#5aa86e" stroke-width="1"/>
+  <text x="730" y="98" text-anchor="middle" class="monos">1</text>
+  <text x="40" y="146" class="small">서브넷 마스크  255.255.255.192  (/26)</text>
+  <rect x="40" y="156" width="20" height="32" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1"/>
+  <text x="50" y="178" text-anchor="middle" class="monos">1</text>
+  <rect x="60" y="156" width="20" height="32" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1"/>
+  <text x="70" y="178" text-anchor="middle" class="monos">1</text>
+  <rect x="80" y="156" width="20" height="32" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1"/>
+  <text x="90" y="178" text-anchor="middle" class="monos">1</text>
+  <rect x="100" y="156" width="20" height="32" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1"/>
+  <text x="110" y="178" text-anchor="middle" class="monos">1</text>
+  <rect x="120" y="156" width="20" height="32" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1"/>
+  <text x="130" y="178" text-anchor="middle" class="monos">1</text>
+  <rect x="140" y="156" width="20" height="32" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1"/>
+  <text x="150" y="178" text-anchor="middle" class="monos">1</text>
+  <rect x="160" y="156" width="20" height="32" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1"/>
+  <text x="170" y="178" text-anchor="middle" class="monos">1</text>
+  <rect x="180" y="156" width="20" height="32" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1"/>
+  <text x="190" y="178" text-anchor="middle" class="monos">1</text>
+  <text x="210" y="178" text-anchor="middle" class="mono">.</text>
+  <rect x="220" y="156" width="20" height="32" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1"/>
+  <text x="230" y="178" text-anchor="middle" class="monos">1</text>
+  <rect x="240" y="156" width="20" height="32" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1"/>
+  <text x="250" y="178" text-anchor="middle" class="monos">1</text>
+  <rect x="260" y="156" width="20" height="32" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1"/>
+  <text x="270" y="178" text-anchor="middle" class="monos">1</text>
+  <rect x="280" y="156" width="20" height="32" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1"/>
+  <text x="290" y="178" text-anchor="middle" class="monos">1</text>
+  <rect x="300" y="156" width="20" height="32" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1"/>
+  <text x="310" y="178" text-anchor="middle" class="monos">1</text>
+  <rect x="320" y="156" width="20" height="32" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1"/>
+  <text x="330" y="178" text-anchor="middle" class="monos">1</text>
+  <rect x="340" y="156" width="20" height="32" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1"/>
+  <text x="350" y="178" text-anchor="middle" class="monos">1</text>
+  <rect x="360" y="156" width="20" height="32" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1"/>
+  <text x="370" y="178" text-anchor="middle" class="monos">1</text>
+  <text x="390" y="178" text-anchor="middle" class="mono">.</text>
+  <rect x="400" y="156" width="20" height="32" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1"/>
+  <text x="410" y="178" text-anchor="middle" class="monos">1</text>
+  <rect x="420" y="156" width="20" height="32" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1"/>
+  <text x="430" y="178" text-anchor="middle" class="monos">1</text>
+  <rect x="440" y="156" width="20" height="32" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1"/>
+  <text x="450" y="178" text-anchor="middle" class="monos">1</text>
+  <rect x="460" y="156" width="20" height="32" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1"/>
+  <text x="470" y="178" text-anchor="middle" class="monos">1</text>
+  <rect x="480" y="156" width="20" height="32" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1"/>
+  <text x="490" y="178" text-anchor="middle" class="monos">1</text>
+  <rect x="500" y="156" width="20" height="32" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1"/>
+  <text x="510" y="178" text-anchor="middle" class="monos">1</text>
+  <rect x="520" y="156" width="20" height="32" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1"/>
+  <text x="530" y="178" text-anchor="middle" class="monos">1</text>
+  <rect x="540" y="156" width="20" height="32" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1"/>
+  <text x="550" y="178" text-anchor="middle" class="monos">1</text>
+  <text x="570" y="178" text-anchor="middle" class="mono">.</text>
+  <rect x="580" y="156" width="20" height="32" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1"/>
+  <text x="590" y="178" text-anchor="middle" class="monos">1</text>
+  <rect x="600" y="156" width="20" height="32" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1"/>
+  <text x="610" y="178" text-anchor="middle" class="monos">1</text>
+  <rect x="620" y="156" width="20" height="32" fill="#dcf3e1" stroke="#5aa86e" stroke-width="1"/>
+  <text x="630" y="178" text-anchor="middle" class="monos">0</text>
+  <rect x="640" y="156" width="20" height="32" fill="#dcf3e1" stroke="#5aa86e" stroke-width="1"/>
+  <text x="650" y="178" text-anchor="middle" class="monos">0</text>
+  <rect x="660" y="156" width="20" height="32" fill="#dcf3e1" stroke="#5aa86e" stroke-width="1"/>
+  <text x="670" y="178" text-anchor="middle" class="monos">0</text>
+  <rect x="680" y="156" width="20" height="32" fill="#dcf3e1" stroke="#5aa86e" stroke-width="1"/>
+  <text x="690" y="178" text-anchor="middle" class="monos">0</text>
+  <rect x="700" y="156" width="20" height="32" fill="#dcf3e1" stroke="#5aa86e" stroke-width="1"/>
+  <text x="710" y="178" text-anchor="middle" class="monos">0</text>
+  <rect x="720" y="156" width="20" height="32" fill="#dcf3e1" stroke="#5aa86e" stroke-width="1"/>
+  <text x="730" y="178" text-anchor="middle" class="monos">0</text>
+  <rect x="40" y="222" width="580" height="34" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="2"/>
+  <text x="330" y="244" text-anchor="middle">네트워크 부분 26비트</text>
+  <rect x="620" y="222" width="120" height="34" fill="#dcf3e1" stroke="#5aa86e" stroke-width="2"/>
+  <text x="680" y="244" text-anchor="middle">호스트 부분 6비트</text>
+  <text x="400" y="288" text-anchor="middle" class="small">마스크는 항상 1이 연속으로 이어진 뒤 0이 이어진다. 1의 개수가 /뒤의 숫자(프리픽스 길이)다</text>
+</svg>
