@@ -57,11 +57,13 @@
   for (var i = 0; i < rows.length; i++) {
     var td = rows[i].querySelectorAll('td');
     if (td.length < 5) continue;
+    // 음성 버튼(🔊)이 이미 붙어 있으면 텍스트에서 제외한다
     var w = {
+      idx: i + 1,
       k: td[1].textContent.trim(),
-      r: td[2].textContent.trim(),
+      r: td[2].textContent.replace(/🔊/g, '').trim(),
       m: td[3].textContent.trim(),
-      ex: td[4].innerHTML
+      ex: td[4].innerHTML.replace(/<button[^>]*class="va-btn"[^>]*>.*?<\/button>/g, '')
     };
     if (w.k && w.r && w.m) words.push(w);
   }
@@ -138,9 +140,13 @@
     if (ok) { st.score++; } else { btn.classList.add('is-wrong'); st.wrong.push(w); }
 
     var last = st.i === st.order.length - 1;
+    var aud = window.vaSrc
+      ? '<button type="button" class="va-btn" data-src="' + window.vaSrc('w', w.idx) + '" aria-label="단어 듣기">🔊 단어</button>' +
+        '<button type="button" class="va-btn" data-src="' + window.vaSrc('s', w.idx) + '" aria-label="예문 듣기">🔊 예문</button><br>'
+      : '';
     document.getElementById('vq-fb').innerHTML =
       '<div class="vq-fb"><span class="vq-verdict ' + (ok ? 'is-right' : 'is-wrong') + '">' + (ok ? '정답' : '오답') + '</span>' +
-      '<b>' + esc(w.k) + '</b> (' + esc(w.r) + ') ' + esc(w.m) + '<br>' + w.ex + '</div>' +
+      '<b>' + esc(w.k) + '</b> (' + esc(w.r) + ') ' + esc(w.m) + '<br>' + aud + w.ex + '</div>' +
       '<button type="button" class="vq-next">' + (last ? '결과 보기' : '다음 문제') + '</button>';
   }
 

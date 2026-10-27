@@ -1,0 +1,63 @@
+name: Generate vocab audio
+
+# 일본어 단어 글이 올라오면 단어/예문 음성(mp3)을 만들어 저장소에 커밋한다.
+# 매일 밤에도 한 번 돌아서, 실패해서 빠진 음성이 있으면 채운다.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "_posts/*japanese-vocab*.md"
+      - "scripts/gen_audio.py"
+      - ".github/workflows/tts.yml"
+  schedule:
+    - cron: "40 14 * * *" # 매일 23:40 KST
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: vocab-audio
+  cancel-in-progress: false
+
+jobs:
+  audio:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install edge-tts
+        run: pip install --upgrade edge-tts
+
+      - name: Generate audio
+        run: python scripts/gen_audio.py
+
+      - name: Commit audio
+        id: commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/audio
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "새로 만든 음성이 없다."
+            exit 0
+          fi
+          git commit -m "Add vocab audio"
+          git pull --rebase origin main
+          git push origin main
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      # GITHUB_TOKEN 으로 push 하면 Pages 빌드가 안 돌 수 있어서 직접 요청한다.
+      - name: Trigger Pages build
+        if: steps.commit.outputs.changed == 'true'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X POST "repos/${{ github.repository }}/pages/builds"

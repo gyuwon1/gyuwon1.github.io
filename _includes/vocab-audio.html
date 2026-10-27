@@ -1,0 +1,69 @@
+<style>
+  .va-btn { font: inherit; display: inline-block; min-width: 32px; height: 32px; margin: 0 6px 0 4px; padding: 0 8px; border: 1px solid #c9c9c9; border-radius: 16px; background: #fff; color: #333; font-size: 14px; line-height: 30px; vertical-align: middle; cursor: pointer; }
+  .va-btn.is-playing { background: #2a7ae2; border-color: #2a7ae2; color: #fff; }
+  .va-btn.is-missing { opacity: .4; }
+  .va-note { margin-right: 6px; color: #c62828; font-size: 12px; vertical-align: middle; }
+</style>
+
+<script>
+(function () {
+  var BASE = '{{ "/assets/audio/" | relative_url }}{{ page.slug }}/';
+  var cur = null, curBtn = null;
+
+  function pad(n) { return (n < 10 ? '0' : '') + n; }
+  window.vaSrc = function (kind, idx) { return BASE + kind + pad(idx) + '.mp3'; };
+
+  function stop() {
+    if (cur) { cur.pause(); cur = null; }
+    if (curBtn) { curBtn.classList.remove('is-playing'); curBtn = null; }
+  }
+
+  function note(btn) {
+    var n = document.createElement('span');
+    n.className = 'va-note';
+    n.textContent = '음성 준비 중';
+    btn.parentNode.insertBefore(n, btn.nextSibling);
+    setTimeout(function () { if (n.parentNode) n.parentNode.removeChild(n); }, 2500);
+  }
+
+  function play(btn) {
+    if (curBtn === btn) { stop(); return; }
+    stop();
+    var a = new Audio(btn.getAttribute('data-src'));
+    cur = a; curBtn = btn;
+    btn.classList.add('is-playing');
+    a.addEventListener('ended', stop);
+    a.addEventListener('error', function () {
+      if (curBtn === btn) stop();
+      btn.classList.add('is-missing');
+      note(btn);
+    });
+    var p = a.play();
+    if (p && p.catch) p.catch(function () { if (curBtn === btn && a.error === null) stop(); });
+  }
+
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest ? e.target.closest('.va-btn') : null;
+    if (b) play(b);
+  });
+
+  function mk(kind, idx, label) {
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'va-btn';
+    b.setAttribute('data-src', window.vaSrc(kind, idx));
+    b.setAttribute('aria-label', label);
+    b.textContent = '🔊';
+    return b;
+  }
+
+  // 표의 각 행: 히라가나 칸에 단어 음성, 예문 칸에 예문 음성
+  var rows = document.querySelectorAll('.post-content table tbody tr');
+  for (var i = 0; i < rows.length; i++) {
+    var td = rows[i].querySelectorAll('td');
+    if (td.length < 5) continue;
+    td[2].appendChild(mk('w', i + 1, '단어 듣기'));
+    td[4].insertBefore(mk('s', i + 1, '예문 듣기'), td[4].firstChild);
+  }
+})();
+</script>
