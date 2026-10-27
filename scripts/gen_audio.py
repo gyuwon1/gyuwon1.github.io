@@ -4,7 +4,7 @@
 - 입력: _posts/*japanese-vocab*.md 의 표 (# | 한자 | 히라가나 | 뜻 | 예문)
 - 출력: assets/audio/<글 slug>/w01.mp3 (단어, 히라가나 읽기), s01.mp3 (예문)
 - 이미 있는 파일은 건너뛴다. 다시 만들려면 파일을 지우거나 --force 를 쓴다.
-- 목소리: Microsoft 신경망 음성 ja-JP-NanamiNeural (edge-tts)
+- 목소리: Microsoft 신경망 음성 ja-JP-KeitaNeural (남성) (edge-tts)
 
 사용법:
   python scripts/gen_audio.py            # 없는 음성만 생성
@@ -22,7 +22,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 POSTS = ROOT / "_posts"
 OUT = ROOT / "assets" / "audio"
 
-VOICE = "ja-JP-NanamiNeural"
+VOICE = "ja-JP-KeitaNeural"
 RATE_WORD = "+0%"
 RATE_SENTENCE = "-10%"  # 학습용이라 예문은 약간 천천히
 CONCURRENCY = 3
