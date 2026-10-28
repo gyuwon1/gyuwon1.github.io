@@ -36,11 +36,12 @@ layout: default
     }
     .post-content table thead { display: none; }
     .post-content table tbody { display: block; }
+    /* 카드: 1행 번호·한자·히라가나·단어🔊 / 2행 뜻 / 3행 예문(🔊는 오른쪽) */
     .post-content table tr {
       display: grid;
-      grid-template-columns: auto auto auto 1fr;
+      grid-template-columns: auto auto 1fr auto;
       column-gap: 10px;
-      align-items: baseline;
+      align-items: center;
       padding: 12px 8px;
       border-bottom: 1px solid #e8e8e8;
     }
@@ -52,15 +53,25 @@ layout: default
     }
     .post-content table td:nth-child(1) { color: #828282; font-size: 13px; }
     .post-content table td:nth-child(2) { font-size: 1.3em; font-weight: 700; }
-    .post-content table td:nth-child(3) { color: #555; }
-    .post-content table td:nth-child(4) { white-space: normal; font-weight: 600; }
+    /* 히라가나 칸은 글자와 🔊를 각각 그리드 칸에 배치한다 */
+    .post-content table td:nth-child(3) { display: contents; color: #555; }
+    .post-content table td:nth-child(3) .va-btn { grid-column: 4; grid-row: 1; margin: 0; }
+    .post-content table td:nth-child(4) {
+      grid-column: 1 / -1;
+      grid-row: 2;
+      margin-top: 4px;
+      white-space: normal;
+      font-weight: 600;
+    }
     .post-content table td:last-child {
       grid-column: 1 / -1;
+      grid-row: 3;
       min-width: 0;
       margin-top: 6px;
       white-space: normal;
       line-height: 2;
     }
+    .post-content table td:last-child .va-btn { float: right; margin: 0 0 6px 10px; }
   }
 </style>
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">

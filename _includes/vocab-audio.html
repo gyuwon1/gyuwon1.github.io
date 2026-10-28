@@ -2,7 +2,7 @@
   .va-btn { font: inherit; display: inline-block; min-width: 32px; height: 32px; margin: 0 6px 0 4px; padding: 0 8px; border: 1px solid #c9c9c9; border-radius: 16px; background: #fff; color: #333; font-size: 14px; line-height: 30px; vertical-align: middle; cursor: pointer; }
   .va-btn.is-playing { background: #2a7ae2; border-color: #2a7ae2; color: #fff; }
   .va-btn.is-missing { opacity: .4; }
-  .va-note { margin-right: 6px; color: #c62828; font-size: 12px; vertical-align: middle; }
+  .va-toast { position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%); z-index: 99; padding: 9px 16px; border-radius: 20px; background: rgba(40,40,40,.92); color: #fff; font-size: 14px; pointer-events: none; }
 </style>
 
 <script>
@@ -18,12 +18,17 @@
     if (curBtn) { curBtn.classList.remove('is-playing'); curBtn = null; }
   }
 
-  function note(btn) {
-    var n = document.createElement('span');
-    n.className = 'va-note';
+  var toastTimer = null;
+  function note() {
+    var n = document.querySelector('.va-toast');
+    if (!n) {
+      n = document.createElement('div');
+      n.className = 'va-toast';
+      document.body.appendChild(n);
+    }
     n.textContent = '음성 준비 중';
-    btn.parentNode.insertBefore(n, btn.nextSibling);
-    setTimeout(function () { if (n.parentNode) n.parentNode.removeChild(n); }, 2500);
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () { if (n.parentNode) n.parentNode.removeChild(n); }, 2200);
   }
 
   function play(btn) {
@@ -36,7 +41,7 @@
     a.addEventListener('error', function () {
       if (curBtn === btn) stop();
       btn.classList.add('is-missing');
-      note(btn);
+      note();
     });
     var p = a.play();
     if (p && p.catch) p.catch(function () { if (curBtn === btn && a.error === null) stop(); });
