@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" role="img" aria-labelledby="t d">
+  <title id="t">192.168.1.0/24를 /26 네 개로 나누기</title>
+  <desc id="d">마지막 옥텟에서 호스트 비트 2개를 서브넷 번호로 빌리면 서브넷 4개가 생기고 서브넷마다 호스트 62대를 쓸 수 있다. 네트워크 주소는 .0 .64 .128 .192이다</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 12px; fill: #52606d; }
+    .head { font-size: 15px; font-weight: 700; }
+    .mono { font-family: "Consolas", "Menlo", monospace; font-size: 16px; }
+  </style>
+  <rect width="800" height="340" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+  <text x="400" y="28" text-anchor="middle" class="head">192.168.1.0/24 를 /26 으로 나누기 (마지막 옥텟 마스크 11000000 = 192)</text>
+  <rect x="240" y="44" width="40" height="36" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1.5"/>
+  <rect x="280" y="44" width="40" height="36" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1.5"/>
+  <rect x="320" y="44" width="40" height="36" fill="#f5f7fa" stroke="#9aa5b1" stroke-width="1.5"/>
+  <rect x="360" y="44" width="40" height="36" fill="#f5f7fa" stroke="#9aa5b1" stroke-width="1.5"/>
+  <rect x="400" y="44" width="40" height="36" fill="#f5f7fa" stroke="#9aa5b1" stroke-width="1.5"/>
+  <rect x="440" y="44" width="40" height="36" fill="#f5f7fa" stroke="#9aa5b1" stroke-width="1.5"/>
+  <rect x="480" y="44" width="40" height="36" fill="#f5f7fa" stroke="#9aa5b1" stroke-width="1.5"/>
+  <rect x="520" y="44" width="40" height="36" fill="#f5f7fa" stroke="#9aa5b1" stroke-width="1.5"/>
+  <text x="260" y="68" text-anchor="middle" class="mono">1</text>
+  <text x="300" y="68" text-anchor="middle" class="mono">1</text>
+  <text x="340" y="68" text-anchor="middle" class="mono">0</text>
+  <text x="380" y="68" text-anchor="middle" class="mono">0</text>
+  <text x="420" y="68" text-anchor="middle" class="mono">0</text>
+  <text x="460" y="68" text-anchor="middle" class="mono">0</text>
+  <text x="500" y="68" text-anchor="middle" class="mono">0</text>
+  <text x="540" y="68" text-anchor="middle" class="mono">0</text>
+  <text x="200" y="68" text-anchor="end" class="small">마지막 옥텟</text>
+  <text x="280" y="102" text-anchor="middle">서브넷 2비트</text>
+  <text x="440" y="102" text-anchor="middle">호스트 6비트</text>
+  <text x="280" y="120" text-anchor="middle" class="small">2² = 4개 서브넷</text>
+  <text x="440" y="120" text-anchor="middle" class="small">2⁶ − 2 = 62대</text>
+  <rect x="30" y="136" width="740" height="30" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1.5"/>
+  <text x="44" y="156">서브넷</text>
+  <text x="164" y="156">네트워크 주소</text>
+  <text x="344" y="156">호스트 범위</text>
+  <text x="614" y="156">브로드캐스트</text>
+  <rect x="30" y="166" width="740" height="34" fill="#ffffff" stroke="#9aa5b1" stroke-width="1"/>
+  <text x="44" y="188">1번째 (00)</text>
+  <text x="164" y="188">192.168.1.0/26</text>
+  <text x="344" y="188">192.168.1.1 ~ 192.168.1.62</text>
+  <text x="614" y="188">192.168.1.63</text>
+  <rect x="30" y="200" width="740" height="34" fill="#f5f7fa" stroke="#9aa5b1" stroke-width="1"/>
+  <text x="44" y="222">2번째 (01)</text>
+  <text x="164" y="222">192.168.1.64/26</text>
+  <text x="344" y="222">192.168.1.65 ~ 192.168.1.126</text>
+  <text x="614" y="222">192.168.1.127</text>
+  <rect x="30" y="234" width="740" height="34" fill="#ffffff" stroke="#9aa5b1" stroke-width="1"/>
+  <text x="44" y="256">3번째 (10)</text>
+  <text x="164" y="256">192.168.1.128/26</text>
+  <text x="344" y="256">192.168.1.129 ~ 192.168.1.190</text>
+  <text x="614" y="256">192.168.1.191</text>
+  <rect x="30" y="268" width="740" height="34" fill="#f5f7fa" stroke="#9aa5b1" stroke-width="1"/>
+  <text x="44" y="290">4번째 (11)</text>
+  <text x="164" y="290">192.168.1.192/26</text>
+  <text x="344" y="290">192.168.1.193 ~ 192.168.1.254</text>
+  <text x="614" y="290">192.168.1.255</text>
+  <text x="400" y="326" text-anchor="middle" class="small">네트워크 주소 사이의 간격은 블록 크기 64이고, 브로드캐스트는 다음 네트워크 주소 − 1이다</text>
+</svg>

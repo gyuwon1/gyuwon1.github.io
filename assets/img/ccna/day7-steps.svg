@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" role="img" aria-labelledby="t d">
+  <title id="t">172.16.35.200/20 계산 순서</title>
+  <desc id="d">프리픽스 길이에서 마스크가 갈리는 옥텟을 찾고, 블록 크기 16을 구하고, 35가 속한 블록의 시작 32를 네트워크 주소로 잡은 뒤, 다음 블록 직전을 브로드캐스트로 정하는 네 단계</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 12px; fill: #52606d; }
+    .head { font-size: 15px; font-weight: 700; }
+  </style>
+  <rect width="800" height="340" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+  <text x="400" y="30" text-anchor="middle" class="head">172.16.35.200/20 의 네트워크 주소, 브로드캐스트, 호스트 범위</text>
+  <rect x="30" y="50" width="220" height="56" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1.5"/>
+  <text x="46" y="74">1단계</text>
+  <text x="46" y="94" class="small">마스크가 갈리는 옥텟 찾기</text>
+  <rect x="250" y="50" width="520" height="56" fill="#f5f7fa" stroke="#9aa5b1" stroke-width="1.5"/>
+  <text x="266" y="74">/20 = 8 + 8 + 4 이므로 3번째 옥텟에서 갈린다</text>
+  <text x="266" y="94" class="small">마스크 255.255.240.0 (240 = 11110000)</text>
+  <rect x="30" y="116" width="220" height="56" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1.5"/>
+  <text x="46" y="140">2단계</text>
+  <text x="46" y="160" class="small">블록 크기 구하기</text>
+  <rect x="250" y="116" width="520" height="56" fill="#f5f7fa" stroke="#9aa5b1" stroke-width="1.5"/>
+  <text x="266" y="140">256 − 240 = 16</text>
+  <text x="266" y="160" class="small">3번째 옥텟의 네트워크 시작값 : 0, 16, 32, 48, 64 ...</text>
+  <rect x="30" y="182" width="220" height="56" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1.5"/>
+  <text x="46" y="206">3단계</text>
+  <text x="46" y="226" class="small">네트워크 주소 정하기</text>
+  <rect x="250" y="182" width="520" height="56" fill="#f5f7fa" stroke="#9aa5b1" stroke-width="1.5"/>
+  <text x="266" y="206">35는 32 이상 48 미만이므로 시작값은 32</text>
+  <text x="266" y="226" class="small">오른쪽 옥텟은 0 : 네트워크 주소 172.16.32.0</text>
+  <rect x="30" y="248" width="220" height="56" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1.5"/>
+  <text x="46" y="272">4단계</text>
+  <text x="46" y="292" class="small">브로드캐스트와 호스트 범위</text>
+  <rect x="250" y="248" width="520" height="56" fill="#f5f7fa" stroke="#9aa5b1" stroke-width="1.5"/>
+  <text x="266" y="272">브로드캐스트 172.16.47.255  (다음 블록 48 − 1, 오른쪽 옥텟은 255)</text>
+  <text x="266" y="292" class="small">호스트 범위 172.16.32.1 ~ 172.16.47.254  (2의 12제곱 − 2 = 4094대)</text>
+  <text x="400" y="326" text-anchor="middle" class="small">마스크가 갈리는 옥텟의 오른쪽은 네트워크 주소에서 0, 브로드캐스트에서 255가 된다</text>
+</svg>

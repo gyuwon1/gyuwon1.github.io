@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 310" role="img" aria-labelledby="t d">
+  <title id="t">/26 블록 크기로 네트워크 구하기</title>
+  <desc id="d">마지막 옥텟 0부터 255를 블록 크기 64로 나눈 그림. 네 블록의 시작이 0, 64, 128, 192이고 192.168.10.77은 두 번째 블록에 속하므로 네트워크 주소는 .64, 브로드캐스트는 .127, 호스트 범위는 .65부터 .126이다</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 12px; fill: #52606d; }
+    .head { font-size: 15px; font-weight: 700; }
+  </style>
+  <rect width="800" height="310" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+  <text x="400" y="30" text-anchor="middle" class="head">192.168.10.77/26 : 마지막 옥텟 0~255를 블록 크기 64로 나눈다</text>
+  <text x="40" y="76" text-anchor="start">네트워크 .0</text>
+  <text x="220" y="76" text-anchor="start">네트워크 .64</text>
+  <text x="400" y="76" text-anchor="start">네트워크 .128</text>
+  <text x="580" y="76" text-anchor="start">네트워크 .192</text>
+  <rect x="40" y="86" width="180" height="70" fill="#f5f7fa" stroke="#9aa5b1" stroke-width="1.5"/>
+  <rect x="220" y="86" width="180" height="70" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="2"/>
+  <rect x="400" y="86" width="180" height="70" fill="#f5f7fa" stroke="#9aa5b1" stroke-width="1.5"/>
+  <rect x="580" y="86" width="180" height="70" fill="#f5f7fa" stroke="#9aa5b1" stroke-width="1.5"/>
+  <text x="130" y="126" text-anchor="middle">호스트 .1 ~ .62</text>
+  <text x="310" y="126" text-anchor="middle">호스트 .65 ~ .126</text>
+  <text x="490" y="126" text-anchor="middle">호스트 .129 ~ .190</text>
+  <text x="670" y="126" text-anchor="middle">호스트 .193 ~ .254</text>
+  <text x="220" y="176" text-anchor="end" class="small">브로드캐스트 .63</text>
+  <text x="400" y="176" text-anchor="end" class="small">브로드캐스트 .127</text>
+  <text x="580" y="176" text-anchor="end" class="small">브로드캐스트 .191</text>
+  <text x="760" y="176" text-anchor="end" class="small">브로드캐스트 .255</text>
+  <line x1="257" y1="226" x2="257" y2="160" stroke="#c0392b" stroke-width="2"/>
+  <polygon points="257,158 252,168 262,168" fill="#c0392b"/>
+  <text x="257" y="246" text-anchor="middle">192.168.10.77  (64 ≤ 77 &lt; 128)</text>
+  <text x="400" y="288" text-anchor="middle">77이 들어가는 블록의 시작 64가 네트워크 주소, 다음 블록 시작 128의 바로 앞 127이 브로드캐스트다</text>
+</svg>
