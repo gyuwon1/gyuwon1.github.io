@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 280" role="img" aria-labelledby="t d">
+  <title id="t">192.168.1.0/24 VLSM 주소 공간</title>
+  <desc id="d">마지막 옥텟 0부터 255까지를 가로 막대로 나타낸 그림. A는 0~127(/25), B는 128~191(/26), C는 192~223(/27), D는 224~227(/30)이고 228부터 255는 미사용이다</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 12px; fill: #52606d; }
+    .head { font-size: 15px; font-weight: 700; }
+  </style>
+  <rect width="800" height="280" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+  <text x="400" y="30" text-anchor="middle" class="head">192.168.1.0/24의 마지막 옥텟 0~255</text>
+  <rect x="40" y="80" width="360" height="60" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="1.5"/>
+  <rect x="400" y="80" width="180" height="60" fill="#e8f5e9" stroke="#7fb685" stroke-width="1.5"/>
+  <rect x="580" y="80" width="90" height="60" fill="#fff3e0" stroke="#d9a35f" stroke-width="1.5"/>
+  <rect x="670" y="80" width="11" height="60" fill="#fce4ec" stroke="#c0392b" stroke-width="1.5"/>
+  <rect x="681" y="80" width="79" height="60" fill="#f5f7fa" stroke="#9aa5b1" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="220" y="116" text-anchor="middle">A  /25  (.0 ~ .127)</text>
+  <text x="490" y="116" text-anchor="middle">B  /26</text>
+  <text x="625" y="116" text-anchor="middle">C  /27</text>
+  <text x="720" y="116" text-anchor="middle" class="small">미사용</text>
+  <text x="40" y="162" text-anchor="middle" class="small">.0</text>
+  <text x="400" y="162" text-anchor="middle" class="small">.128</text>
+  <text x="580" y="162" text-anchor="middle" class="small">.192</text>
+  <text x="670" y="162" text-anchor="middle" class="small">.224</text>
+  <text x="760" y="162" text-anchor="middle" class="small">.255</text>
+  <text x="490" y="182" text-anchor="middle" class="small">.128 ~ .191</text>
+  <text x="625" y="182" text-anchor="middle" class="small">.192 ~ .223</text>
+  <line x1="675" y1="78" x2="675" y2="58" stroke="#c0392b" stroke-width="1.5"/>
+  <text x="675" y="50" text-anchor="middle">D  /30  (.224 ~ .227, 링크)</text>
+  <text x="400" y="236" text-anchor="middle">큰 블록부터 앞에서 차례로 놓고, 남은 .228 ~ .255는 나중에 쓴다</text>
+  <text x="400" y="258" text-anchor="middle" class="small">막대 길이는 주소 개수에 비례한다 (A 128개, B 64개, C 32개, D 4개)</text>
+</svg>

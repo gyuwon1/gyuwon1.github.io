@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 330" role="img" aria-labelledby="t d">
+  <title id="t">필요 호스트 수에서 프리픽스 길이 정하기</title>
+  <desc id="d">서브넷 A는 100대로 2의 7제곱 빼기 2가 126이므로 /25, B는 50대로 62이므로 /26, C는 20대로 30이므로 /27, D는 2대로 2이므로 /30을 고른다</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 12px; fill: #52606d; }
+    .head { font-size: 15px; font-weight: 700; }
+  </style>
+  <rect width="800" height="330" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+  <text x="400" y="30" text-anchor="middle" class="head">필요 호스트 수에 맞는 가장 작은 블록 고르기</text>
+  <text x="110" y="64" text-anchor="middle" class="small">서브넷</text>
+  <text x="330" y="64" text-anchor="middle" class="small">사용 가능 호스트 (2의 h제곱 - 2)</text>
+  <text x="600" y="64" text-anchor="middle" class="small">선택</text>
+  <rect x="40" y="76" width="140" height="44" fill="#f5f7fa" stroke="#9aa5b1"/>
+  <rect x="230" y="76" width="200" height="44" fill="#f5f7fa" stroke="#9aa5b1"/>
+  <rect x="520" y="76" width="160" height="44" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="2"/>
+  <text x="110" y="103" text-anchor="middle">A  필요 100대</text>
+  <text x="330" y="103" text-anchor="middle">h=7 : 126 (h=6은 62라서 부족)</text>
+  <text x="600" y="103" text-anchor="middle">/25</text>
+  <line x1="182" y1="98" x2="228" y2="98" stroke="#52606d" stroke-width="1.5"/>
+  <line x1="432" y1="98" x2="518" y2="98" stroke="#52606d" stroke-width="1.5"/>
+  <rect x="40" y="136" width="140" height="44" fill="#f5f7fa" stroke="#9aa5b1"/>
+  <rect x="230" y="136" width="200" height="44" fill="#f5f7fa" stroke="#9aa5b1"/>
+  <rect x="520" y="136" width="160" height="44" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="2"/>
+  <text x="110" y="163" text-anchor="middle">B  필요 50대</text>
+  <text x="330" y="163" text-anchor="middle">h=6 : 62 (h=5는 30이라서 부족)</text>
+  <text x="600" y="163" text-anchor="middle">/26</text>
+  <line x1="182" y1="158" x2="228" y2="158" stroke="#52606d" stroke-width="1.5"/>
+  <line x1="432" y1="158" x2="518" y2="158" stroke="#52606d" stroke-width="1.5"/>
+  <rect x="40" y="196" width="140" height="44" fill="#f5f7fa" stroke="#9aa5b1"/>
+  <rect x="230" y="196" width="200" height="44" fill="#f5f7fa" stroke="#9aa5b1"/>
+  <rect x="520" y="196" width="160" height="44" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="2"/>
+  <text x="110" y="223" text-anchor="middle">C  필요 20대</text>
+  <text x="330" y="223" text-anchor="middle">h=5 : 30 (h=4는 14라서 부족)</text>
+  <text x="600" y="223" text-anchor="middle">/27</text>
+  <line x1="182" y1="218" x2="228" y2="218" stroke="#52606d" stroke-width="1.5"/>
+  <line x1="432" y1="218" x2="518" y2="218" stroke="#52606d" stroke-width="1.5"/>
+  <rect x="40" y="256" width="140" height="44" fill="#f5f7fa" stroke="#9aa5b1"/>
+  <rect x="230" y="256" width="200" height="44" fill="#f5f7fa" stroke="#9aa5b1"/>
+  <rect x="520" y="256" width="160" height="44" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="2"/>
+  <text x="110" y="283" text-anchor="middle">D  필요 2대</text>
+  <text x="330" y="283" text-anchor="middle">h=2 : 2 (h=1은 0이라서 부족)</text>
+  <text x="600" y="283" text-anchor="middle">/30</text>
+  <line x1="182" y1="278" x2="228" y2="278" stroke="#52606d" stroke-width="1.5"/>
+  <line x1="432" y1="278" x2="518" y2="278" stroke="#52606d" stroke-width="1.5"/>
+</svg>
