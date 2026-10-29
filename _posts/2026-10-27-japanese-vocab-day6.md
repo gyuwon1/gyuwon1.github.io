@@ -7,12 +7,12 @@ categories: [japanese]
 
 | # | 한자 | 히라가나 | 뜻 | 예문 |
 |---|------|----------|-----|------|
-| 1 (복습) | 判定 | はんてい | 판정 | <ruby>検査<rt>けんさ</rt></ruby>の<ruby>結果<rt>けっか</rt></ruby>、<ruby>合格<rt>ごうかく</rt></ruby>と<ruby>判定<rt>はんてい</rt></ruby>された。<br>검사 결과 합격으로 판정되었다. |
-| 2 (복습) | 登録 | とうろく | 등록 | <ruby>会議室<rt>かいぎしつ</rt></ruby>の<ruby>予約<rt>よやく</rt></ruby>を<ruby>登録<rt>とうろく</rt></ruby>した。<br>회의실 예약을 등록했다. |
-| 3 (복습) | 選択 | せんたく | 선택 | <ruby>好<rt>す</rt></ruby>きな<ruby>色<rt>いろ</rt></ruby>を<ruby>選択<rt>せんたく</rt></ruby>する。<br>좋아하는 색을 선택한다. |
-| 4 (복습) | 反映 | はんえい | 반영 | <ruby>変更<rt>へんこう</rt></ruby>した<ruby>内容<rt>ないよう</rt></ruby>が<ruby>画面<rt>がめん</rt></ruby>に<ruby>反映<rt>はんえい</rt></ruby>された。<br>변경한 내용이 화면에 반영되었다. |
-| 5 (복습) | 単位 | たんい | 단위 | <ruby>容量<rt>ようりょう</rt></ruby>の<ruby>単位<rt>たんい</rt></ruby>はギガバイトだ。<br>용량의 단위는 기가바이트다. |
-| 6 (복습) | 全体 | ぜんたい | 전체 | <ruby>全体<rt>ぜんたい</rt></ruby>の<ruby>約<rt>やく</rt></ruby><ruby>半分<rt>はんぶん</rt></ruby>が<ruby>終<rt>お</rt></ruby>わった。<br>전체의 약 절반이 끝났다. |
+| 1 | **判定** | はんてい | 판정 | <ruby>検査<rt>けんさ</rt></ruby>の<ruby>結果<rt>けっか</rt></ruby>、<ruby>合格<rt>ごうかく</rt></ruby>と<ruby>判定<rt>はんてい</rt></ruby>された。<br>검사 결과 합격으로 판정되었다. |
+| 2 | **登録** | とうろく | 등록 | <ruby>会議室<rt>かいぎしつ</rt></ruby>の<ruby>予約<rt>よやく</rt></ruby>を<ruby>登録<rt>とうろく</rt></ruby>した。<br>회의실 예약을 등록했다. |
+| 3 | **選択** | せんたく | 선택 | <ruby>好<rt>す</rt></ruby>きな<ruby>色<rt>いろ</rt></ruby>を<ruby>選択<rt>せんたく</rt></ruby>する。<br>좋아하는 색을 선택한다. |
+| 4 | **反映** | はんえい | 반영 | <ruby>変更<rt>へんこう</rt></ruby>した<ruby>内容<rt>ないよう</rt></ruby>が<ruby>画面<rt>がめん</rt></ruby>に<ruby>反映<rt>はんえい</rt></ruby>された。<br>변경한 내용이 화면에 반영되었다. |
+| 5 | **単位** | たんい | 단위 | <ruby>容量<rt>ようりょう</rt></ruby>の<ruby>単位<rt>たんい</rt></ruby>はギガバイトだ。<br>용량의 단위는 기가바이트다. |
+| 6 | **全体** | ぜんたい | 전체 | <ruby>全体<rt>ぜんたい</rt></ruby>の<ruby>約<rt>やく</rt></ruby><ruby>半分<rt>はんぶん</rt></ruby>が<ruby>終<rt>お</rt></ruby>わった。<br>전체의 약 절반이 끝났다. |
 | 7 | 計算 | けいさん | 계산 | <ruby>電卓<rt>でんたく</rt></ruby>で<ruby>合計<rt>ごうけい</rt></ruby>を<ruby>計算<rt>けいさん</rt></ruby>する。<br>계산기로 합계를 계산한다. |
 | 8 | 数値 | すうち | 수치 | <ruby>測定<rt>そくてい</rt></ruby>した<ruby>数値<rt>すうち</rt></ruby>を<ruby>表<rt>ひょう</rt></ruby>に<ruby>記入<rt>きにゅう</rt></ruby>した。<br>측정한 수치를 표에 기입했다. |
 | 9 | 換算 | かんざん | 환산 | <ruby>円<rt>えん</rt></ruby>をドルに<ruby>換算<rt>かんざん</rt></ruby>する。<br>엔을 달러로 환산한다. |

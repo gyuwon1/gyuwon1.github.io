@@ -7,12 +7,12 @@ categories: [japanese]
 
 | # | 한자 | 히라가나 | 뜻 | 예문 |
 |---|------|----------|-----|------|
-| 1 (복습) | 接続 | せつぞく | 접속, 연결 | <ruby>会議室<rt>かいぎしつ</rt></ruby>のプロジェクターに<ruby>接続<rt>せつぞく</rt></ruby>する。<br>회의실 프로젝터에 연결한다. |
-| 2 (복습) | 変更 | へんこう | 변경 | パスワードを<ruby>定期的<rt>ていきてき</rt></ruby>に<ruby>変更<rt>へんこう</rt></ruby>する。<br>비밀번호를 정기적으로 변경한다. |
-| 3 (복습) | 追加 | ついか | 추가 | <ruby>注文<rt>ちゅうもん</rt></ruby>に<ruby>飲<rt>の</rt></ruby>み<ruby>物<rt>もの</rt></ruby>を<ruby>追加<rt>ついか</rt></ruby>した。<br>주문에 음료를 추가했다. |
-| 4 (복습) | 削除 | さくじょ | 삭제 | <ruby>古<rt>ふる</rt></ruby>い<ruby>写真<rt>しゃしん</rt></ruby>を<ruby>削除<rt>さくじょ</rt></ruby>して<ruby>空<rt>あ</rt></ruby>きを<ruby>作<rt>つく</rt></ruby>る。<br>오래된 사진을 삭제해서 여유 공간을 만든다. |
-| 5 (복습) | 制限 | せいげん | 제한 | <ruby>一度<rt>いちど</rt></ruby>に<ruby>送<rt>おく</rt></ruby>れる<ruby>容量<rt>ようりょう</rt></ruby>には<ruby>制限<rt>せいげん</rt></ruby>がある。<br>한 번에 보낼 수 있는 용량에는 제한이 있다. |
-| 6 (복습) | 許可 | きょか | 허가 | <ruby>撮影<rt>さつえい</rt></ruby>は<ruby>許可<rt>きょか</rt></ruby>されていない。<br>촬영은 허가되어 있지 않다. |
+| 1 | **接続** | せつぞく | 접속, 연결 | <ruby>会議室<rt>かいぎしつ</rt></ruby>のプロジェクターに<ruby>接続<rt>せつぞく</rt></ruby>する。<br>회의실 프로젝터에 연결한다. |
+| 2 | **変更** | へんこう | 변경 | パスワードを<ruby>定期的<rt>ていきてき</rt></ruby>に<ruby>変更<rt>へんこう</rt></ruby>する。<br>비밀번호를 정기적으로 변경한다. |
+| 3 | **追加** | ついか | 추가 | <ruby>注文<rt>ちゅうもん</rt></ruby>に<ruby>飲<rt>の</rt></ruby>み<ruby>物<rt>もの</rt></ruby>を<ruby>追加<rt>ついか</rt></ruby>した。<br>주문에 음료를 추가했다. |
+| 4 | **削除** | さくじょ | 삭제 | <ruby>古<rt>ふる</rt></ruby>い<ruby>写真<rt>しゃしん</rt></ruby>を<ruby>削除<rt>さくじょ</rt></ruby>して<ruby>空<rt>あ</rt></ruby>きを<ruby>作<rt>つく</rt></ruby>る。<br>오래된 사진을 삭제해서 여유 공간을 만든다. |
+| 5 | **制限** | せいげん | 제한 | <ruby>一度<rt>いちど</rt></ruby>に<ruby>送<rt>おく</rt></ruby>れる<ruby>容量<rt>ようりょう</rt></ruby>には<ruby>制限<rt>せいげん</rt></ruby>がある。<br>한 번에 보낼 수 있는 용량에는 제한이 있다. |
+| 6 | **許可** | きょか | 허가 | <ruby>撮影<rt>さつえい</rt></ruby>は<ruby>許可<rt>きょか</rt></ruby>されていない。<br>촬영은 허가되어 있지 않다. |
 | 7 | 設定 | せってい | 설정 | <ruby>画面<rt>がめん</rt></ruby>の<ruby>明<rt>あか</rt></ruby>るさを<ruby>設定<rt>せってい</rt></ruby>する。<br>화면 밝기를 설정한다. |
 | 8 | 通信 | つうしん | 통신 | <ruby>山<rt>やま</rt></ruby>の<ruby>中<rt>なか</rt></ruby>では<ruby>通信<rt>つうしん</rt></ruby>が<ruby>不安定<rt>ふあんてい</rt></ruby>になる。<br>산속에서는 통신이 불안정해진다. |
 | 9 | 機能 | きのう | 기능 | このアプリには<ruby>便利<rt>べんり</rt></ruby>な<ruby>機能<rt>きのう</rt></ruby>が<ruby>多<rt>おお</rt></ruby>い。<br>이 앱에는 편리한 기능이 많다. |

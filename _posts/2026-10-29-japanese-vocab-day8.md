@@ -7,12 +7,12 @@ categories: [japanese]
 
 | # | 한자 | 히라가나 | 뜻 | 예문 |
 |---|------|----------|-----|------|
-| 1 (복습) | 割当 | わりあて | 할당, 배정 | <ruby>新入社員<rt>しんにゅうしゃいん</rt></ruby>への<ruby>仕事<rt>しごと</rt></ruby>の<ruby>割当<rt>わりあて</rt></ruby>を<ruby>見直<rt>みなお</rt></ruby>した。<br>신입 사원에 대한 업무 배정을 다시 검토했다. |
-| 2 (복습) | 最大 | さいだい | 최대 | この<ruby>箱<rt>はこ</rt></ruby>には<ruby>最大<rt>さいだい</rt></ruby>で10キロの<ruby>荷物<rt>にもつ</rt></ruby>を<ruby>入<rt>い</rt></ruby>れられる。<br>이 상자에는 최대 10kg의 짐을 넣을 수 있다. |
-| 3 (복습) | 最小 | さいしょう | 최소 | <ruby>費用<rt>ひよう</rt></ruby>を<ruby>最小<rt>さいしょう</rt></ruby>にする<ruby>方法<rt>ほうほう</rt></ruby>を<ruby>考<rt>かんが</rt></ruby>える。<br>비용을 최소로 하는 방법을 생각한다. |
-| 4 (복습) | 規模 | きぼ | 규모 | <ruby>会社<rt>かいしゃ</rt></ruby>の<ruby>規模<rt>きぼ</rt></ruby>に<ruby>合<rt>あ</rt></ruby>わせて<ruby>設備<rt>せつび</rt></ruby>を<ruby>選<rt>えら</rt></ruby>ぶ。<br>회사 규모에 맞춰 설비를 고른다. |
-| 5 (복습) | 需要 | じゅよう | 수요 | <ruby>冬<rt>ふゆ</rt></ruby>は<ruby>暖房<rt>だんぼう</rt></ruby>の<ruby>需要<rt>じゅよう</rt></ruby>が<ruby>増<rt>ふ</rt></ruby>える。<br>겨울에는 난방 수요가 늘어난다. |
-| 6 (복습) | 検証 | けんしょう | 검증 | <ruby>新<rt>あたら</rt></ruby>しい<ruby>方法<rt>ほうほう</rt></ruby>が<ruby>本当<rt>ほんとう</rt></ruby>に<ruby>正<rt>ただ</rt></ruby>しいか<ruby>検証<rt>けんしょう</rt></ruby>した。<br>새로운 방법이 정말 올바른지 검증했다. |
+| 1 | **割当** | わりあて | 할당, 배정 | <ruby>新入社員<rt>しんにゅうしゃいん</rt></ruby>への<ruby>仕事<rt>しごと</rt></ruby>の<ruby>割当<rt>わりあて</rt></ruby>を<ruby>見直<rt>みなお</rt></ruby>した。<br>신입 사원에 대한 업무 배정을 다시 검토했다. |
+| 2 | **最大** | さいだい | 최대 | この<ruby>箱<rt>はこ</rt></ruby>には<ruby>最大<rt>さいだい</rt></ruby>で10キロの<ruby>荷物<rt>にもつ</rt></ruby>を<ruby>入<rt>い</rt></ruby>れられる。<br>이 상자에는 최대 10kg의 짐을 넣을 수 있다. |
+| 3 | **最小** | さいしょう | 최소 | <ruby>費用<rt>ひよう</rt></ruby>を<ruby>最小<rt>さいしょう</rt></ruby>にする<ruby>方法<rt>ほうほう</rt></ruby>を<ruby>考<rt>かんが</rt></ruby>える。<br>비용을 최소로 하는 방법을 생각한다. |
+| 4 | **規模** | きぼ | 규모 | <ruby>会社<rt>かいしゃ</rt></ruby>の<ruby>規模<rt>きぼ</rt></ruby>に<ruby>合<rt>あ</rt></ruby>わせて<ruby>設備<rt>せつび</rt></ruby>を<ruby>選<rt>えら</rt></ruby>ぶ。<br>회사 규모에 맞춰 설비를 고른다. |
+| 5 | **需要** | じゅよう | 수요 | <ruby>冬<rt>ふゆ</rt></ruby>は<ruby>暖房<rt>だんぼう</rt></ruby>の<ruby>需要<rt>じゅよう</rt></ruby>が<ruby>増<rt>ふ</rt></ruby>える。<br>겨울에는 난방 수요가 늘어난다. |
+| 6 | **検証** | けんしょう | 검증 | <ruby>新<rt>あたら</rt></ruby>しい<ruby>方法<rt>ほうほう</rt></ruby>が<ruby>本当<rt>ほんとう</rt></ruby>に<ruby>正<rt>ただ</rt></ruby>しいか<ruby>検証<rt>けんしょう</rt></ruby>した。<br>새로운 방법이 정말 올바른지 검증했다. |
 | 7 | 階層 | かいそう | 계층 | <ruby>会社<rt>かいしゃ</rt></ruby>の<ruby>組織<rt>そしき</rt></ruby>は<ruby>三<rt>みっ</rt></ruby>つの<ruby>階層<rt>かいそう</rt></ruby>に<ruby>分<rt>わ</rt></ruby>かれている。<br>회사 조직은 세 개의 계층으로 나뉘어 있다. |
 | 8 | 効果 | こうか | 효과 | この<ruby>薬<rt>くすり</rt></ruby>はすぐに<ruby>効果<rt>こうか</rt></ruby>が<ruby>出<rt>で</rt></ruby>た。<br>이 약은 바로 효과가 나타났다. |
 | 9 | 有効 | ゆうこう | 유효 | このチケットは<ruby>一年間<rt>いちねんかん</rt></ruby><ruby>有効<rt>ゆうこう</rt></ruby>だ。<br>이 티켓은 1년간 유효하다. |

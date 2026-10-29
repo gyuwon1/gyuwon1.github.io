@@ -7,12 +7,12 @@ categories: [japanese]
 
 | # | 한자 | 히라가나 | 뜻 | 예문 |
 |---|------|----------|-----|------|
-| 1 (복습) | 確認 | かくにん | 확인 | メールを<ruby>送<rt>おく</rt></ruby>る<ruby>前<rt>まえ</rt></ruby>にもう<ruby>一度<rt>いちど</rt></ruby><ruby>確認<rt>かくにん</rt></ruby>する。<br>메일을 보내기 전에 한 번 더 확인한다. |
-| 2 (복습) | 構成 | こうせい | 구성 | この<ruby>会社<rt>かいしゃ</rt></ruby>は<ruby>三<rt>みっ</rt></ruby>つの<ruby>部門<rt>ぶもん</rt></ruby>で<ruby>構成<rt>こうせい</rt></ruby>されている。<br>이 회사는 세 부문으로 구성되어 있다. |
-| 3 (복습) | 対応 | たいおう | 대응 | お<ruby>客様<rt>きゃくさま</rt></ruby>からの<ruby>問<rt>と</rt></ruby>い<ruby>合<rt>あ</rt></ruby>わせに<ruby>対応<rt>たいおう</rt></ruby>する。<br>고객 문의에 대응한다. |
-| 4 (복습) | 原因 | げんいん | 원인 | <ruby>遅延<rt>ちえん</rt></ruby>の<ruby>原因<rt>げんいん</rt></ruby>は<ruby>回線<rt>かいせん</rt></ruby>の<ruby>混雑<rt>こんざつ</rt></ruby>だった。<br>지연의 원인은 회선 혼잡이었다. |
-| 5 (복습) | 解決 | かいけつ | 해결 | トラブルは<ruby>無事<rt>ぶじ</rt></ruby>に<ruby>解決<rt>かいけつ</rt></ruby>した。<br>문제는 무사히 해결되었다. |
-| 6 (복습) | 準備 | じゅんび | 준비 | <ruby>試験<rt>しけん</rt></ruby>に<ruby>向<rt>む</rt></ruby>けて<ruby>準備<rt>じゅんび</rt></ruby>を<ruby>進<rt>すす</rt></ruby>めている。<br>시험을 향해 준비를 진행하고 있다. |
+| 1 | **確認** | かくにん | 확인 | メールを<ruby>送<rt>おく</rt></ruby>る<ruby>前<rt>まえ</rt></ruby>にもう<ruby>一度<rt>いちど</rt></ruby><ruby>確認<rt>かくにん</rt></ruby>する。<br>메일을 보내기 전에 한 번 더 확인한다. |
+| 2 | **構成** | こうせい | 구성 | この<ruby>会社<rt>かいしゃ</rt></ruby>は<ruby>三<rt>みっ</rt></ruby>つの<ruby>部門<rt>ぶもん</rt></ruby>で<ruby>構成<rt>こうせい</rt></ruby>されている。<br>이 회사는 세 부문으로 구성되어 있다. |
+| 3 | **対応** | たいおう | 대응 | お<ruby>客様<rt>きゃくさま</rt></ruby>からの<ruby>問<rt>と</rt></ruby>い<ruby>合<rt>あ</rt></ruby>わせに<ruby>対応<rt>たいおう</rt></ruby>する。<br>고객 문의에 대응한다. |
+| 4 | **原因** | げんいん | 원인 | <ruby>遅延<rt>ちえん</rt></ruby>の<ruby>原因<rt>げんいん</rt></ruby>は<ruby>回線<rt>かいせん</rt></ruby>の<ruby>混雑<rt>こんざつ</rt></ruby>だった。<br>지연의 원인은 회선 혼잡이었다. |
+| 5 | **解決** | かいけつ | 해결 | トラブルは<ruby>無事<rt>ぶじ</rt></ruby>に<ruby>解決<rt>かいけつ</rt></ruby>した。<br>문제는 무사히 해결되었다. |
+| 6 | **準備** | じゅんび | 준비 | <ruby>試験<rt>しけん</rt></ruby>に<ruby>向<rt>む</rt></ruby>けて<ruby>準備<rt>じゅんび</rt></ruby>を<ruby>進<rt>すす</rt></ruby>めている。<br>시험을 향해 준비를 진행하고 있다. |
 | 7 | 検討 | けんとう | 검토 | <ruby>転職<rt>てんしょく</rt></ruby>を<ruby>検討<rt>けんとう</rt></ruby>している。<br>이직을 검토하고 있다. |
 | 8 | 調整 | ちょうせい | 조정 | <ruby>会議<rt>かいぎ</rt></ruby>の<ruby>日程<rt>にってい</rt></ruby>を<ruby>調整<rt>ちょうせい</rt></ruby>する。<br>회의 일정을 조정한다. |
 | 9 | 比較 | ひかく | 비교 | <ruby>二<rt>ふた</rt></ruby>つのプランを<ruby>比較<rt>ひかく</rt></ruby>して<ruby>選<rt>えら</rt></ruby>ぶ。<br>두 가지 플랜을 비교해서 고른다. |

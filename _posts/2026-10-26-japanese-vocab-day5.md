@@ -7,12 +7,12 @@ categories: [japanese]
 
 | # | 한자 | 히라가나 | 뜻 | 예문 |
 |---|------|----------|-----|------|
-| 1 (복습) | 速度 | そくど | 속도 | <ruby>風<rt>かぜ</rt></ruby>が<ruby>強<rt>つよ</rt></ruby>くて<ruby>自転車<rt>じてんしゃ</rt></ruby>の<ruby>速度<rt>そくど</rt></ruby>が<ruby>出<rt>で</rt></ruby>ない。<br>바람이 강해서 자전거 속도가 나지 않는다. |
-| 2 (복습) | 遅延 | ちえん | 지연 | <ruby>電車<rt>でんしゃ</rt></ruby>の<ruby>遅延<rt>ちえん</rt></ruby>で<ruby>会議<rt>かいぎ</rt></ruby>に<ruby>遅<rt>おく</rt></ruby>れた。<br>전철 지연 때문에 회의에 늦었다. |
-| 3 (복습) | 転送 | てんそう | 전송, 전달 | <ruby>電話<rt>でんわ</rt></ruby>を<ruby>隣<rt>となり</rt></ruby>の<ruby>席<rt>せき</rt></ruby>に<ruby>転送<rt>てんそう</rt></ruby>してもらった。<br>전화를 옆자리로 전달받았다. |
-| 4 (복습) | 応答 | おうとう | 응답 | <ruby>呼<rt>よ</rt></ruby>びかけても<ruby>応答<rt>おうとう</rt></ruby>がない。<br>불러도 응답이 없다. |
-| 5 (복습) | 確保 | かくほ | 확보 | <ruby>席<rt>せき</rt></ruby>を<ruby>確保<rt>かくほ</rt></ruby>するために<ruby>早<rt>はや</rt></ruby>く<ruby>行<rt>い</rt></ruby>った。<br>자리를 확보하기 위해 일찍 갔다. |
-| 6 (복습) | 分割 | ぶんかつ | 분할 | <ruby>大<rt>おお</rt></ruby>きなファイルを<ruby>二<rt>ふた</rt></ruby>つに<ruby>分割<rt>ぶんかつ</rt></ruby>した。<br>큰 파일을 둘로 분할했다. |
+| 1 | **速度** | そくど | 속도 | <ruby>風<rt>かぜ</rt></ruby>が<ruby>強<rt>つよ</rt></ruby>くて<ruby>自転車<rt>じてんしゃ</rt></ruby>の<ruby>速度<rt>そくど</rt></ruby>が<ruby>出<rt>で</rt></ruby>ない。<br>바람이 강해서 자전거 속도가 나지 않는다. |
+| 2 | **遅延** | ちえん | 지연 | <ruby>電車<rt>でんしゃ</rt></ruby>の<ruby>遅延<rt>ちえん</rt></ruby>で<ruby>会議<rt>かいぎ</rt></ruby>に<ruby>遅<rt>おく</rt></ruby>れた。<br>전철 지연 때문에 회의에 늦었다. |
+| 3 | **転送** | てんそう | 전송, 전달 | <ruby>電話<rt>でんわ</rt></ruby>を<ruby>隣<rt>となり</rt></ruby>の<ruby>席<rt>せき</rt></ruby>に<ruby>転送<rt>てんそう</rt></ruby>してもらった。<br>전화를 옆자리로 전달받았다. |
+| 4 | **応答** | おうとう | 응답 | <ruby>呼<rt>よ</rt></ruby>びかけても<ruby>応答<rt>おうとう</rt></ruby>がない。<br>불러도 응답이 없다. |
+| 5 | **確保** | かくほ | 확보 | <ruby>席<rt>せき</rt></ruby>を<ruby>確保<rt>かくほ</rt></ruby>するために<ruby>早<rt>はや</rt></ruby>く<ruby>行<rt>い</rt></ruby>った。<br>자리를 확보하기 위해 일찍 갔다. |
+| 6 | **分割** | ぶんかつ | 분할 | <ruby>大<rt>おお</rt></ruby>きなファイルを<ruby>二<rt>ふた</rt></ruby>つに<ruby>分割<rt>ぶんかつ</rt></ruby>した。<br>큰 파일을 둘로 분할했다. |
 | 7 | 住所 | じゅうしょ | 주소 | <ruby>荷物<rt>にもつ</rt></ruby>に<ruby>住所<rt>じゅうしょ</rt></ruby>を<ruby>書<rt>か</rt></ruby>く。<br>짐에 주소를 쓴다. |
 | 8 | 識別 | しきべつ | 식별 | <ruby>色<rt>いろ</rt></ruby>で<ruby>種類<rt>しゅるい</rt></ruby>を<ruby>識別<rt>しきべつ</rt></ruby>する。<br>색으로 종류를 식별한다. |
 | 9 | 区別 | くべつ | 구별 | <ruby>双子<rt>ふたご</rt></ruby>を<ruby>区別<rt>くべつ</rt></ruby>するのは<ruby>難<rt>むずか</rt></ruby>しい。<br>쌍둥이를 구별하는 것은 어렵다. |

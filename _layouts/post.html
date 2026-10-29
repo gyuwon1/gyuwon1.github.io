@@ -27,6 +27,14 @@ layout: default
   .post-content table td:last-child { line-height: 2; }
   .post-content table rt { font-size: 0.55em; }
 
+  /* 복습 단어(한자 칸이 굵게 표시된 행): 진한 색과 왼쪽 막대로 강조한다 */
+  .post-content table td:nth-child(2) strong { color: #0b57d0; font-weight: 800; }
+  .post-content table tr:has(td:nth-child(2) > strong) { box-shadow: inset 3px 0 0 #0b57d0; }
+  @media (prefers-color-scheme: dark) {
+    .post-content table td:nth-child(2) strong { color: #8ab4f8; }
+    .post-content table tr:has(td:nth-child(2) > strong) { box-shadow: inset 3px 0 0 #8ab4f8; }
+  }
+
   @media (max-width: 640px) {
     .post-content table {
       display: block;

@@ -7,12 +7,12 @@ categories: [japanese]
 
 | # | 한자 | 히라가나 | 뜻 | 예문 |
 |---|------|----------|-----|------|
-| 1 (복습) | 設定 | せってい | 설정 | <ruby>通知<rt>つうち</rt></ruby>の<ruby>音<rt>おと</rt></ruby>を<ruby>設定<rt>せってい</rt></ruby>で<ruby>切<rt>き</rt></ruby>った。<br>알림 소리를 설정에서 껐다. |
-| 2 (복습) | 通信 | つうしん | 통신 | <ruby>通信<rt>つうしん</rt></ruby><ruby>量<rt>りょう</rt></ruby>が<ruby>月<rt>つき</rt></ruby>の<ruby>上限<rt>じょうげん</rt></ruby>に<ruby>近<rt>ちか</rt></ruby>づいている。<br>통신량이 월 상한에 가까워지고 있다. |
-| 3 (복습) | 障害 | しょうがい | 장애 | <ruby>障害<rt>しょうがい</rt></ruby>の<ruby>原因<rt>げんいん</rt></ruby>はまだ<ruby>分<rt>わ</rt></ruby>かっていない。<br>장애의 원인은 아직 알지 못한다. |
-| 4 (복습) | 認証 | にんしょう | 인증 | <ruby>認証<rt>にんしょう</rt></ruby>コードがメールで<ruby>届<rt>とど</rt></ruby>いた。<br>인증 코드가 메일로 도착했다. |
-| 5 (복습) | 共有 | きょうゆう | 공유 | <ruby>資料<rt>しりょう</rt></ruby>はフォルダで<ruby>共有<rt>きょうゆう</rt></ruby>してある。<br>자료는 폴더로 공유해 두었다. |
-| 6 (복습) | 担当 | たんとう | 담당 | <ruby>営業<rt>えいぎょう</rt></ruby>の<ruby>担当<rt>たんとう</rt></ruby>が<ruby>変<rt>か</rt></ruby>わった。<br>영업 담당이 바뀌었다. |
+| 1 | **設定** | せってい | 설정 | <ruby>通知<rt>つうち</rt></ruby>の<ruby>音<rt>おと</rt></ruby>を<ruby>設定<rt>せってい</rt></ruby>で<ruby>切<rt>き</rt></ruby>った。<br>알림 소리를 설정에서 껐다. |
+| 2 | **通信** | つうしん | 통신 | <ruby>通信<rt>つうしん</rt></ruby><ruby>量<rt>りょう</rt></ruby>が<ruby>月<rt>つき</rt></ruby>の<ruby>上限<rt>じょうげん</rt></ruby>に<ruby>近<rt>ちか</rt></ruby>づいている。<br>통신량이 월 상한에 가까워지고 있다. |
+| 3 | **障害** | しょうがい | 장애 | <ruby>障害<rt>しょうがい</rt></ruby>の<ruby>原因<rt>げんいん</rt></ruby>はまだ<ruby>分<rt>わ</rt></ruby>かっていない。<br>장애의 원인은 아직 알지 못한다. |
+| 4 | **認証** | にんしょう | 인증 | <ruby>認証<rt>にんしょう</rt></ruby>コードがメールで<ruby>届<rt>とど</rt></ruby>いた。<br>인증 코드가 메일로 도착했다. |
+| 5 | **共有** | きょうゆう | 공유 | <ruby>資料<rt>しりょう</rt></ruby>はフォルダで<ruby>共有<rt>きょうゆう</rt></ruby>してある。<br>자료는 폴더로 공유해 두었다. |
+| 6 | **担当** | たんとう | 담당 | <ruby>営業<rt>えいぎょう</rt></ruby>の<ruby>担当<rt>たんとう</rt></ruby>が<ruby>変<rt>か</rt></ruby>わった。<br>영업 담당이 바뀌었다. |
 | 7 | 目的 | もくてき | 목적 | <ruby>今日<rt>きょう</rt></ruby>の<ruby>会議<rt>かいぎ</rt></ruby>の<ruby>目的<rt>もくてき</rt></ruby>を<ruby>確<rt>たし</rt></ruby>かめる。<br>오늘 회의의 목적을 확인한다. |
 | 8 | 結果 | けっか | 결과 | <ruby>試験<rt>しけん</rt></ruby>の<ruby>結果<rt>けっか</rt></ruby>は<ruby>来週<rt>らいしゅう</rt></ruby><ruby>出<rt>で</rt></ruby>る。<br>시험 결과는 다음 주에 나온다. |
 | 9 | 方法 | ほうほう | 방법 | もっと<ruby>簡単<rt>かんたん</rt></ruby>な<ruby>方法<rt>ほうほう</rt></ruby>を<ruby>探<rt>さが</rt></ruby>している。<br>더 간단한 방법을 찾고 있다. |

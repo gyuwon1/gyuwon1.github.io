@@ -7,12 +7,12 @@ categories: [japanese]
 
 | # | 한자 | 히라가나 | 뜻 | 예문 |
 |---|------|----------|-----|------|
-| 1 (복습) | 余裕 | よゆう | 여유 | <ruby>今日<rt>きょう</rt></ruby>は<ruby>仕事<rt>しごと</rt></ruby>に<ruby>余裕<rt>よゆう</rt></ruby>があるので、<ruby>早<rt>はや</rt></ruby>く<ruby>帰<rt>かえ</rt></ruby>れる。<br>오늘은 일에 여유가 있어서 일찍 돌아갈 수 있다. |
-| 2 (복습) | 拡張 | かくちょう | 확장 | <ruby>倉庫<rt>そうこ</rt></ruby>を<ruby>拡張<rt>かくちょう</rt></ruby>して、<ruby>荷物<rt>にもつ</rt></ruby>を<ruby>置<rt>お</rt></ruby>く<ruby>場所<rt>ばしょ</rt></ruby>を<ruby>増<rt>ふ</rt></ruby>やした。<br>창고를 확장해서 짐을 둘 장소를 늘렸다. |
-| 3 (복습) | 整理 | せいり | 정리 | <ruby>古<rt>ふる</rt></ruby>い<ruby>書類<rt>しょるい</rt></ruby>を<ruby>整理<rt>せいり</rt></ruby>して<ruby>捨<rt>す</rt></ruby>てた。<br>오래된 서류를 정리해서 버렸다. |
-| 4 (복습) | 境界 | きょうかい | 경계 | <ruby>庭<rt>にわ</rt></ruby>に<ruby>隣<rt>となり</rt></ruby>の<ruby>家<rt>いえ</rt></ruby>との<ruby>境界<rt>きょうかい</rt></ruby>を<ruby>示<rt>しめ</rt></ruby>す<ruby>線<rt>せん</rt></ruby>がある。<br>정원에 이웃집과의 경계를 나타내는 선이 있다. |
-| 5 (복습) | 正確 | せいかく | 정확 | この<ruby>地図<rt>ちず</rt></ruby>は<ruby>正確<rt>せいかく</rt></ruby>で、<ruby>迷<rt>まよ</rt></ruby>わずに<ruby>着<rt>つ</rt></ruby>いた。<br>이 지도는 정확해서 헤매지 않고 도착했다. |
-| 6 (복습) | 具体 | ぐたい | 구체 | <ruby>具体<rt>ぐたい</rt></ruby><ruby>的<rt>てき</rt></ruby>な<ruby>計画<rt>けいかく</rt></ruby>はまだ<ruby>決<rt>き</rt></ruby>まっていない。<br>구체적인 계획은 아직 정해지지 않았다. |
+| 1 | **余裕** | よゆう | 여유 | <ruby>今日<rt>きょう</rt></ruby>は<ruby>仕事<rt>しごと</rt></ruby>に<ruby>余裕<rt>よゆう</rt></ruby>があるので、<ruby>早<rt>はや</rt></ruby>く<ruby>帰<rt>かえ</rt></ruby>れる。<br>오늘은 일에 여유가 있어서 일찍 돌아갈 수 있다. |
+| 2 | **拡張** | かくちょう | 확장 | <ruby>倉庫<rt>そうこ</rt></ruby>を<ruby>拡張<rt>かくちょう</rt></ruby>して、<ruby>荷物<rt>にもつ</rt></ruby>を<ruby>置<rt>お</rt></ruby>く<ruby>場所<rt>ばしょ</rt></ruby>を<ruby>増<rt>ふ</rt></ruby>やした。<br>창고를 확장해서 짐을 둘 장소를 늘렸다. |
+| 3 | **整理** | せいり | 정리 | <ruby>古<rt>ふる</rt></ruby>い<ruby>書類<rt>しょるい</rt></ruby>を<ruby>整理<rt>せいり</rt></ruby>して<ruby>捨<rt>す</rt></ruby>てた。<br>오래된 서류를 정리해서 버렸다. |
+| 4 | **境界** | きょうかい | 경계 | <ruby>庭<rt>にわ</rt></ruby>に<ruby>隣<rt>となり</rt></ruby>の<ruby>家<rt>いえ</rt></ruby>との<ruby>境界<rt>きょうかい</rt></ruby>を<ruby>示<rt>しめ</rt></ruby>す<ruby>線<rt>せん</rt></ruby>がある。<br>정원에 이웃집과의 경계를 나타내는 선이 있다. |
+| 5 | **正確** | せいかく | 정확 | この<ruby>地図<rt>ちず</rt></ruby>は<ruby>正確<rt>せいかく</rt></ruby>で、<ruby>迷<rt>まよ</rt></ruby>わずに<ruby>着<rt>つ</rt></ruby>いた。<br>이 지도는 정확해서 헤매지 않고 도착했다. |
+| 6 | **具体** | ぐたい | 구체 | <ruby>具体<rt>ぐたい</rt></ruby><ruby>的<rt>てき</rt></ruby>な<ruby>計画<rt>けいかく</rt></ruby>はまだ<ruby>決<rt>き</rt></ruby>まっていない。<br>구체적인 계획은 아직 정해지지 않았다. |
 | 7 | 割当 | わりあて | 할당, 배정 | <ruby>席<rt>せき</rt></ruby>の<ruby>割当<rt>わりあて</rt></ruby>は<ruby>先生<rt>せんせい</rt></ruby>が<ruby>決<rt>き</rt></ruby>める。<br>좌석 배정은 선생님이 정한다. |
 | 8 | 区画 | くかく | 구획 | <ruby>駐車場<rt>ちゅうしゃじょう</rt></ruby>は<ruby>白<rt>しろ</rt></ruby>い<ruby>線<rt>せん</rt></ruby>で<ruby>区画<rt>くかく</rt></ruby>されている。<br>주차장은 흰 선으로 구획되어 있다. |
 | 9 | 最大 | さいだい | 최대 | このバスには<ruby>最大<rt>さいだい</rt></ruby>で40<ruby>人<rt>にん</rt></ruby><ruby>乗<rt>の</rt></ruby>れる。<br>이 버스에는 최대 40명이 탈 수 있다. |
