@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" role="img" aria-labelledby="t d">
+  <title id="t">IPv6 주소 표기 압축 과정</title>
+  <desc id="d">2001:0db8:0000:0000:0000:ff00:0042:8329에서 각 그룹 앞의 0을 지우고 연속된 0 그룹 세 개를 ::로 바꿔 2001:db8::ff00:42:8329로 줄인다</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 12px; fill: #52606d; }
+    .head { font-size: 15px; font-weight: 700; }
+    .mono { font-family: Consolas, "Courier New", monospace; font-size: 15px; }
+  </style>
+  <rect width="800" height="340" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+  <text x="400" y="30" text-anchor="middle" class="head">128비트 주소를 16비트씩 8그룹으로 쓰고 두 단계로 줄인다</text>
+  <text x="40" y="66" class="small">원래 표기 (그룹마다 16진수 4자리)</text>
+  <rect x="40" y="76" width="84" height="40" fill="#f5f7fa" stroke="#9aa5b1"/>
+  <text x="82.0" y="101" text-anchor="middle" class="mono">2001</text>
+  <rect x="130" y="76" width="84" height="40" fill="#f5f7fa" stroke="#9aa5b1"/>
+  <text x="172.0" y="101" text-anchor="middle" class="mono">0db8</text>
+  <rect x="220" y="76" width="84" height="40" fill="#f5f7fa" stroke="#9aa5b1"/>
+  <text x="262.0" y="101" text-anchor="middle" class="mono">0000</text>
+  <rect x="310" y="76" width="84" height="40" fill="#f5f7fa" stroke="#9aa5b1"/>
+  <text x="352.0" y="101" text-anchor="middle" class="mono">0000</text>
+  <rect x="400" y="76" width="84" height="40" fill="#f5f7fa" stroke="#9aa5b1"/>
+  <text x="442.0" y="101" text-anchor="middle" class="mono">0000</text>
+  <rect x="490" y="76" width="84" height="40" fill="#f5f7fa" stroke="#9aa5b1"/>
+  <text x="532.0" y="101" text-anchor="middle" class="mono">ff00</text>
+  <rect x="580" y="76" width="84" height="40" fill="#f5f7fa" stroke="#9aa5b1"/>
+  <text x="622.0" y="101" text-anchor="middle" class="mono">0042</text>
+  <rect x="670" y="76" width="84" height="40" fill="#f5f7fa" stroke="#9aa5b1"/>
+  <text x="712.0" y="101" text-anchor="middle" class="mono">8329</text>
+  <text x="40" y="146" class="small">1단계: 각 그룹 앞의 0을 지운다 (그룹이 모두 0이면 0 하나는 남긴다)</text>
+  <rect x="40" y="156" width="84" height="40" fill="#f5f7fa" stroke="#9aa5b1"/>
+  <text x="82.0" y="181" text-anchor="middle" class="mono">2001</text>
+  <rect x="130" y="156" width="84" height="40" fill="#fff8e1" stroke="#d4a017"/>
+  <text x="172.0" y="181" text-anchor="middle" class="mono">db8</text>
+  <rect x="220" y="156" width="84" height="40" fill="#fff8e1" stroke="#d4a017"/>
+  <text x="262.0" y="181" text-anchor="middle" class="mono">0</text>
+  <rect x="310" y="156" width="84" height="40" fill="#fff8e1" stroke="#d4a017"/>
+  <text x="352.0" y="181" text-anchor="middle" class="mono">0</text>
+  <rect x="400" y="156" width="84" height="40" fill="#fff8e1" stroke="#d4a017"/>
+  <text x="442.0" y="181" text-anchor="middle" class="mono">0</text>
+  <rect x="490" y="156" width="84" height="40" fill="#f5f7fa" stroke="#9aa5b1"/>
+  <text x="532.0" y="181" text-anchor="middle" class="mono">ff00</text>
+  <rect x="580" y="156" width="84" height="40" fill="#fff8e1" stroke="#d4a017"/>
+  <text x="622.0" y="181" text-anchor="middle" class="mono">42</text>
+  <rect x="670" y="156" width="84" height="40" fill="#f5f7fa" stroke="#9aa5b1"/>
+  <text x="712.0" y="181" text-anchor="middle" class="mono">8329</text>
+  <text x="40" y="226" class="small">2단계: 연속된 0 그룹을 :: 하나로 바꾼다 (주소 전체에서 한 번만)</text>
+  <rect x="40" y="236" width="84" height="40" fill="#f5f7fa" stroke="#9aa5b1"/>
+  <text x="82.0" y="261" text-anchor="middle" class="mono">2001</text>
+  <rect x="130" y="236" width="84" height="40" fill="#f5f7fa" stroke="#9aa5b1"/>
+  <text x="172.0" y="261" text-anchor="middle" class="mono">db8</text>
+  <rect x="220" y="236" width="264" height="40" fill="#e3f2fd" stroke="#7aa5d2"/>
+  <text x="352.0" y="261" text-anchor="middle" class="mono">::</text>
+  <rect x="490" y="236" width="84" height="40" fill="#f5f7fa" stroke="#9aa5b1"/>
+  <text x="532.0" y="261" text-anchor="middle" class="mono">ff00</text>
+  <rect x="580" y="236" width="84" height="40" fill="#f5f7fa" stroke="#9aa5b1"/>
+  <text x="622.0" y="261" text-anchor="middle" class="mono">42</text>
+  <rect x="670" y="236" width="84" height="40" fill="#f5f7fa" stroke="#9aa5b1"/>
+  <text x="712.0" y="261" text-anchor="middle" class="mono">8329</text>
+  <text x="400" y="306" text-anchor="middle" class="mono">2001:db8::ff00:42:8329</text>
+  <text x="400" y="326" text-anchor="middle" class="small">:: 자리에 들어갈 0 그룹 수 = 8 - 보이는 그룹 수 (여기서는 8 - 5 = 3)</text>
+</svg>

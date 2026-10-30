@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" role="img" aria-labelledby="t d">
+  <title id="t">IPv6 주소 종류</title>
+  <desc id="d">글로벌 유니캐스트 2000::/3, 유니크 로컬 FC00::/7, 링크 로컬 FE80::/10, 멀티캐스트 FF00::/8, 루프백 ::1, 미지정 ::의 프리픽스와 도달 범위</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 12px; fill: #52606d; }
+    .head { font-size: 15px; font-weight: 700; }
+    .mono { font-family: Consolas, "Courier New", monospace; font-size: 15px; }
+  </style>
+  <rect width="800" height="380" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+  <text x="400" y="30" text-anchor="middle" class="head">IPv6 주소 종류와 프리픽스</text>
+  <rect x="40" y="48" width="190" height="36" fill="#e3f2fd" stroke="#7aa5d2"/>
+  <text x="135.0" y="71" text-anchor="middle" class="head">종류</text>
+  <rect x="230" y="48" width="150" height="36" fill="#e3f2fd" stroke="#7aa5d2"/>
+  <text x="305.0" y="71" text-anchor="middle" class="head">프리픽스</text>
+  <rect x="380" y="48" width="170" height="36" fill="#e3f2fd" stroke="#7aa5d2"/>
+  <text x="465.0" y="71" text-anchor="middle" class="head">도달 범위</text>
+  <rect x="550" y="48" width="210" height="36" fill="#e3f2fd" stroke="#7aa5d2"/>
+  <text x="655.0" y="71" text-anchor="middle" class="head">예</text>
+  <rect x="40" y="84" width="190" height="42" fill="#f5f7fa" stroke="#9aa5b1"/>
+  <text x="135.0" y="110" text-anchor="middle">글로벌 유니캐스트</text>
+  <rect x="230" y="84" width="150" height="42" fill="#f5f7fa" stroke="#9aa5b1"/>
+  <text x="305.0" y="110" text-anchor="middle" class="mono">2000::/3</text>
+  <rect x="380" y="84" width="170" height="42" fill="#f5f7fa" stroke="#9aa5b1"/>
+  <text x="465.0" y="110" text-anchor="middle">인터넷 전체</text>
+  <rect x="550" y="84" width="210" height="42" fill="#f5f7fa" stroke="#9aa5b1"/>
+  <text x="655.0" y="110" text-anchor="middle" class="mono">2001:db8:1:1::1</text>
+  <rect x="40" y="126" width="190" height="42" fill="#f5f7fa" stroke="#9aa5b1"/>
+  <text x="135.0" y="152" text-anchor="middle">유니크 로컬</text>
+  <rect x="230" y="126" width="150" height="42" fill="#f5f7fa" stroke="#9aa5b1"/>
+  <text x="305.0" y="152" text-anchor="middle" class="mono">FC00::/7</text>
+  <rect x="380" y="126" width="170" height="42" fill="#f5f7fa" stroke="#9aa5b1"/>
+  <text x="465.0" y="152" text-anchor="middle">조직 내부</text>
+  <rect x="550" y="126" width="210" height="42" fill="#f5f7fa" stroke="#9aa5b1"/>
+  <text x="655.0" y="152" text-anchor="middle" class="mono">FD12:3456:789A::1</text>
+  <rect x="40" y="168" width="190" height="42" fill="#f5f7fa" stroke="#9aa5b1"/>
+  <text x="135.0" y="194" text-anchor="middle">링크 로컬</text>
+  <rect x="230" y="168" width="150" height="42" fill="#f5f7fa" stroke="#9aa5b1"/>
+  <text x="305.0" y="194" text-anchor="middle" class="mono">FE80::/10</text>
+  <rect x="380" y="168" width="170" height="42" fill="#f5f7fa" stroke="#9aa5b1"/>
+  <text x="465.0" y="194" text-anchor="middle">같은 링크 안</text>
+  <rect x="550" y="168" width="210" height="42" fill="#f5f7fa" stroke="#9aa5b1"/>
+  <text x="655.0" y="194" text-anchor="middle" class="mono">FE80::1</text>
+  <rect x="40" y="210" width="190" height="42" fill="#f5f7fa" stroke="#9aa5b1"/>
+  <text x="135.0" y="236" text-anchor="middle">멀티캐스트</text>
+  <rect x="230" y="210" width="150" height="42" fill="#f5f7fa" stroke="#9aa5b1"/>
+  <text x="305.0" y="236" text-anchor="middle" class="mono">FF00::/8</text>
+  <rect x="380" y="210" width="170" height="42" fill="#f5f7fa" stroke="#9aa5b1"/>
+  <text x="465.0" y="236" text-anchor="middle">그룹 대상</text>
+  <rect x="550" y="210" width="210" height="42" fill="#f5f7fa" stroke="#9aa5b1"/>
+  <text x="655.0" y="236" text-anchor="middle" class="mono">FF02::1</text>
+  <rect x="40" y="252" width="190" height="42" fill="#f5f7fa" stroke="#9aa5b1"/>
+  <text x="135.0" y="278" text-anchor="middle">루프백</text>
+  <rect x="230" y="252" width="150" height="42" fill="#f5f7fa" stroke="#9aa5b1"/>
+  <text x="305.0" y="278" text-anchor="middle" class="mono">::1/128</text>
+  <rect x="380" y="252" width="170" height="42" fill="#f5f7fa" stroke="#9aa5b1"/>
+  <text x="465.0" y="278" text-anchor="middle">자기 자신</text>
+  <rect x="550" y="252" width="210" height="42" fill="#f5f7fa" stroke="#9aa5b1"/>
+  <text x="655.0" y="278" text-anchor="middle" class="mono">::1</text>
+  <rect x="40" y="294" width="190" height="42" fill="#f5f7fa" stroke="#9aa5b1"/>
+  <text x="135.0" y="320" text-anchor="middle">미지정</text>
+  <rect x="230" y="294" width="150" height="42" fill="#f5f7fa" stroke="#9aa5b1"/>
+  <text x="305.0" y="320" text-anchor="middle" class="mono">::/128</text>
+  <rect x="380" y="294" width="170" height="42" fill="#f5f7fa" stroke="#9aa5b1"/>
+  <text x="465.0" y="320" text-anchor="middle">주소 없음</text>
+  <rect x="550" y="294" width="210" height="42" fill="#f5f7fa" stroke="#9aa5b1"/>
+  <text x="655.0" y="320" text-anchor="middle" class="mono">::</text>
+  <text x="400" y="364" text-anchor="middle" class="small">IPv6에는 브로드캐스트가 없다. 그 역할은 멀티캐스트(FF02::1 등)가 맡는다</text>
+</svg>
