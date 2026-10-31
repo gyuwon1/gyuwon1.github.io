@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 400" role="img" aria-labelledby="t d">
+  <title id="t">192.168.10.77/26 서브넷 계산</title>
+  <desc id="d">마지막 옥텟 77과 마스크 192를 비트로 놓고 AND 연산으로 네트워크 주소 64, 호스트 비트를 모두 1로 바꿔 브로드캐스트 주소 127을 구하는 과정</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 14px; fill: #1f2933; }
+    .small { font-size: 12px; fill: #52606d; }
+    .head { font-size: 15px; font-weight: 700; }
+    .mono { font-family: Consolas, "Courier New", monospace; font-size: 14px; }
+  </style>
+  <rect width="780" height="400" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+  <text x="390" y="30" text-anchor="middle" class="head">192.168.10.77/26의 마지막 옥텟 (앞 세 옥텟은 192.168.10)</text>
+  <line x1="240" y1="62" x2="340" y2="62" stroke="#2f6fb0" stroke-width="2"/>
+  <text x="290" y="54" text-anchor="middle" class="small">네트워크 비트 2개</text>
+  <line x1="340" y1="62" x2="640" y2="62" stroke="#c77d1a" stroke-width="2"/>
+  <text x="490" y="54" text-anchor="middle" class="small">호스트 비트 6개</text>
+  <text x="228" y="104" text-anchor="end">주소</text>
+  <rect x="240" y="78" width="50" height="42" fill="#d6ecff" stroke="#7aa5d2"/>
+  <text x="265.0" y="105" text-anchor="middle" class="mono">0</text>
+  <rect x="290" y="78" width="50" height="42" fill="#d6ecff" stroke="#7aa5d2"/>
+  <text x="315.0" y="105" text-anchor="middle" class="mono">1</text>
+  <rect x="340" y="78" width="50" height="42" fill="#ffe8cc" stroke="#e8a54b"/>
+  <text x="365.0" y="105" text-anchor="middle" class="mono">0</text>
+  <rect x="390" y="78" width="50" height="42" fill="#ffe8cc" stroke="#e8a54b"/>
+  <text x="415.0" y="105" text-anchor="middle" class="mono">0</text>
+  <rect x="440" y="78" width="50" height="42" fill="#ffe8cc" stroke="#e8a54b"/>
+  <text x="465.0" y="105" text-anchor="middle" class="mono">1</text>
+  <rect x="490" y="78" width="50" height="42" fill="#ffe8cc" stroke="#e8a54b"/>
+  <text x="515.0" y="105" text-anchor="middle" class="mono">1</text>
+  <rect x="540" y="78" width="50" height="42" fill="#ffe8cc" stroke="#e8a54b"/>
+  <text x="565.0" y="105" text-anchor="middle" class="mono">0</text>
+  <rect x="590" y="78" width="50" height="42" fill="#ffe8cc" stroke="#e8a54b"/>
+  <text x="615.0" y="105" text-anchor="middle" class="mono">1</text>
+  <text x="656" y="105" class="mono">= 77</text>
+  <text x="228" y="158" text-anchor="end">마스크 /26</text>
+  <rect x="240" y="132" width="50" height="42" fill="#d6ecff" stroke="#7aa5d2"/>
+  <text x="265.0" y="159" text-anchor="middle" class="mono">1</text>
+  <rect x="290" y="132" width="50" height="42" fill="#d6ecff" stroke="#7aa5d2"/>
+  <text x="315.0" y="159" text-anchor="middle" class="mono">1</text>
+  <rect x="340" y="132" width="50" height="42" fill="#ffe8cc" stroke="#e8a54b"/>
+  <text x="365.0" y="159" text-anchor="middle" class="mono">0</text>
+  <rect x="390" y="132" width="50" height="42" fill="#ffe8cc" stroke="#e8a54b"/>
+  <text x="415.0" y="159" text-anchor="middle" class="mono">0</text>
+  <rect x="440" y="132" width="50" height="42" fill="#ffe8cc" stroke="#e8a54b"/>
+  <text x="465.0" y="159" text-anchor="middle" class="mono">0</text>
+  <rect x="490" y="132" width="50" height="42" fill="#ffe8cc" stroke="#e8a54b"/>
+  <text x="515.0" y="159" text-anchor="middle" class="mono">0</text>
+  <rect x="540" y="132" width="50" height="42" fill="#ffe8cc" stroke="#e8a54b"/>
+  <text x="565.0" y="159" text-anchor="middle" class="mono">0</text>
+  <rect x="590" y="132" width="50" height="42" fill="#ffe8cc" stroke="#e8a54b"/>
+  <text x="615.0" y="159" text-anchor="middle" class="mono">0</text>
+  <text x="656" y="159" class="mono">= 192</text>
+  <text x="228" y="212" text-anchor="end">AND: 네트워크 주소</text>
+  <rect x="240" y="186" width="50" height="42" fill="#d6ecff" stroke="#7aa5d2"/>
+  <text x="265.0" y="213" text-anchor="middle" class="mono">0</text>
+  <rect x="290" y="186" width="50" height="42" fill="#d6ecff" stroke="#7aa5d2"/>
+  <text x="315.0" y="213" text-anchor="middle" class="mono">1</text>
+  <rect x="340" y="186" width="50" height="42" fill="#ffe8cc" stroke="#e8a54b"/>
+  <text x="365.0" y="213" text-anchor="middle" class="mono">0</text>
+  <rect x="390" y="186" width="50" height="42" fill="#ffe8cc" stroke="#e8a54b"/>
+  <text x="415.0" y="213" text-anchor="middle" class="mono">0</text>
+  <rect x="440" y="186" width="50" height="42" fill="#ffe8cc" stroke="#e8a54b"/>
+  <text x="465.0" y="213" text-anchor="middle" class="mono">0</text>
+  <rect x="490" y="186" width="50" height="42" fill="#ffe8cc" stroke="#e8a54b"/>
+  <text x="515.0" y="213" text-anchor="middle" class="mono">0</text>
+  <rect x="540" y="186" width="50" height="42" fill="#ffe8cc" stroke="#e8a54b"/>
+  <text x="565.0" y="213" text-anchor="middle" class="mono">0</text>
+  <rect x="590" y="186" width="50" height="42" fill="#ffe8cc" stroke="#e8a54b"/>
+  <text x="615.0" y="213" text-anchor="middle" class="mono">0</text>
+  <text x="656" y="213" class="mono">= 64</text>
+  <text x="228" y="258" text-anchor="end">호스트 비트를 모두 1로</text><text x="228" y="276" text-anchor="end" class="small">= 브로드캐스트</text>
+  <rect x="240" y="240" width="50" height="42" fill="#d6ecff" stroke="#7aa5d2"/>
+  <text x="265.0" y="267" text-anchor="middle" class="mono">0</text>
+  <rect x="290" y="240" width="50" height="42" fill="#d6ecff" stroke="#7aa5d2"/>
+  <text x="315.0" y="267" text-anchor="middle" class="mono">1</text>
+  <rect x="340" y="240" width="50" height="42" fill="#ffe8cc" stroke="#e8a54b"/>
+  <text x="365.0" y="267" text-anchor="middle" class="mono">1</text>
+  <rect x="390" y="240" width="50" height="42" fill="#ffe8cc" stroke="#e8a54b"/>
+  <text x="415.0" y="267" text-anchor="middle" class="mono">1</text>
+  <rect x="440" y="240" width="50" height="42" fill="#ffe8cc" stroke="#e8a54b"/>
+  <text x="465.0" y="267" text-anchor="middle" class="mono">1</text>
+  <rect x="490" y="240" width="50" height="42" fill="#ffe8cc" stroke="#e8a54b"/>
+  <text x="515.0" y="267" text-anchor="middle" class="mono">1</text>
+  <rect x="540" y="240" width="50" height="42" fill="#ffe8cc" stroke="#e8a54b"/>
+  <text x="565.0" y="267" text-anchor="middle" class="mono">1</text>
+  <rect x="590" y="240" width="50" height="42" fill="#ffe8cc" stroke="#e8a54b"/>
+  <text x="615.0" y="267" text-anchor="middle" class="mono">1</text>
+  <text x="656" y="267" class="mono">= 127</text>
+  <rect x="40" y="304" width="700" height="72" rx="8" fill="#f5f7fa" stroke="#9aa5b1"/>
+  <text x="58" y="328">블록 크기 = 256 - 192 = 64이므로 서브넷은 0, 64, 128, 192에서 시작하고 77은 64 구간에 속한다</text>
+  <text x="58" y="350">네트워크 192.168.10.64, 브로드캐스트 192.168.10.127</text>
+  <text x="58" y="370">사용 가능한 호스트 192.168.10.65 ~ 192.168.10.126 (2의 6제곱 - 2 = 62대)</text>
+</svg>
