@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" role="img" aria-labelledby="t d">
+  <title id="t">부팅과 설정 저장의 흐름</title>
+  <desc id="d">부팅할 때 플래시의 IOS 이미지와 NVRAM의 startup-config가 RAM으로 올라가 running-config가 되고, copy running-config startup-config 명령으로 RAM의 설정을 NVRAM에 저장하는 흐름</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 12px; fill: #52606d; }
+    .head { font-size: 14px; font-weight: 700; }
+    .mono { font-family: Consolas, "Courier New", monospace; font-size: 13px; }
+  </style>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#52606d"/>
+    </marker>
+  </defs>
+  <rect width="800" height="360" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+
+  <rect x="40" y="40" width="240" height="80" fill="#e3f2fd" stroke="#7aa5d2"/>
+  <text x="160" y="68" text-anchor="middle" class="head">플래시</text>
+  <text x="160" y="90" text-anchor="middle" class="small">IOS 이미지</text>
+  <text x="160" y="108" text-anchor="middle" class="small">전원을 꺼도 유지</text>
+
+  <rect x="40" y="220" width="240" height="80" fill="#e3f2fd" stroke="#7aa5d2"/>
+  <text x="160" y="248" text-anchor="middle" class="head">NVRAM</text>
+  <text x="160" y="270" text-anchor="middle" class="mono">startup-config</text>
+  <text x="160" y="288" text-anchor="middle" class="small">전원을 꺼도 유지</text>
+
+  <rect x="520" y="40" width="240" height="260" fill="#e8f5e9" stroke="#7fb685"/>
+  <text x="640" y="72" text-anchor="middle" class="head">RAM</text>
+  <text x="640" y="100" text-anchor="middle" class="mono">running-config</text>
+  <text x="640" y="130" text-anchor="middle" class="small">지금 동작 중인 설정</text>
+  <text x="640" y="152" text-anchor="middle" class="small">명령을 입력하면 바로 바뀐다</text>
+  <text x="640" y="174" text-anchor="middle" class="small">전원이 꺼지면 사라진다</text>
+  <text x="640" y="214" text-anchor="middle" class="mono">show running-config</text>
+  <text x="640" y="236" text-anchor="middle" class="small">현재 설정 확인</text>
+
+  <line x1="282" y1="80" x2="518" y2="80" stroke="#52606d" marker-end="url(#a)"/>
+  <text x="400" y="70" text-anchor="middle" class="small">부팅 시 IOS 로드</text>
+  <line x1="282" y1="260" x2="518" y2="260" stroke="#52606d" marker-end="url(#a)"/>
+  <text x="400" y="250" text-anchor="middle" class="small">부팅 시 설정 복사</text>
+
+  <path d="M640 302 L640 335 L160 335 L160 302" fill="none" stroke="#52606d" marker-end="url(#a)"/>
+  <text x="400" y="326" text-anchor="middle" class="mono">copy running-config startup-config</text>
+</svg>

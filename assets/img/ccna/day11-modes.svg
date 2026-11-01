@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img" aria-labelledby="t d">
+  <title id="t">Cisco IOS 명령 모드와 이동 명령</title>
+  <desc id="d">사용자 EXEC에서 enable로 특권 EXEC, configure terminal로 글로벌 설정 모드, 거기서 interface와 line 명령으로 인터페이스·라인 설정 모드로 들어가고 exit으로 한 단계씩 돌아오는 구조</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 12px; fill: #52606d; }
+    .head { font-size: 14px; font-weight: 700; }
+    .mono { font-family: Consolas, "Courier New", monospace; font-size: 14px; }
+  </style>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#52606d"/>
+    </marker>
+  </defs>
+  <rect width="800" height="400" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+  <text x="400" y="30" text-anchor="middle" class="head">IOS 명령 모드</text>
+
+  <rect x="40" y="60" width="280" height="56" fill="#e3f2fd" stroke="#7aa5d2"/>
+  <text x="180" y="82" text-anchor="middle" class="head">사용자 EXEC</text>
+  <text x="180" y="102" text-anchor="middle" class="mono">Switch&gt;</text>
+
+  <rect x="40" y="140" width="280" height="56" fill="#e3f2fd" stroke="#7aa5d2"/>
+  <text x="180" y="162" text-anchor="middle" class="head">특권 EXEC</text>
+  <text x="180" y="182" text-anchor="middle" class="mono">Switch#</text>
+
+  <rect x="40" y="220" width="280" height="56" fill="#e8f5e9" stroke="#7fb685"/>
+  <text x="180" y="242" text-anchor="middle" class="head">글로벌 설정 모드</text>
+  <text x="180" y="262" text-anchor="middle" class="mono">Switch(config)#</text>
+
+  <line x1="110" y1="118" x2="110" y2="138" stroke="#52606d" marker-end="url(#a)"/>
+  <text x="120" y="133" class="mono">enable</text>
+  <line x1="250" y1="138" x2="250" y2="118" stroke="#52606d" marker-end="url(#a)"/>
+  <text x="260" y="133" class="mono">disable</text>
+
+  <line x1="110" y1="198" x2="110" y2="218" stroke="#52606d" marker-end="url(#a)"/>
+  <text x="120" y="213" class="small">configure terminal</text>
+  <line x1="250" y1="218" x2="250" y2="198" stroke="#52606d" marker-end="url(#a)"/>
+  <text x="260" y="213" class="mono">exit</text>
+
+  <rect x="480" y="175" width="280" height="70" fill="#fff8e1" stroke="#d4b24c"/>
+  <text x="620" y="197" text-anchor="middle" class="head">인터페이스 설정 모드</text>
+  <text x="620" y="217" text-anchor="middle" class="mono">Switch(config-if)#</text>
+  <text x="620" y="236" text-anchor="middle" class="small">진입: interface g0/1</text>
+
+  <rect x="480" y="265" width="280" height="70" fill="#fff8e1" stroke="#d4b24c"/>
+  <text x="620" y="287" text-anchor="middle" class="head">라인 설정 모드</text>
+  <text x="620" y="307" text-anchor="middle" class="mono">Switch(config-line)#</text>
+  <text x="620" y="326" text-anchor="middle" class="small">진입: line console 0</text>
+
+  <line x1="320" y1="248" x2="478" y2="212" stroke="#52606d" marker-end="url(#a)"/>
+  <line x1="320" y1="248" x2="478" y2="300" stroke="#52606d" marker-end="url(#a)"/>
+
+  <text x="400" y="372" text-anchor="middle" class="small">exit은 한 단계 위로, end 또는 Ctrl+Z는 설정 모드 어디서든 특권 EXEC로 바로 나온다</text>
+</svg>
