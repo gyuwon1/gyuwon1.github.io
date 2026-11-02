@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" role="img" aria-labelledby="t d">
+  <title id="t">스위치의 MAC 학습과 플러딩</title>
+  <desc id="d">PC-A가 PC-B로 처음 프레임을 보내면 스위치는 출발지 MAC을 Fa0/1로 학습하고, 목적지를 모르므로 들어온 포트를 뺀 나머지 포트로 보낸다</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 11px; fill: #52606d; }
+    .head { font-size: 15px; font-weight: 700; }
+    .mono { font-family: "Consolas", "Menlo", monospace; font-size: 12px; }
+    .flow { stroke: #2f6fb0; stroke-width: 2.5; fill: none; marker-end: url(#arr); }
+    .no { stroke: #9aa5b1; stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+  </style>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2f6fb0"/>
+    </marker>
+  </defs>
+  <rect width="800" height="380" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+  <text x="400" y="30" text-anchor="middle" class="head">1. 첫 프레임: 출발지를 학습하고 플러딩</text>
+  <rect x="60" y="60" width="120" height="50" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="2"/>
+  <text x="120" y="81" text-anchor="middle">PC-A</text>
+  <text x="120" y="99" text-anchor="middle" class="small">0000.0000.000A</text>
+  <rect x="60" y="270" width="120" height="50" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="2"/>
+  <text x="120" y="291" text-anchor="middle">PC-B</text>
+  <text x="120" y="309" text-anchor="middle" class="small">0000.0000.000B</text>
+  <rect x="620" y="60" width="120" height="50" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="2"/>
+  <text x="680" y="81" text-anchor="middle">PC-C</text>
+  <text x="680" y="99" text-anchor="middle" class="small">0000.0000.000C</text>
+  <rect x="620" y="270" width="120" height="50" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="2"/>
+  <text x="680" y="291" text-anchor="middle">PC-D</text>
+  <text x="680" y="309" text-anchor="middle" class="small">0000.0000.000D</text>
+  <rect x="300" y="150" width="200" height="70" fill="#fff4d6" stroke="#d4a72c" stroke-width="2"/>
+  <text x="400" y="180" text-anchor="middle">스위치</text>
+  <text x="400" y="200" text-anchor="middle" class="small">Fa0/1 ~ Fa0/4</text>
+  <path class="flow" d="M180 85 L300 165"/>
+  <path class="flow" d="M300 205 L180 295"/>
+  <path class="flow" d="M500 165 L620 85"/>
+  <path class="flow" d="M500 205 L620 295"/>
+  <text x="225" y="150" text-anchor="middle" class="small">Fa0/1</text>
+  <text x="240" y="320" text-anchor="middle" class="small">Fa0/2</text>
+  <text x="575" y="150" text-anchor="middle" class="small">Fa0/3</text>
+  <text x="560" y="320" text-anchor="middle" class="small">Fa0/4</text>
+  <text x="120" y="52" text-anchor="middle" class="small">A → B 프레임 전송</text>
+  <rect x="290" y="250" width="220" height="110" fill="#f5f7fa" stroke="#9aa5b1" stroke-width="1.5"/>
+  <text x="400" y="270" text-anchor="middle" class="small">MAC 주소 테이블</text>
+  <text x="305" y="288" class="small">MAC 주소</text>
+  <text x="450" y="288" class="small">포트</text>
+  <text x="305" y="308" class="mono">0000.0000.000A</text>
+  <text x="450" y="308" class="mono">Fa0/1</text>
+</svg>

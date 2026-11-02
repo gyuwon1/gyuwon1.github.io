@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 410" role="img" aria-labelledby="t d">
+  <title id="t">스위치의 프레임 처리 순서</title>
+  <desc id="d">프레임이 들어오면 출발지 MAC을 기록하고 목적지 MAC을 찾아 포워딩, 필터링, 플러딩 중 하나를 수행하는 순서</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 11px; fill: #52606d; }
+    .head { font-size: 15px; font-weight: 700; }
+    .mono { font-family: "Consolas", "Menlo", monospace; font-size: 12px; }
+    .flow { stroke: #2f6fb0; stroke-width: 2.5; fill: none; marker-end: url(#arr); }
+    .no { stroke: #9aa5b1; stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+  </style>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2f6fb0"/>
+    </marker>
+  </defs>
+  <rect width="800" height="410" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+  <text x="400" y="30" text-anchor="middle" class="head">프레임 하나를 받았을 때 스위치가 하는 일</text>
+  <rect x="250" y="50" width="300" height="40" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="2"/>
+  <text x="400" y="74" text-anchor="middle">프레임이 포트로 들어온다</text>
+  <rect x="250" y="120" width="300" height="40" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="2"/>
+  <text x="400" y="144" text-anchor="middle">출발지 MAC과 포트를 테이블에 기록</text>
+  <rect x="250" y="190" width="300" height="40" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="2"/>
+  <text x="400" y="214" text-anchor="middle">목적지 MAC을 테이블에서 찾는다</text>
+  <path class="flow" d="M400 90 L400 118"/>
+  <path class="flow" d="M400 160 L400 188"/>
+  <rect x="20" y="290" width="230" height="100" fill="#dcf3e1" stroke="#5aa86e" stroke-width="2"/>
+  <text x="135" y="314" text-anchor="middle" class="head">포워딩</text>
+  <text x="135" y="334" text-anchor="middle">목적지가 테이블에 있고</text>
+  <text x="135" y="354" text-anchor="middle">다른 포트에 연결됨</text>
+  <text x="135" y="374" text-anchor="middle">그 포트로만 내보낸다</text>
+  <rect x="285" y="290" width="230" height="100" fill="#f5f7fa" stroke="#9aa5b1" stroke-width="2"/>
+  <text x="400" y="314" text-anchor="middle" class="head">필터링</text>
+  <text x="400" y="334" text-anchor="middle">목적지가 들어온 포트와</text>
+  <text x="400" y="354" text-anchor="middle">같은 포트에 있음</text>
+  <text x="400" y="374" text-anchor="middle">프레임을 버린다</text>
+  <rect x="550" y="290" width="230" height="100" fill="#fde8e8" stroke="#d27a7a" stroke-width="2"/>
+  <text x="665" y="314" text-anchor="middle" class="head">플러딩</text>
+  <text x="665" y="334" text-anchor="middle">목적지가 테이블에 없음</text>
+  <text x="665" y="354" text-anchor="middle">또는 브로드캐스트</text>
+  <text x="665" y="374" text-anchor="middle">들어온 포트 외 전부로 전송</text>
+  <path class="flow" d="M340 230 L170 288"/>
+  <path class="flow" d="M400 230 L400 288"/>
+  <path class="flow" d="M460 230 L630 288"/>
+</svg>
