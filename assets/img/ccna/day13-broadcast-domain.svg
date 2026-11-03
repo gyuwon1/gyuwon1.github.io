@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 370" role="img" aria-labelledby="t d">
+  <title id="t">VLAN이 브로드캐스트 도메인을 나누는 모습</title>
+  <desc id="d">VLAN이 없으면 PC1의 브로드캐스트가 스위치에 연결된 PC 6대 모두에 도달하고, VLAN 10과 VLAN 20으로 나누면 같은 VLAN의 PC에만 도달한다</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 11px; fill: #52606d; }
+    .head { font-size: 15px; font-weight: 700; }
+    .link { stroke: #9aa5b1; stroke-width: 1.5; fill: none; }
+    .flow { stroke: #2f6fb0; stroke-width: 2.5; fill: none; marker-end: url(#arr); }
+    .ok { stroke: #2e7d4f; stroke-width: 2.5; fill: none; marker-start: url(#arrg); marker-end: url(#arrg); }
+    .no { stroke: #c0392b; stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+    .bad { fill: #c0392b; font-weight: 700; font-size: 16px; }
+  </style>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2f6fb0"/>
+    </marker>
+    <marker id="arrg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2e7d4f"/>
+    </marker>
+  </defs>
+  <rect width="800" height="370" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+  <rect x="10" y="50" width="380" height="305" fill="none" stroke="#d9e2ec"/>
+  <rect x="410" y="50" width="380" height="305" fill="none" stroke="#d9e2ec"/>
+  <text x="200" y="35" text-anchor="middle" class="head">VLAN 없음</text>
+  <text x="600" y="35" text-anchor="middle" class="head">VLAN 10 / VLAN 20</text>
+  <rect x="135" y="100" width="140" height="44" fill="#fff4d6" stroke="#d4a72c" stroke-width="2"/>
+  <text x="205" y="127" text-anchor="middle">스위치</text>
+  <rect x="25" y="250" width="50" height="40" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="2"/>
+  <text x="50" y="275" text-anchor="middle">PC1</text>
+  <path class="flow" d="M50 250 L190 146"/>
+  <rect x="87" y="250" width="50" height="40" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="2"/>
+  <text x="112" y="275" text-anchor="middle">PC2</text>
+  <path class="flow" d="M215 144 L112 248"/>
+  <rect x="149" y="250" width="50" height="40" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="2"/>
+  <text x="174" y="275" text-anchor="middle">PC3</text>
+  <path class="flow" d="M215 144 L174 248"/>
+  <rect x="211" y="250" width="50" height="40" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="2"/>
+  <text x="236" y="275" text-anchor="middle">PC4</text>
+  <path class="flow" d="M215 144 L236 248"/>
+  <rect x="273" y="250" width="50" height="40" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="2"/>
+  <text x="298" y="275" text-anchor="middle">PC5</text>
+  <path class="flow" d="M215 144 L298 248"/>
+  <rect x="335" y="250" width="50" height="40" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="2"/>
+  <text x="360" y="275" text-anchor="middle">PC6</text>
+  <path class="flow" d="M215 144 L360 248"/>
+  <rect x="535" y="100" width="140" height="44" fill="#fff4d6" stroke="#d4a72c" stroke-width="2"/>
+  <text x="605" y="127" text-anchor="middle">스위치</text>
+  <rect x="425" y="250" width="50" height="40" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="2"/>
+  <text x="450" y="275" text-anchor="middle">PC1</text>
+  <path class="flow" d="M450 250 L590 146"/>
+  <rect x="487" y="250" width="50" height="40" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="2"/>
+  <text x="512" y="275" text-anchor="middle">PC2</text>
+  <path class="flow" d="M615 144 L512 248"/>
+  <rect x="549" y="250" width="50" height="40" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="2"/>
+  <text x="574" y="275" text-anchor="middle">PC3</text>
+  <path class="flow" d="M615 144 L574 248"/>
+  <rect x="611" y="250" width="50" height="40" fill="#e6f4ea" stroke="#6aa77a" stroke-width="2"/>
+  <text x="636" y="275" text-anchor="middle">PC4</text>
+  <path class="no" d="M605 144 L636 250"/>
+  <rect x="673" y="250" width="50" height="40" fill="#e6f4ea" stroke="#6aa77a" stroke-width="2"/>
+  <text x="698" y="275" text-anchor="middle">PC5</text>
+  <path class="no" d="M605 144 L698 250"/>
+  <rect x="735" y="250" width="50" height="40" fill="#e6f4ea" stroke="#6aa77a" stroke-width="2"/>
+  <text x="760" y="275" text-anchor="middle">PC6</text>
+  <path class="no" d="M605 144 L760 250"/>
+  <text x="200" y="80" text-anchor="middle" class="small">PC1이 브로드캐스트를 보낸다</text>
+  <text x="600" y="80" text-anchor="middle" class="small">PC1이 브로드캐스트를 보낸다</text>
+  <text x="200" y="320" text-anchor="middle">6대 모두에 도달</text>
+  <text x="200" y="340" text-anchor="middle" class="small">브로드캐스트 도메인 1개</text>
+  <text x="512" y="315" text-anchor="middle">VLAN 10: PC2, PC3에만 도달</text>
+  <text x="698" y="315" text-anchor="middle">VLAN 20: 도달하지 않음</text>
+  <text x="600" y="340" text-anchor="middle" class="small">브로드캐스트 도메인 2개</text>
+</svg>

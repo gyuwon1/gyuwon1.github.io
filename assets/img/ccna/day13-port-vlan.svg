@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" role="img" aria-labelledby="t d">
+  <title id="t">포트별 VLAN 할당과 VLAN 간 통신</title>
+  <desc id="d">스위치의 Fa0/1과 Fa0/2는 VLAN 10, Fa0/3과 Fa0/4는 VLAN 20에 속한다. 같은 VLAN끼리는 통신하고 다른 VLAN끼리는 스위치만으로 통신할 수 없다</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 11px; fill: #52606d; }
+    .head { font-size: 15px; font-weight: 700; }
+    .link { stroke: #9aa5b1; stroke-width: 1.5; fill: none; }
+    .flow { stroke: #2f6fb0; stroke-width: 2.5; fill: none; marker-end: url(#arr); }
+    .ok { stroke: #2e7d4f; stroke-width: 2.5; fill: none; marker-start: url(#arrg); marker-end: url(#arrg); }
+    .no { stroke: #c0392b; stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+    .bad { fill: #c0392b; font-weight: 700; font-size: 16px; }
+  </style>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2f6fb0"/>
+    </marker>
+    <marker id="arrg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2e7d4f"/>
+    </marker>
+  </defs>
+  <rect width="800" height="380" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+  <text x="400" y="26" text-anchor="middle" class="head">포트를 VLAN에 할당한 스위치</text>
+  <rect x="50" y="50" width="120" height="50" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="2"/>
+  <text x="110" y="72" text-anchor="middle">PC-A</text>
+  <text x="110" y="89" text-anchor="middle" class="small">192.168.10.11/24</text>
+  <rect x="50" y="280" width="120" height="50" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="2"/>
+  <text x="110" y="302" text-anchor="middle">PC-B</text>
+  <text x="110" y="319" text-anchor="middle" class="small">192.168.10.12/24</text>
+  <rect x="630" y="50" width="120" height="50" fill="#e6f4ea" stroke="#6aa77a" stroke-width="2"/>
+  <text x="690" y="72" text-anchor="middle">PC-C</text>
+  <text x="690" y="89" text-anchor="middle" class="small">192.168.20.11/24</text>
+  <rect x="630" y="280" width="120" height="50" fill="#e6f4ea" stroke="#6aa77a" stroke-width="2"/>
+  <text x="690" y="302" text-anchor="middle">PC-D</text>
+  <text x="690" y="319" text-anchor="middle" class="small">192.168.20.12/24</text>
+  <rect x="300" y="150" width="200" height="80" fill="#fff4d6" stroke="#d4a72c" stroke-width="2"/>
+  <text x="400" y="195" text-anchor="middle">SW1</text>
+  <path class="link" d="M170 85 L300 170"/>
+  <path class="link" d="M170 295 L300 210"/>
+  <path class="link" d="M630 85 L500 170"/>
+  <path class="link" d="M630 295 L500 210"/>
+  <text x="308" y="174" text-anchor="start" class="small">Fa0/1</text>
+  <text x="308" y="214" text-anchor="start" class="small">Fa0/2</text>
+  <text x="492" y="174" text-anchor="end" class="small">Fa0/3</text>
+  <text x="492" y="214" text-anchor="end" class="small">Fa0/4</text>
+  <path class="ok" d="M110 100 L110 280"/>
+  <path class="ok" d="M690 100 L690 280"/>
+  <text x="122" y="195" class="small">같은 VLAN 10</text>
+  <text x="122" y="211" class="small">통신 가능</text>
+  <text x="678" y="195" text-anchor="end" class="small">같은 VLAN 20</text>
+  <text x="678" y="211" text-anchor="end" class="small">통신 가능</text>
+  <path class="no" d="M185 62 L615 62"/>
+  <text x="400" y="52" text-anchor="middle" class="small">다른 VLAN, 다른 서브넷: 스위치만으로는 통신 불가</text>
+  <text x="400" y="88" text-anchor="middle" class="bad">✕</text>
+  <rect x="280" y="258" width="240" height="90" fill="#f5f7fa" stroke="#9aa5b1" stroke-width="1.5"/>
+  <text x="400" y="278" text-anchor="middle" class="small">포트와 VLAN</text>
+  <text x="300" y="300">Fa0/1, Fa0/2</text>
+  <text x="440" y="300">VLAN 10</text>
+  <text x="300" y="324">Fa0/3, Fa0/4</text>
+  <text x="440" y="324">VLAN 20</text>
+</svg>
