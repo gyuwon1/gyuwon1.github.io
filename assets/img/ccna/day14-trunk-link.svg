@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" role="img" aria-labelledby="t d">
+  <title id="t">두 스위치 사이의 트렁크 링크</title>
+  <desc id="d">SW1과 SW2는 트렁크 링크 하나로 연결되고 이 링크로 VLAN 10과 VLAN 20의 프레임이 함께 전달된다. 각 스위치의 PC는 액세스 포트에 연결된다</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 11px; fill: #52606d; }
+    .head { font-size: 15px; font-weight: 700; }
+    .link { stroke: #9aa5b1; stroke-width: 1.5; fill: none; }
+    .trunk { stroke: #2f6fb0; stroke-width: 5; fill: none; }
+  </style>
+  <rect width="800" height="340" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+  <text x="400" y="26" text-anchor="middle" class="head">트렁크 하나로 여러 VLAN 전달</text>
+  <rect x="40" y="50" width="110" height="46" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="2"/>
+  <text x="95" y="70" text-anchor="middle">PC-A</text>
+  <text x="95" y="86" text-anchor="middle" class="small">VLAN 10</text>
+  <rect x="40" y="240" width="110" height="46" fill="#e6f4ea" stroke="#6aa77a" stroke-width="2"/>
+  <text x="95" y="260" text-anchor="middle">PC-C</text>
+  <text x="95" y="276" text-anchor="middle" class="small">VLAN 20</text>
+  <rect x="650" y="50" width="110" height="46" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="2"/>
+  <text x="705" y="70" text-anchor="middle">PC-B</text>
+  <text x="705" y="86" text-anchor="middle" class="small">VLAN 10</text>
+  <rect x="650" y="240" width="110" height="46" fill="#e6f4ea" stroke="#6aa77a" stroke-width="2"/>
+  <text x="705" y="260" text-anchor="middle">PC-D</text>
+  <text x="705" y="276" text-anchor="middle" class="small">VLAN 20</text>
+  <rect x="230" y="125" width="100" height="90" fill="#fff4d6" stroke="#d4a72c" stroke-width="2"/>
+  <text x="280" y="175" text-anchor="middle">SW1</text>
+  <rect x="470" y="125" width="100" height="90" fill="#fff4d6" stroke="#d4a72c" stroke-width="2"/>
+  <text x="520" y="175" text-anchor="middle">SW2</text>
+  <path class="link" d="M150 73 L230 140"/>
+  <path class="link" d="M150 263 L230 200"/>
+  <path class="link" d="M650 73 L570 140"/>
+  <path class="link" d="M650 263 L570 200"/>
+  <text x="190" y="100" text-anchor="middle" class="small">액세스</text>
+  <text x="190" y="248" text-anchor="middle" class="small">액세스</text>
+  <text x="610" y="100" text-anchor="middle" class="small">액세스</text>
+  <text x="610" y="248" text-anchor="middle" class="small">액세스</text>
+  <path class="trunk" d="M330 170 L470 170"/>
+  <text x="400" y="150" text-anchor="middle" class="head">트렁크</text>
+  <text x="400" y="195" text-anchor="middle" class="small">VLAN 10 + VLAN 20</text>
+  <text x="400" y="211" text-anchor="middle" class="small">태그로 구분</text>
+  <text x="400" y="310" text-anchor="middle" class="small">트렁크가 없으면 VLAN마다 스위치 사이에 케이블이 하나씩 필요하다</text>
+</svg>
