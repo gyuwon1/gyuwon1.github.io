@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 280" role="img" aria-labelledby="t d">
+  <title id="t">서브인터페이스와 VLAN의 대응</title>
+  <desc id="d">R1의 서브인터페이스 Gi0/0.10, Gi0/0.20, Gi0/0.99가 각각 VLAN 10, 20, 99와 대응하고 서브넷의 게이트웨이 주소를 가진다. VLAN 99는 네이티브 VLAN이다</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 11px; fill: #52606d; }
+    .head { font-size: 15px; font-weight: 700; }
+    .link { stroke: #9aa5b1; stroke-width: 1.5; fill: none; }
+    .trunk { stroke: #2f6fb0; stroke-width: 5; fill: none; }
+    .arrow { stroke: #d98a1f; stroke-width: 2.5; fill: none; }
+  </style>
+  <rect width="800" height="280" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+  <text x="400" y="26" text-anchor="middle" class="head">서브인터페이스 = VLAN 하나의 게이트웨이</text>
+  <rect x="40" y="50" width="720" height="34" fill="#f0f4f8" stroke="#9aa5b1" stroke-width="2"/>
+  <text x="100" y="72" text-anchor="middle">서브인터페이스</text>
+  <text x="270" y="72" text-anchor="middle">encapsulation</text>
+  <text x="470" y="72" text-anchor="middle">IP 주소</text>
+  <text x="670" y="72" text-anchor="middle">게이트웨이가 되는 VLAN</text>
+  <rect x="40" y="84" width="720" height="40" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="2"/>
+  <text x="100" y="109" text-anchor="middle">Gi0/0.10</text>
+  <text x="270" y="109" text-anchor="middle">dot1q 10</text>
+  <text x="470" y="109" text-anchor="middle">192.168.10.1/24</text>
+  <text x="670" y="109" text-anchor="middle">VLAN 10</text>
+  <rect x="40" y="124" width="720" height="40" fill="#e6f4ea" stroke="#6aa77a" stroke-width="2"/>
+  <text x="100" y="149" text-anchor="middle">Gi0/0.20</text>
+  <text x="270" y="149" text-anchor="middle">dot1q 20</text>
+  <text x="470" y="149" text-anchor="middle">192.168.20.1/24</text>
+  <text x="670" y="149" text-anchor="middle">VLAN 20</text>
+  <rect x="40" y="164" width="720" height="40" fill="#fff4d6" stroke="#d4a72c" stroke-width="2"/>
+  <text x="100" y="189" text-anchor="middle">Gi0/0.99</text>
+  <text x="270" y="189" text-anchor="middle">dot1q 99 native</text>
+  <text x="470" y="189" text-anchor="middle">192.168.99.1/24</text>
+  <text x="670" y="189" text-anchor="middle">VLAN 99 (네이티브)</text>
+  <text x="400" y="240" text-anchor="middle" class="small">서브인터페이스 번호는 VLAN 번호와 같게 붙이는 것이 관례이지만 동작에 필요한 규칙은 아니다</text>
+  <text x="400" y="258" text-anchor="middle" class="small">VLAN을 구분하는 것은 번호가 아니라 encapsulation dot1q 뒤의 값이다</text>
+</svg>

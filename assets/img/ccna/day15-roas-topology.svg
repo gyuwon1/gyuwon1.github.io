@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" role="img" aria-labelledby="t d">
+  <title id="t">Router-on-a-stick 구성</title>
+  <desc id="d">PC1은 VLAN 10, PC2는 VLAN 20의 액세스 포트에 연결되어 있다. SW1과 R1은 트렁크 링크 하나로 연결되고 R1의 물리 인터페이스에는 VLAN마다 서브인터페이스가 만들어진다</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 11px; fill: #52606d; }
+    .head { font-size: 15px; font-weight: 700; }
+    .link { stroke: #9aa5b1; stroke-width: 1.5; fill: none; }
+    .trunk { stroke: #2f6fb0; stroke-width: 5; fill: none; }
+    .arrow { stroke: #d98a1f; stroke-width: 2.5; fill: none; }
+  </style>
+  <rect width="800" height="340" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+  <text x="400" y="26" text-anchor="middle" class="head">링크 하나에 서브인터페이스 여러 개</text>
+  <rect x="40" y="60" width="120" height="60" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="2"/>
+  <text x="100" y="85" text-anchor="middle">PC1</text>
+  <text x="100" y="103" text-anchor="middle" class="small">192.168.10.10 / VLAN 10</text>
+  <rect x="40" y="220" width="120" height="60" fill="#e6f4ea" stroke="#6aa77a" stroke-width="2"/>
+  <text x="100" y="245" text-anchor="middle">PC2</text>
+  <text x="100" y="263" text-anchor="middle" class="small">192.168.20.10 / VLAN 20</text>
+  <rect x="290" y="130" width="120" height="80" fill="#fff4d6" stroke="#d4a72c" stroke-width="2"/>
+  <text x="350" y="165" text-anchor="middle">SW1</text>
+  <text x="350" y="185" text-anchor="middle" class="small">Gi0/1 트렁크</text>
+  <rect x="610" y="100" width="150" height="140" fill="#f0f4f8" stroke="#9aa5b1" stroke-width="2"/>
+  <text x="685" y="124" text-anchor="middle">R1</text>
+  <text x="685" y="144" text-anchor="middle" class="small">Gi0/0 (IP 없음)</text>
+  <rect x="622" y="158" width="126" height="22" fill="#e3f2fd" stroke="#7aa5d2"/>
+  <text x="685" y="174" text-anchor="middle" class="small">Gi0/0.10 192.168.10.1</text>
+  <rect x="622" y="186" width="126" height="22" fill="#e6f4ea" stroke="#6aa77a"/>
+  <text x="685" y="202" text-anchor="middle" class="small">Gi0/0.20 192.168.20.1</text>
+  <path class="link" d="M160 90 L290 150"/>
+  <path class="link" d="M160 250 L290 190"/>
+  <text x="200" y="108" class="small">액세스 VLAN 10</text>
+  <text x="200" y="244" class="small">액세스 VLAN 20</text>
+  <path class="trunk" d="M410 170 L610 170"/>
+  <text x="510" y="158" text-anchor="middle" class="small">802.1Q 트렁크 (물리 링크 1개)</text>
+  <text x="400" y="320" text-anchor="middle" class="small">PC1의 기본 게이트웨이는 192.168.10.1, PC2의 기본 게이트웨이는 192.168.20.1</text>
+</svg>
