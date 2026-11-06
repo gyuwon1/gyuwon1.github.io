@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 330" role="img" aria-labelledby="t d">
+  <title>브리지 ID 구조와 포트 상태 전환</title>
+  <desc>브리지 ID는 우선순위 4비트, VLAN ID 12비트, MAC 주소 6바이트로 이루어진다. 포트 상태는 블로킹, 리스닝, 러닝, 포워딩 순서로 바뀌며 각각 최대 20초, 15초, 15초가 걸린다</desc>
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#52606d"/>
+    </marker>
+  </defs>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 11px; fill: #52606d; }
+    .head { font-size: 15px; font-weight: 700; }
+    .arrow { stroke: #52606d; stroke-width: 2; fill: none; marker-end: url(#ar); }
+  </style>
+  <rect width="800" height="330" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+  <text x="40" y="30" class="head">브리지 ID (BID) 8바이트</text>
+  <text x="230" y="56" text-anchor="middle" class="small">우선순위 필드 2바이트</text>
+  <line x1="40" y1="62" x2="440" y2="62" stroke="#9aa5b1" stroke-width="2"/>
+  <rect x="40" y="68" width="180" height="40" fill="#e3f2fd" stroke="#7aa5d2" stroke-width="2"/>
+  <text x="130" y="93" text-anchor="middle">우선순위 4비트</text>
+  <rect x="220" y="68" width="220" height="40" fill="#e6f4ea" stroke="#6aa77a" stroke-width="2"/>
+  <text x="330" y="93" text-anchor="middle">VLAN ID 12비트</text>
+  <rect x="440" y="68" width="300" height="40" fill="#fff4d6" stroke="#d4a72c" stroke-width="2"/>
+  <text x="590" y="93" text-anchor="middle">MAC 주소 6바이트</text>
+  <text x="130" y="126" text-anchor="middle" class="small">4096 단위, 기본 32768</text>
+  <text x="590" y="126" text-anchor="middle" class="small">우선순위가 같을 때 비교</text>
+  <text x="400" y="150" text-anchor="middle">예: 32768 + VLAN 1 = 32769. 값이 가장 작은 BID가 루트 브리지가 된다</text>
+  <line x1="40" y1="166" x2="760" y2="166" stroke="#d9e2ec" stroke-width="2"/>
+  <text x="40" y="192" class="head">포트 상태 (802.1D)</text>
+  <rect x="40" y="206" width="150" height="46" rx="6" fill="#fdecea" stroke="#c0392b" stroke-width="2"/>
+  <text x="115" y="226" text-anchor="middle">블로킹</text>
+  <text x="115" y="243" text-anchor="middle" class="small">최대 20초 (Max Age)</text>
+  <rect x="230" y="206" width="150" height="46" rx="6" fill="#fff4d6" stroke="#d4a72c" stroke-width="2"/>
+  <text x="305" y="226" text-anchor="middle">리스닝</text>
+  <text x="305" y="243" text-anchor="middle" class="small">15초 (Forward Delay)</text>
+  <rect x="420" y="206" width="150" height="46" rx="6" fill="#fff4d6" stroke="#d4a72c" stroke-width="2"/>
+  <text x="495" y="226" text-anchor="middle">러닝</text>
+  <text x="495" y="243" text-anchor="middle" class="small">15초 (Forward Delay)</text>
+  <rect x="610" y="206" width="150" height="46" rx="6" fill="#e6f4ea" stroke="#6aa77a" stroke-width="2"/>
+  <text x="685" y="226" text-anchor="middle">포워딩</text>
+  <text x="685" y="243" text-anchor="middle" class="small">정상 동작</text>
+  <line class="arrow" x1="192" y1="229" x2="228" y2="229"/>
+  <line class="arrow" x1="382" y1="229" x2="418" y2="229"/>
+  <line class="arrow" x1="572" y1="229" x2="608" y2="229"/>
+  <text x="115" y="274" text-anchor="middle" class="small">BPDU만 수신</text>
+  <text x="305" y="274" text-anchor="middle" class="small">BPDU 송수신</text>
+  <text x="305" y="290" text-anchor="middle" class="small">MAC 학습 안 함</text>
+  <text x="495" y="274" text-anchor="middle" class="small">MAC 주소 학습</text>
+  <text x="495" y="290" text-anchor="middle" class="small">데이터 전달 안 함</text>
+  <text x="685" y="274" text-anchor="middle" class="small">데이터 전달</text>
+  <text x="685" y="290" text-anchor="middle" class="small">MAC 학습, BPDU 송수신</text>
+  <text x="400" y="318" text-anchor="middle" class="small">블로킹에서 포워딩까지 보통 30~50초가 걸린다</text>
+</svg>

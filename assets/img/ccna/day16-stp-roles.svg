@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" role="img" aria-labelledby="t d">
+  <title>STP가 정한 포트 역할</title>
+  <desc>세 스위치가 삼각형으로 연결되어 있고 모든 링크의 cost는 4이다. SW1이 루트 브리지이며 두 포트가 지정 포트이다. SW2와 SW3의 SW1 방향 포트는 루트 포트이다. SW2와 SW3 사이 링크는 SW2 쪽이 지정 포트, SW3 쪽이 차단 포트이다</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 11px; fill: #52606d; }
+    .head { font-size: 15px; font-weight: 700; }
+    .link { stroke: #9aa5b1; stroke-width: 3; fill: none; }
+    .sw { fill: #e3f2fd; stroke: #7aa5d2; stroke-width: 2; }
+    .root { fill: #fff4d6; stroke: #d4a72c; stroke-width: 2; }
+    .rp { fill: #2f6fb0; font-weight: 700; }
+    .dp { fill: #2e7d4f; font-weight: 700; }
+    .bk { fill: #c0392b; font-weight: 700; }
+  </style>
+  <rect width="800" height="360" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+  <text x="400" y="26" text-anchor="middle" class="head">3대 스위치에서 STP가 고른 결과</text>
+  <line class="link" x1="360" y1="108" x2="170" y2="222"/>
+  <line class="link" x1="440" y1="108" x2="630" y2="222"/>
+  <line class="link" x1="250" y1="250" x2="550" y2="250"/>
+  <rect class="root" x="320" y="52" width="160" height="56" rx="6"/>
+  <text x="400" y="76" text-anchor="middle">SW1 (루트 브리지)</text>
+  <text x="400" y="95" text-anchor="middle" class="small">32769 / 0001.0001.0001</text>
+  <rect class="sw" x="90" y="222" width="160" height="56" rx="6"/>
+  <text x="170" y="246" text-anchor="middle">SW2</text>
+  <text x="170" y="265" text-anchor="middle" class="small">32769 / 0002.0002.0002</text>
+  <rect class="sw" x="550" y="222" width="160" height="56" rx="6"/>
+  <text x="630" y="246" text-anchor="middle">SW3</text>
+  <text x="630" y="265" text-anchor="middle" class="small">32769 / 0003.0003.0003</text>
+  <text x="338" y="132" text-anchor="end" class="dp">DP</text>
+  <text x="462" y="132" class="dp">DP</text>
+  <text x="152" y="210" text-anchor="end" class="rp">RP</text>
+  <text x="648" y="210" class="rp">RP</text>
+  <text x="262" y="240" class="dp">DP</text>
+  <text x="538" y="240" text-anchor="end" class="bk">차단</text>
+  <line x1="545" y1="236" x2="545" y2="264" stroke="#c0392b" stroke-width="4"/>
+  <text x="262" y="270" class="small">Gi0/2</text>
+  <text x="538" y="270" text-anchor="end" class="small">Gi0/2</text>
+  <text x="250" y="160" text-anchor="end" class="small">cost 4</text>
+  <text x="550" y="160" class="small">cost 4</text>
+  <text x="400" y="240" text-anchor="middle" class="small">cost 4</text>
+  <text x="400" y="300" text-anchor="middle" class="small">루트 경로 비용이 같으면 BID가 낮은 SW2 쪽이 지정 포트가 된다</text>
+  <text x="130" y="336" class="rp">RP</text><text x="152" y="336" class="small">루트 포트</text>
+  <text x="290" y="336" class="dp">DP</text><text x="312" y="336" class="small">지정 포트</text>
+  <text x="450" y="336" class="bk">차단</text><text x="486" y="336" class="small">블로킹 포트 (데이터 전달 안 함)</text>
+</svg>
