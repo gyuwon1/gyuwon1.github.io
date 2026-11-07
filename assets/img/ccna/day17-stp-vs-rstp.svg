@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" role="img" aria-labelledby="t d">
+  <title>802.1D와 Rapid PVST+의 수렴 시간 비교</title>
+  <desc>802.1D는 블로킹 Max Age 20초, 리스닝 15초, 러닝 15초를 거쳐 최대 50초 뒤 포워딩이 된다. 802.1w는 디스카딩, 러닝, 포워딩 순으로 핸드셰이크를 통해 수 초 안에 포워딩이 된다. 아래에 두 방식의 포트 상태 대응이 정리되어 있다</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 11px; fill: #52606d; }
+    .head { font-size: 15px; font-weight: 700; }
+    .blk { fill: #fde2e0; stroke: #c0392b; stroke-width: 1.5; }
+    .lis { fill: #fff4d6; stroke: #d4a72c; stroke-width: 1.5; }
+    .lrn { fill: #e3f2fd; stroke: #7aa5d2; stroke-width: 1.5; }
+    .fwd { fill: #def3e6; stroke: #2e7d4f; stroke-width: 1.5; }
+  </style>
+  <rect width="800" height="340" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+  <text x="400" y="28" text-anchor="middle" class="head">BPDU가 끊긴 뒤 포워딩이 되기까지</text>
+  <text x="30" y="96">802.1D</text>
+  <rect class="blk" x="150" y="72" width="240" height="40"/>
+  <text x="270" y="97" text-anchor="middle">블로킹 (Max Age 20초)</text>
+  <rect class="lis" x="390" y="72" width="180" height="40"/>
+  <text x="480" y="97" text-anchor="middle">리스닝 15초</text>
+  <rect class="lrn" x="570" y="72" width="180" height="40"/>
+  <text x="660" y="97" text-anchor="middle">러닝 15초</text>
+  <text x="750" y="134" text-anchor="end" class="small">포워딩 (최대 50초 뒤)</text>
+  <text x="30" y="176">802.1w</text>
+  <rect class="blk" x="150" y="152" width="24" height="40"/>
+  <rect class="lrn" x="174" y="152" width="12" height="40"/>
+  <rect class="fwd" x="186" y="152" width="12" height="40"/>
+  <text x="212" y="177">디스카딩 → 러닝 → 포워딩, 핸드셰이크로 수 초 이내</text>
+  <text x="150" y="212" class="small">막대 길이는 시간에 비례한다 (12px = 1초)</text>
+  <line x1="30" y1="232" x2="770" y2="232" stroke="#d9e2ec"/>
+  <text x="30" y="256" class="head">포트 상태 대응</text>
+  <text x="30" y="280">802.1D 블로킹, 리스닝</text>
+  <text x="250" y="280">→</text>
+  <text x="290" y="280">802.1w 디스카딩 (프레임 전달 안 함, 주소 학습 안 함)</text>
+  <text x="30" y="302">802.1D 러닝</text>
+  <text x="250" y="302">→</text>
+  <text x="290" y="302">802.1w 러닝 (주소 학습, 프레임 전달 안 함)</text>
+  <text x="30" y="324">802.1D 포워딩</text>
+  <text x="250" y="324">→</text>
+  <text x="290" y="324">802.1w 포워딩 (프레임 전달, 주소 학습)</text>
+</svg>

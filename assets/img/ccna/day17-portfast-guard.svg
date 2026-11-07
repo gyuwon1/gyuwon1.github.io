@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 350" role="img" aria-labelledby="t d">
+  <title>PortFast와 BPDU Guard의 동작</title>
+  <desc>액세스 스위치의 Fa0/1 포트에 PC가 연결되어 있고 PortFast 덕분에 링크가 올라오면 바로 포워딩한다. Fa0/2 포트에는 다른 스위치가 잘못 연결되어 BPDU를 보내고, BPDU Guard가 이를 감지해 포트를 err-disabled 상태로 차단한다</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 11px; fill: #52606d; }
+    .head { font-size: 15px; font-weight: 700; }
+    .link { stroke: #9aa5b1; stroke-width: 3; fill: none; }
+    .sw { fill: #e3f2fd; stroke: #7aa5d2; stroke-width: 2; }
+    .pc { fill: #def3e6; stroke: #2e7d4f; stroke-width: 2; }
+    .bad { fill: #fde2e0; stroke: #c0392b; stroke-width: 2; }
+    .ok { fill: #2e7d4f; font-weight: 700; }
+    .ng { fill: #c0392b; font-weight: 700; }
+  </style>
+  <rect width="800" height="350" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+  <text x="400" y="28" text-anchor="middle" class="head">액세스 포트 보호</text>
+  <line class="link" x1="350" y1="110" x2="110" y2="215"/>
+  <line class="link" x1="450" y1="110" x2="690" y2="215"/>
+  <line x1="504" y1="126" x2="524" y2="150" stroke="#c0392b" stroke-width="4"/>
+  <line x1="524" y1="126" x2="504" y2="150" stroke="#c0392b" stroke-width="4"/>
+  <rect class="sw" x="300" y="50" width="200" height="60" rx="6"/>
+  <text x="400" y="76" text-anchor="middle">액세스 스위치</text>
+  <text x="400" y="96" text-anchor="middle" class="small">PortFast + BPDU Guard</text>
+  <rect class="pc" x="50" y="215" width="120" height="50" rx="6"/>
+  <text x="110" y="245" text-anchor="middle">PC</text>
+  <rect class="bad" x="630" y="215" width="140" height="50" rx="6"/>
+  <text x="700" y="245" text-anchor="middle">다른 스위치</text>
+  <text x="250" y="146" text-anchor="end" class="small">Fa0/1</text>
+  <text x="590" y="140" class="small">Fa0/2</text>
+  <text x="590" y="158" class="ng">BPDU 수신</text>
+  <text x="110" y="292" text-anchor="middle" class="ok">링크가 올라오면 바로 포워딩</text>
+  <text x="110" y="311" text-anchor="middle" class="small">리스닝, 러닝 단계를 건너뛴다</text>
+  <text x="700" y="292" text-anchor="middle" class="ng">err-disabled로 차단</text>
+  <text x="700" y="311" text-anchor="middle" class="small">관리자가 복구할 때까지 down</text>
+  <text x="400" y="338" text-anchor="middle" class="small">PortFast는 단말이 연결된 액세스 포트에만 적용한다</text>
+</svg>
