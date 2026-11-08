@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 330" role="img" aria-labelledby="t d">
+  <title>EtherChannel 모드 조합표</title>
+  <desc>LACP는 active와 active, active와 passive 조합에서 묶이고 passive와 passive는 묶이지 않는다. PAgP는 desirable과 desirable, desirable과 auto 조합에서 묶이고 auto와 auto는 묶이지 않는다. on은 on과만 묶이며 협상하지 않는다</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 11px; fill: #52606d; }
+    .head { font-size: 15px; font-weight: 700; }
+    .link { stroke: #9aa5b1; stroke-width: 3; fill: none; }
+    .act { stroke: #2e7d4f; stroke-width: 3; fill: none; }
+    .blk { stroke: #c0392b; stroke-width: 3; fill: none; stroke-dasharray: 6 4; }
+    .sw { fill: #e3f2fd; stroke: #7aa5d2; stroke-width: 2; }
+    .pc { fill: #def3e6; stroke: #2e7d4f; stroke-width: 2; }
+    .po { fill: none; stroke: #7aa5d2; stroke-width: 2; stroke-dasharray: 5 4; }
+    .ok { fill: #2e7d4f; font-weight: 700; }
+    .ng { fill: #c0392b; font-weight: 700; }
+    .th { fill: #e3f2fd; stroke: #7aa5d2; stroke-width: 1.5; }
+    .td { fill: #ffffff; stroke: #d9e2ec; stroke-width: 1.5; }
+  </style>
+  <rect width="800" height="330" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+  <text x="400" y="28" text-anchor="middle" class="head">양쪽 모드 조합과 결과</text>
+  <rect class="th" x="40" y="48" width="140" height="34"/>
+  <rect class="th" x="180" y="48" width="170" height="34"/>
+  <rect class="th" x="350" y="48" width="170" height="34"/>
+  <rect class="th" x="520" y="48" width="240" height="34"/>
+  <text x="110" y="70" text-anchor="middle">방식</text>
+  <text x="265" y="70" text-anchor="middle">SW1 / SW2</text>
+  <text x="435" y="70" text-anchor="middle">결과</text>
+  <text x="640" y="70" text-anchor="middle">비고</text>
+  <rect class="td" x="40" y="82" width="140" height="102"/>
+  <text x="110" y="128" text-anchor="middle">LACP</text>
+  <text x="110" y="148" text-anchor="middle" class="small">IEEE 표준</text>
+  <rect class="td" x="180" y="82" width="170" height="34"/>
+  <rect class="td" x="180" y="116" width="170" height="34"/>
+  <rect class="td" x="180" y="150" width="170" height="34"/>
+  <text x="265" y="104" text-anchor="middle">active / active</text>
+  <text x="265" y="138" text-anchor="middle">active / passive</text>
+  <text x="265" y="172" text-anchor="middle">passive / passive</text>
+  <rect class="td" x="350" y="82" width="170" height="34"/>
+  <rect class="td" x="350" y="116" width="170" height="34"/>
+  <rect class="td" x="350" y="150" width="170" height="34"/>
+  <text x="435" y="104" text-anchor="middle" class="ok">묶인다</text>
+  <text x="435" y="138" text-anchor="middle" class="ok">묶인다</text>
+  <text x="435" y="172" text-anchor="middle" class="ng">묶이지 않는다</text>
+  <rect class="td" x="520" y="82" width="240" height="102"/>
+  <text x="640" y="128" text-anchor="middle" class="small">passive는 먼저 협상을</text>
+  <text x="640" y="146" text-anchor="middle" class="small">시작하지 않는다</text>
+  <rect class="td" x="40" y="184" width="140" height="102"/>
+  <text x="110" y="230" text-anchor="middle">PAgP</text>
+  <text x="110" y="250" text-anchor="middle" class="small">Cisco 전용</text>
+  <rect class="td" x="180" y="184" width="170" height="34"/>
+  <rect class="td" x="180" y="218" width="170" height="34"/>
+  <rect class="td" x="180" y="252" width="170" height="34"/>
+  <text x="265" y="206" text-anchor="middle">desirable / desirable</text>
+  <text x="265" y="240" text-anchor="middle">desirable / auto</text>
+  <text x="265" y="274" text-anchor="middle">auto / auto</text>
+  <rect class="td" x="350" y="184" width="170" height="34"/>
+  <rect class="td" x="350" y="218" width="170" height="34"/>
+  <rect class="td" x="350" y="252" width="170" height="34"/>
+  <text x="435" y="206" text-anchor="middle" class="ok">묶인다</text>
+  <text x="435" y="240" text-anchor="middle" class="ok">묶인다</text>
+  <text x="435" y="274" text-anchor="middle" class="ng">묶이지 않는다</text>
+  <rect class="td" x="520" y="184" width="240" height="102"/>
+  <text x="640" y="230" text-anchor="middle" class="small">auto는 먼저 협상을</text>
+  <text x="640" y="248" text-anchor="middle" class="small">시작하지 않는다</text>
+  <text x="400" y="312" text-anchor="middle" class="small">on은 협상 없이 강제로 묶는다. 상대도 on이어야 하고 LACP, PAgP와는 섞이지 않는다</text>
+</svg>

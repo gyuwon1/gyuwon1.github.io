@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 330" role="img" aria-labelledby="t d">
+  <title>EtherChannel의 부하 분산 방식</title>
+  <desc>프레임의 출발지와 목적지 주소로 해시값을 계산하고, 그 값에 따라 묶음 안의 포트 중 하나를 고른다. 같은 출발지와 목적지 조합은 항상 같은 포트로 나가며, 조합이 다르면 다른 포트로 나갈 수 있다</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 11px; fill: #52606d; }
+    .head { font-size: 15px; font-weight: 700; }
+    .link { stroke: #9aa5b1; stroke-width: 3; fill: none; }
+    .act { stroke: #2e7d4f; stroke-width: 3; fill: none; }
+    .blk { stroke: #c0392b; stroke-width: 3; fill: none; stroke-dasharray: 6 4; }
+    .sw { fill: #e3f2fd; stroke: #7aa5d2; stroke-width: 2; }
+    .pc { fill: #def3e6; stroke: #2e7d4f; stroke-width: 2; }
+    .po { fill: none; stroke: #7aa5d2; stroke-width: 2; stroke-dasharray: 5 4; }
+    .ok { fill: #2e7d4f; font-weight: 700; }
+    .ng { fill: #c0392b; font-weight: 700; }
+    .th { fill: #e3f2fd; stroke: #7aa5d2; stroke-width: 1.5; }
+    .td { fill: #ffffff; stroke: #d9e2ec; stroke-width: 1.5; }
+  </style>
+  <rect width="800" height="330" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+  <text x="400" y="28" text-anchor="middle" class="head">플로우 단위 부하 분산</text>
+  <rect class="pc" x="30" y="60" width="150" height="44" rx="6"/>
+  <text x="105" y="87" text-anchor="middle">PC1 to 서버A</text>
+  <rect class="pc" x="30" y="125" width="150" height="44" rx="6"/>
+  <text x="105" y="152" text-anchor="middle">PC2 to 서버A</text>
+  <rect class="pc" x="30" y="190" width="150" height="44" rx="6"/>
+  <text x="105" y="217" text-anchor="middle">PC1 to 서버B</text>
+  <rect class="sw" x="290" y="95" width="140" height="100" rx="6"/>
+  <text x="360" y="130" text-anchor="middle">SW1</text>
+  <text x="360" y="152" text-anchor="middle" class="small">출발지, 목적지 주소로</text>
+  <text x="360" y="168" text-anchor="middle" class="small">해시 계산</text>
+  <line class="link" x1="180" y1="82" x2="290" y2="125"/>
+  <line class="link" x1="180" y1="147" x2="290" y2="145"/>
+  <line class="link" x1="180" y1="212" x2="290" y2="165"/>
+  <rect class="po" x="440" y="60" width="200" height="170" rx="10"/>
+  <text x="540" y="52" text-anchor="middle" class="small">Port-channel 1</text>
+  <line class="act" x1="430" y1="115" x2="640" y2="100"/>
+  <line class="act" x1="430" y1="145" x2="640" y2="145"/>
+  <line class="act" x1="430" y1="175" x2="640" y2="190"/>
+  <text x="530" y="95" class="small">Gi0/1</text>
+  <text x="530" y="139" class="small">Gi0/2</text>
+  <text x="530" y="205" class="small">Gi0/3</text>
+  <rect class="sw" x="660" y="95" width="110" height="100" rx="6"/>
+  <text x="715" y="150" text-anchor="middle">SW2</text>
+  <text x="400" y="262" text-anchor="middle" class="ok">같은 조합은 항상 같은 포트로 나간다</text>
+  <text x="400" y="282" text-anchor="middle" class="small">프레임 순서가 뒤바뀌지 않게 하려는 방식이다</text>
+  <text x="400" y="312" text-anchor="middle" class="small">조합이 한쪽으로 몰리면 특정 포트만 바쁠 수 있다</text>
+</svg>

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" role="img" aria-labelledby="t d">
+  <title>STP 환경의 중복 링크와 EtherChannel 비교</title>
+  <desc>왼쪽은 스위치 두 대 사이에 링크가 두 개 있지만 STP가 하나를 블로킹해 대역폭을 절반만 쓴다. 오른쪽은 두 링크를 Port-channel 1 하나로 묶어 STP가 하나의 링크로 보고 두 링크를 모두 사용한다</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 11px; fill: #52606d; }
+    .head { font-size: 15px; font-weight: 700; }
+    .link { stroke: #9aa5b1; stroke-width: 3; fill: none; }
+    .act { stroke: #2e7d4f; stroke-width: 3; fill: none; }
+    .blk { stroke: #c0392b; stroke-width: 3; fill: none; stroke-dasharray: 6 4; }
+    .sw { fill: #e3f2fd; stroke: #7aa5d2; stroke-width: 2; }
+    .pc { fill: #def3e6; stroke: #2e7d4f; stroke-width: 2; }
+    .po { fill: none; stroke: #7aa5d2; stroke-width: 2; stroke-dasharray: 5 4; }
+    .ok { fill: #2e7d4f; font-weight: 700; }
+    .ng { fill: #c0392b; font-weight: 700; }
+    .th { fill: #e3f2fd; stroke: #7aa5d2; stroke-width: 1.5; }
+    .td { fill: #ffffff; stroke: #d9e2ec; stroke-width: 1.5; }
+  </style>
+  <rect width="800" height="340" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+  <text x="200" y="28" text-anchor="middle" class="head">묶지 않은 경우 (STP)</text>
+  <text x="600" y="28" text-anchor="middle" class="head">EtherChannel</text>
+  <line x1="400" y1="45" x2="400" y2="320" stroke="#d9e2ec"/>
+  <rect class="sw" x="140" y="60" width="120" height="44" rx="6"/>
+  <text x="200" y="87" text-anchor="middle">SW1</text>
+  <rect class="sw" x="140" y="236" width="120" height="44" rx="6"/>
+  <text x="200" y="263" text-anchor="middle">SW2</text>
+  <line class="act" x1="175" y1="104" x2="175" y2="236"/>
+  <line class="blk" x1="225" y1="104" x2="225" y2="236"/>
+  <text x="165" y="175" text-anchor="end" class="small">Gi0/1 포워딩</text>
+  <text x="235" y="175" class="small">Gi0/2 블로킹</text>
+  <text x="200" y="304" text-anchor="middle" class="ng">사용 가능한 대역폭은 링크 1개 분량</text>
+  <text x="200" y="322" text-anchor="middle" class="small">나머지 링크는 예비로만 남는다</text>
+  <rect class="sw" x="540" y="60" width="120" height="44" rx="6"/>
+  <text x="600" y="87" text-anchor="middle">SW1</text>
+  <rect class="sw" x="540" y="236" width="120" height="44" rx="6"/>
+  <text x="600" y="263" text-anchor="middle">SW2</text>
+  <line class="act" x1="575" y1="104" x2="575" y2="236"/>
+  <line class="act" x1="625" y1="104" x2="625" y2="236"/>
+  <rect class="po" x="552" y="112" width="96" height="116" rx="10"/>
+  <text x="546" y="175" text-anchor="end" class="small">Gi0/1</text>
+  <text x="656" y="175" class="small">Gi0/2</text>
+  <text x="730" y="108" text-anchor="middle" class="small">Port-channel 1</text>
+  <text x="730" y="126" text-anchor="middle" class="small">논리 링크 1개</text>
+  <text x="600" y="304" text-anchor="middle" class="ok">두 링크를 모두 사용</text>
+  <text x="600" y="322" text-anchor="middle" class="small">STP는 묶음 전체를 링크 하나로 본다</text>
+</svg>
