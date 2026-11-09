@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" role="img" aria-labelledby="t d">
+  <title>광고 프레임에 담기는 정보</title>
+  <desc>장비는 주기적으로 멀티캐스트 프레임을 보낸다. CDP 프레임에는 Device ID, Port ID, Holdtime, Capabilities, Platform, Address가 들어 있고, LLDP 프레임에는 Chassis ID, Port ID, TTL, System Name, System Capabilities, Management Address가 들어 있다. 받은 장비는 홀드타임 또는 TTL이 지나면 해당 정보를 지운다</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 11px; fill: #52606d; }
+    .head { font-size: 15px; font-weight: 700; }
+    .link { stroke: #7aa5d2; stroke-width: 3; fill: none; }
+    .sw { fill: #e3f2fd; stroke: #7aa5d2; stroke-width: 2; }
+    .ok { fill: #def3e6; stroke: #2e7d4f; stroke-width: 2; }
+    .ng { fill: #fdecea; stroke: #c0392b; stroke-width: 2; }
+    .th { fill: #e3f2fd; stroke: #7aa5d2; stroke-width: 1.5; }
+    .td { fill: #ffffff; stroke: #d9e2ec; stroke-width: 1.5; }
+    .arr { stroke: #2e7d4f; stroke-width: 2; fill: none; marker-end: url(#a); }
+  </style>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#2e7d4f"/></marker></defs>
+  <rect width="800" height="300" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+  <text x="400" y="28" text-anchor="middle" class="head">광고 프레임 속 정보 (TLV)</text>
+  <text x="30" y="66" class="head">CDP</text>
+  <rect class="ok" x="30" y="76" width="120" height="44"/><text x="90" y="103" text-anchor="middle">Device ID</text>
+  <rect class="ok" x="150" y="76" width="110" height="44"/><text x="205" y="103" text-anchor="middle">Port ID</text>
+  <rect class="ok" x="260" y="76" width="120" height="44"/><text x="320" y="103" text-anchor="middle">Holdtime</text>
+  <rect class="ok" x="380" y="76" width="140" height="44"/><text x="450" y="103" text-anchor="middle">Capabilities</text>
+  <rect class="ok" x="520" y="76" width="110" height="44"/><text x="575" y="103" text-anchor="middle">Platform</text>
+  <rect class="ok" x="630" y="76" width="110" height="44"/><text x="685" y="103" text-anchor="middle">Address</text>
+  <text x="30" y="166" class="head">LLDP</text>
+  <rect class="sw" x="30" y="176" width="120" height="44"/><text x="90" y="203" text-anchor="middle">Chassis ID</text>
+  <rect class="sw" x="150" y="176" width="110" height="44"/><text x="205" y="203" text-anchor="middle">Port ID</text>
+  <rect class="sw" x="260" y="176" width="120" height="44"/><text x="320" y="203" text-anchor="middle">TTL</text>
+  <rect class="sw" x="380" y="176" width="140" height="44"/><text x="450" y="203" text-anchor="middle">System Name</text>
+  <rect class="sw" x="520" y="176" width="110" height="44"/><text x="575" y="203" text-anchor="middle" style="font-size:11px">Sys Capabilities</text>
+  <rect class="sw" x="630" y="176" width="110" height="44"/><text x="685" y="203" text-anchor="middle" style="font-size:11px">Mgmt Address</text>
+  <text x="400" y="262" text-anchor="middle" class="small">Holdtime(TTL)이 지나도 새 프레임이 오지 않으면 이웃 정보를 지운다</text>
+</svg>

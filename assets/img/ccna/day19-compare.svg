@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 330" role="img" aria-labelledby="t d">
+  <title>CDP와 LLDP 비교표</title>
+  <desc>CDP는 Cisco 전용이고 목적지 MAC이 0100.0CCC.CCCC, 기본 전송 주기 60초, 홀드타임 180초이며 Cisco 장비에서 기본으로 켜져 있다. LLDP는 IEEE 802.1AB 표준이고 목적지 MAC이 0180.C200.000E, EtherType 0x88CC, 기본 전송 주기 30초, 홀드타임 120초이며 Cisco IOS에서 기본으로 꺼져 있다</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 11px; fill: #52606d; }
+    .head { font-size: 15px; font-weight: 700; }
+    .link { stroke: #7aa5d2; stroke-width: 3; fill: none; }
+    .sw { fill: #e3f2fd; stroke: #7aa5d2; stroke-width: 2; }
+    .ok { fill: #def3e6; stroke: #2e7d4f; stroke-width: 2; }
+    .ng { fill: #fdecea; stroke: #c0392b; stroke-width: 2; }
+    .th { fill: #e3f2fd; stroke: #7aa5d2; stroke-width: 1.5; }
+    .td { fill: #ffffff; stroke: #d9e2ec; stroke-width: 1.5; }
+    .arr { stroke: #2e7d4f; stroke-width: 2; fill: none; marker-end: url(#a); }
+  </style>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#2e7d4f"/></marker></defs>
+  <rect width="800" height="330" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+  <text x="400" y="28" text-anchor="middle" class="head">CDP와 LLDP</text>
+  <rect class="th" x="30" y="48" width="170" height="38"/><rect class="th" x="200" y="48" width="280" height="38"/><rect class="th" x="480" y="48" width="290" height="38"/>
+  <text x="115" y="72" text-anchor="middle" class="head">항목</text><text x="340" y="72" text-anchor="middle" class="head">CDP</text><text x="625" y="72" text-anchor="middle" class="head">LLDP</text>
+  <rect class="td" x="30" y="86" width="170" height="38"/><rect class="td" x="200" y="86" width="280" height="38"/><rect class="td" x="480" y="86" width="290" height="38"/>
+  <text x="115" y="110" text-anchor="middle">규격</text><text x="340" y="110" text-anchor="middle">Cisco 전용</text><text x="625" y="110" text-anchor="middle">IEEE 802.1AB 표준</text>
+  <rect class="td" x="30" y="124" width="170" height="38"/><rect class="td" x="200" y="124" width="280" height="38"/><rect class="td" x="480" y="124" width="290" height="38"/>
+  <text x="115" y="148" text-anchor="middle">목적지 MAC</text><text x="340" y="148" text-anchor="middle">0100.0CCC.CCCC</text><text x="625" y="148" text-anchor="middle">0180.C200.000E</text>
+  <rect class="td" x="30" y="162" width="170" height="38"/><rect class="td" x="200" y="162" width="280" height="38"/><rect class="td" x="480" y="162" width="290" height="38"/>
+  <text x="115" y="186" text-anchor="middle">전송 주기</text><text x="340" y="186" text-anchor="middle">60초</text><text x="625" y="186" text-anchor="middle">30초</text>
+  <rect class="td" x="30" y="200" width="170" height="38"/><rect class="td" x="200" y="200" width="280" height="38"/><rect class="td" x="480" y="200" width="290" height="38"/>
+  <text x="115" y="224" text-anchor="middle">홀드타임</text><text x="340" y="224" text-anchor="middle">180초</text><text x="625" y="224" text-anchor="middle">120초</text>
+  <rect class="td" x="30" y="238" width="170" height="38"/><rect class="td" x="200" y="238" width="280" height="38"/><rect class="td" x="480" y="238" width="290" height="38"/>
+  <text x="115" y="262" text-anchor="middle">Cisco 기본값</text><text x="340" y="262" text-anchor="middle">켜짐</text><text x="625" y="262" text-anchor="middle">꺼짐 (lldp run으로 켬)</text>
+  <text x="400" y="306" text-anchor="middle" class="small">둘 다 Layer 2 프로토콜이라 IP 주소 없이도 동작한다</text>
+</svg>

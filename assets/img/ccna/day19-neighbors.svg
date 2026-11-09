@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" role="img" aria-labelledby="t d">
+  <title>CDP와 LLDP로 보이는 이웃 장비</title>
+  <desc>SW1, SW2, SW3이 일렬로 연결되어 있다. 각 장비는 직접 연결된 장비에만 광고 프레임을 보내므로 SW2의 이웃 목록에는 SW1과 SW3이 나오고, SW1의 이웃 목록에는 SW2만 나온다</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 11px; fill: #52606d; }
+    .head { font-size: 15px; font-weight: 700; }
+    .link { stroke: #7aa5d2; stroke-width: 3; fill: none; }
+    .sw { fill: #e3f2fd; stroke: #7aa5d2; stroke-width: 2; }
+    .ok { fill: #def3e6; stroke: #2e7d4f; stroke-width: 2; }
+    .ng { fill: #fdecea; stroke: #c0392b; stroke-width: 2; }
+    .th { fill: #e3f2fd; stroke: #7aa5d2; stroke-width: 1.5; }
+    .td { fill: #ffffff; stroke: #d9e2ec; stroke-width: 1.5; }
+    .arr { stroke: #2e7d4f; stroke-width: 2; fill: none; marker-end: url(#a); }
+  </style>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#2e7d4f"/></marker></defs>
+  <rect width="800" height="340" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+  <text x="400" y="28" text-anchor="middle" class="head">직접 연결된 장비만 이웃이 된다</text>
+  <line class="link" x1="190" y1="110" x2="320" y2="110"/>
+  <line class="link" x1="480" y1="110" x2="610" y2="110"/>
+  <rect class="sw" x="70" y="80" width="120" height="60" rx="6"/>
+  <text x="130" y="108" text-anchor="middle">SW1</text>
+  <text x="130" y="126" text-anchor="middle" class="small">Gi0/1</text>
+  <rect class="sw" x="320" y="80" width="160" height="60" rx="6"/>
+  <text x="400" y="108" text-anchor="middle">SW2</text>
+  <text x="400" y="126" text-anchor="middle" class="small">Gi0/1, Gi0/2</text>
+  <rect class="sw" x="610" y="80" width="120" height="60" rx="6"/>
+  <text x="670" y="108" text-anchor="middle">SW3</text>
+  <text x="670" y="126" text-anchor="middle" class="small">Gi0/2</text>
+  <path class="arr" d="M200 70 L310 70"/>
+  <path class="arr" d="M600 70 L490 70"/>
+  <text x="255" y="62" text-anchor="middle" class="small">광고 프레임</text>
+  <text x="545" y="62" text-anchor="middle" class="small">광고 프레임</text>
+  <rect class="ok" x="70" y="190" width="170" height="110" rx="6"/>
+  <text x="155" y="214" text-anchor="middle" class="head">SW1의 이웃</text>
+  <text x="155" y="244" text-anchor="middle">SW2 (Gi0/1)</text>
+  <text x="155" y="268" text-anchor="middle" class="small">SW3은 보이지 않음</text>
+  <rect class="ok" x="315" y="190" width="170" height="110" rx="6"/>
+  <text x="400" y="214" text-anchor="middle" class="head">SW2의 이웃</text>
+  <text x="400" y="244" text-anchor="middle">SW1 (Gi0/1)</text>
+  <text x="400" y="266" text-anchor="middle">SW3 (Gi0/2)</text>
+  <rect class="ok" x="560" y="190" width="170" height="110" rx="6"/>
+  <text x="645" y="214" text-anchor="middle" class="head">SW3의 이웃</text>
+  <text x="645" y="244" text-anchor="middle">SW2 (Gi0/2)</text>
+  <text x="645" y="268" text-anchor="middle" class="small">SW1은 보이지 않음</text>
+  <text x="400" y="326" text-anchor="middle" class="small">프레임은 다음 장비에서 전달되지 않고 거기서 끝난다</text>
+</svg>
