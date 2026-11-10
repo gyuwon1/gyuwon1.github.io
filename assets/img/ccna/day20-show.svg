@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" role="img" aria-labelledby="t d">
+  <title>확인하려는 대상별 show 명령</title>
+  <desc>인터페이스 상태는 show interfaces status, MAC 주소 테이블은 show mac address-table, VLAN 소속은 show vlan brief, 트렁크는 show interfaces trunk, STP는 show spanning-tree, EtherChannel은 show etherchannel summary, 이웃 장비는 show cdp neighbors와 show lldp neighbors이다</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 11px; fill: #52606d; }
+    .head { font-size: 15px; font-weight: 700; }
+    .link { stroke: #7aa5d2; stroke-width: 3; fill: none; }
+    .trunk { stroke: #2e7d4f; stroke-width: 3; fill: none; }
+    .sw { fill: #e3f2fd; stroke: #7aa5d2; stroke-width: 2; }
+    .rt { fill: #fff4e0; stroke: #d98c1f; stroke-width: 2; }
+    .pc { fill: #f5f7fa; stroke: #9aa5b1; stroke-width: 2; }
+    .th { fill: #e3f2fd; stroke: #7aa5d2; stroke-width: 1.5; }
+    .td { fill: #ffffff; stroke: #d9e2ec; stroke-width: 1.5; }
+    .arr { stroke: #2e7d4f; stroke-width: 2; fill: none; marker-end: url(#a); }
+  </style>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#2e7d4f"/></marker></defs>
+  <rect width="800" height="380" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+  <text x="400" y="28" text-anchor="middle" class="head">무엇을 보려면 어떤 명령을 쓰는가</text>
+  <rect class="th" x="30" y="48" width="250" height="38"/><rect class="th" x="280" y="48" width="490" height="38"/>
+  <text x="155" y="72" text-anchor="middle" class="head">확인 대상</text><text x="525" y="72" text-anchor="middle" class="head">명령</text>
+  <rect class="td" x="30" y="86" width="250" height="38"/><rect class="td" x="280" y="86" width="490" height="38"/>
+  <text x="155" y="110" text-anchor="middle">포트 up/down, 속도</text><text x="525" y="110" text-anchor="middle">show interfaces status</text>
+  <rect class="td" x="30" y="124" width="250" height="38"/><rect class="td" x="280" y="124" width="490" height="38"/>
+  <text x="155" y="148" text-anchor="middle">MAC 주소 학습</text><text x="525" y="148" text-anchor="middle">show mac address-table</text>
+  <rect class="td" x="30" y="162" width="250" height="38"/><rect class="td" x="280" y="162" width="490" height="38"/>
+  <text x="155" y="186" text-anchor="middle">포트의 VLAN 소속</text><text x="525" y="186" text-anchor="middle">show vlan brief</text>
+  <rect class="td" x="30" y="200" width="250" height="38"/><rect class="td" x="280" y="200" width="490" height="38"/>
+  <text x="155" y="224" text-anchor="middle">트렁크, 허용 VLAN, 네이티브 VLAN</text><text x="525" y="224" text-anchor="middle">show interfaces trunk</text>
+  <rect class="td" x="30" y="238" width="250" height="38"/><rect class="td" x="280" y="238" width="490" height="38"/>
+  <text x="155" y="262" text-anchor="middle">루트 브리지, 포트 역할과 상태</text><text x="525" y="262" text-anchor="middle">show spanning-tree</text>
+  <rect class="td" x="30" y="276" width="250" height="38"/><rect class="td" x="280" y="276" width="490" height="38"/>
+  <text x="155" y="300" text-anchor="middle">EtherChannel 묶음 상태</text><text x="525" y="300" text-anchor="middle">show etherchannel summary</text>
+  <rect class="td" x="30" y="314" width="250" height="38"/><rect class="td" x="280" y="314" width="490" height="38"/>
+  <text x="155" y="338" text-anchor="middle">직접 연결된 이웃 장비</text><text x="525" y="338" text-anchor="middle">show cdp neighbors, show lldp neighbors</text>
+</svg>
