@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "일본어 단어 Day 20"
-date: 2026-11-10 20:22:00 +0900
+date: 2026-11-10 20:15:00 +0900
 categories: [japanese]
 ---
 
