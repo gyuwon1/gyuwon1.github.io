@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" role="img" aria-labelledby="t d">
+  <title>라우터를 지날 때 바뀌는 헤더와 바뀌지 않는 헤더</title>
+  <desc>PC1에서 PC2로 가는 패킷이 R1과 R2를 지나는 그림. 출발지와 목적지 IP 주소는 끝까지 같고, 이더넷 헤더의 MAC 주소는 구간마다 새로 쓰이며 TTL은 라우터를 지날 때마다 1씩 줄어든다</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 11px; fill: #52606d; }
+    .head { font-size: 15px; font-weight: 700; }
+    .link { stroke: #7aa5d2; stroke-width: 3; fill: none; }
+    .rt { fill: #fff4e0; stroke: #d98c1f; stroke-width: 2; }
+    .pc { fill: #f5f7fa; stroke: #9aa5b1; stroke-width: 2; }
+    .box { fill: #ffffff; stroke: #d9e2ec; stroke-width: 1.5; }
+    .ip { fill: #e8f5e9; stroke: #2e7d4f; stroke-width: 1.5; }
+    .l2 { fill: #e3f2fd; stroke: #7aa5d2; stroke-width: 1.5; }
+  </style>
+  <rect width="800" height="300" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+  <text x="400" y="28" text-anchor="middle" class="head">PC1 에서 PC2 로 가는 패킷</text>
+  <line class="link" x1="95" y1="85" x2="265" y2="85"/>
+  <line class="link" x1="335" y1="85" x2="465" y2="85"/>
+  <line class="link" x1="535" y1="85" x2="705" y2="85"/>
+  <rect class="pc" x="30" y="60" width="65" height="50" rx="6"/>
+  <text x="62" y="82" text-anchor="middle" class="head">PC1</text>
+  <text x="62" y="99" text-anchor="middle" class="small">10.1.1.10</text>
+  <rect class="rt" x="265" y="60" width="70" height="50" rx="6"/>
+  <text x="300" y="90" text-anchor="middle" class="head">R1</text>
+  <rect class="rt" x="465" y="60" width="70" height="50" rx="6"/>
+  <text x="500" y="90" text-anchor="middle" class="head">R2</text>
+  <rect class="pc" x="705" y="60" width="70" height="50" rx="6"/>
+  <text x="740" y="82" text-anchor="middle" class="head">PC2</text>
+  <text x="740" y="99" text-anchor="middle" class="small">10.3.3.10</text>
+
+  <text x="180" y="135" text-anchor="middle" class="small">구간 1</text>
+  <rect class="l2" x="100" y="145" width="160" height="32" rx="4"/>
+  <text x="180" y="165" text-anchor="middle">MAC: PC1 → R1</text>
+  <rect class="ip" x="100" y="182" width="160" height="32" rx="4"/>
+  <text x="180" y="202" text-anchor="middle">IP: 10.1.1.10 → 10.3.3.10</text>
+  <rect class="box" x="100" y="219" width="160" height="32" rx="4"/>
+  <text x="180" y="239" text-anchor="middle">TTL 64</text>
+
+  <text x="400" y="135" text-anchor="middle" class="small">구간 2</text>
+  <rect class="l2" x="320" y="145" width="160" height="32" rx="4"/>
+  <text x="400" y="165" text-anchor="middle">MAC: R1 → R2</text>
+  <rect class="ip" x="320" y="182" width="160" height="32" rx="4"/>
+  <text x="400" y="202" text-anchor="middle">IP: 10.1.1.10 → 10.3.3.10</text>
+  <rect class="box" x="320" y="219" width="160" height="32" rx="4"/>
+  <text x="400" y="239" text-anchor="middle">TTL 63</text>
+
+  <text x="620" y="135" text-anchor="middle" class="small">구간 3</text>
+  <rect class="l2" x="540" y="145" width="160" height="32" rx="4"/>
+  <text x="620" y="165" text-anchor="middle">MAC: R2 → PC2</text>
+  <rect class="ip" x="540" y="182" width="160" height="32" rx="4"/>
+  <text x="620" y="202" text-anchor="middle">IP: 10.1.1.10 → 10.3.3.10</text>
+  <rect class="box" x="540" y="219" width="160" height="32" rx="4"/>
+  <text x="620" y="239" text-anchor="middle">TTL 62</text>
+  <text x="400" y="278" text-anchor="middle" class="small">MAC 주소는 구간마다 바뀌고, IP 주소는 끝까지 유지된다. TTL은 라우터마다 1 줄어든다</text>
+</svg>
