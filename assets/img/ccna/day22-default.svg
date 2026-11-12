@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 330" role="img" aria-labelledby="t d">
+  <title>디폴트 라우트와 플로팅 스태틱 라우트</title>
+  <desc>R1의 라우팅 테이블에 AD 1인 디폴트 라우트 0.0.0.0/0 via 192.168.12.2 와 AD 200인 백업 디폴트 라우트 via 192.168.13.2 가 있다. 평소에는 AD가 낮은 경로만 테이블에 올라가고, 주 링크가 끊기면 AD 200 경로가 올라온다</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 11px; fill: #52606d; }
+    .head { font-size: 14px; font-weight: 700; }
+    .box { fill: #e3f2fd; stroke: #7aa5d2; stroke-width: 1.5; }
+    .net { fill: #fff8e1; stroke: #d9a441; stroke-width: 1.5; }
+    .main { stroke: #2e7d4f; stroke-width: 3; }
+    .backup { stroke: #9aa5b1; stroke-width: 2.5; stroke-dasharray: 7 5; }
+  </style>
+  <rect width="800" height="330" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+  <rect class="box" x="40" y="130" width="120" height="70" rx="8"/>
+  <text x="100" y="160" text-anchor="middle" class="head">R1</text>
+  <text x="100" y="182" text-anchor="middle" class="small">사내 라우터</text>
+  <rect class="box" x="400" y="50" width="130" height="60" rx="8"/>
+  <text x="465" y="86" text-anchor="middle" class="head">ISP-A (주)</text>
+  <rect class="box" x="400" y="220" width="130" height="60" rx="8"/>
+  <text x="465" y="256" text-anchor="middle" class="head">ISP-B (백업)</text>
+  <rect class="net" x="640" y="130" width="130" height="70" rx="8"/>
+  <text x="705" y="170" text-anchor="middle" class="head">인터넷</text>
+  <line class="main" x1="160" y1="150" x2="400" y2="85"/>
+  <line class="backup" x1="160" y1="180" x2="400" y2="250"/>
+  <line class="main" x1="530" y1="80" x2="640" y2="150"/>
+  <line class="backup" x1="530" y1="250" x2="640" y2="180"/>
+  <text x="250" y="102" class="small" transform="rotate(-15 250 102)">192.168.12.2 (AD 1)</text>
+  <text x="250" y="236" class="small" transform="rotate(18 250 236)">192.168.13.2 (AD 200)</text>
+  <text x="400" y="312" text-anchor="middle" class="small">0.0.0.0/0 경로가 두 개 있어도 AD가 낮은 쪽만 테이블에 올라간다. 주 링크가 끊기면 AD 200 경로가 올라온다</text>
+  <text x="40" y="40" class="head">R1의 설정</text>
+  <text x="40" y="62" class="small">ip route 0.0.0.0 0.0.0.0 192.168.12.2</text>
+  <text x="40" y="80" class="small">ip route 0.0.0.0 0.0.0.0 192.168.13.2 200</text>
+</svg>

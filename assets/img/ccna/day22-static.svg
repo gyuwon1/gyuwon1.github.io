@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" role="img" aria-labelledby="t d">
+  <title>정적 라우트가 필요한 구성</title>
+  <desc>R1과 R2가 192.168.12.0/24 링크로 연결되어 있다. R1은 10.2.2.0/24를 직접 알지 못하므로 ip route 10.2.2.0 255.255.255.0 192.168.12.2 로 다음 홉 R2를 지정한다. R2에도 10.1.1.0/24로 돌아가는 경로가 있어야 응답이 돌아온다</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 11px; fill: #52606d; }
+    .head { font-size: 14px; font-weight: 700; }
+    .box { fill: #e3f2fd; stroke: #7aa5d2; stroke-width: 1.5; }
+    .net { fill: #fff8e1; stroke: #d9a441; stroke-width: 1.5; }
+    .line { stroke: #52606d; stroke-width: 2; }
+    .go { stroke: #2e7d4f; stroke-width: 2.5; fill: none; }
+    .back { stroke: #c0562b; stroke-width: 2.5; fill: none; stroke-dasharray: 6 4; }
+  </style>
+  <rect width="800" height="300" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+  <rect class="net" x="30" y="100" width="140" height="70" rx="8"/>
+  <text x="100" y="128" text-anchor="middle" class="head">LAN A</text>
+  <text x="100" y="150" text-anchor="middle">10.1.1.0/24</text>
+  <rect class="box" x="250" y="100" width="100" height="70" rx="8"/>
+  <text x="300" y="128" text-anchor="middle" class="head">R1</text>
+  <text x="300" y="150" text-anchor="middle" class="small">Gi0/0 10.1.1.1</text>
+  <rect class="box" x="450" y="100" width="100" height="70" rx="8"/>
+  <text x="500" y="128" text-anchor="middle" class="head">R2</text>
+  <text x="500" y="150" text-anchor="middle" class="small">Gi0/1 .2</text>
+  <rect class="net" x="630" y="100" width="140" height="70" rx="8"/>
+  <text x="700" y="128" text-anchor="middle" class="head">LAN B</text>
+  <text x="700" y="150" text-anchor="middle">10.2.2.0/24</text>
+  <line class="line" x1="170" y1="135" x2="250" y2="135"/>
+  <line class="line" x1="350" y1="135" x2="450" y2="135"/>
+  <line class="line" x1="550" y1="135" x2="630" y2="135"/>
+  <text x="400" y="125" text-anchor="middle" class="small">192.168.12.0/24</text>
+  <text x="400" y="158" text-anchor="middle" class="small">R1 Gi0/1 .1</text>
+  <path class="go" d="M 300 95 Q 400 50 500 95"/>
+  <text x="400" y="42" text-anchor="middle">R1: 10.2.2.0/24 은 192.168.12.2 로 보낸다</text>
+  <path class="back" d="M 500 178 Q 400 225 300 178"/>
+  <text x="400" y="248" text-anchor="middle">R2: 10.1.1.0/24 은 192.168.12.1 로 보낸다</text>
+  <text x="400" y="280" text-anchor="middle" class="small">양쪽 라우터에 경로가 모두 있어야 요청과 응답이 오간다</text>
+</svg>
