@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" role="img" aria-labelledby="t d">
+  <title>RIP 홉 수와 OSPF 비용 비교</title>
+  <desc>R1에서 목적지 네트워크까지 RIP은 거치는 라우터 수가 적은 경로를, OSPF는 인터페이스 대역폭으로 계산한 비용의 합이 작은 경로를 고른다. RIP은 홉 수 15까지만 허용하고 16은 도달 불가이다</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 11px; fill: #52606d; }
+    .head { font-size: 14px; font-weight: 700; }
+    .box { fill: #e3f2fd; stroke: #7aa5d2; stroke-width: 1.5; }
+    .ok { fill: #e8f5e9; stroke: #2e7d4f; stroke-width: 1.5; }
+    .net { fill: #fff8e1; stroke: #d9a441; stroke-width: 1.5; }
+    .arrow { stroke: #52606d; stroke-width: 2; fill: none; }
+  </style>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#52606d"/></marker></defs>
+  <rect width="800" height="300" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+<text x="40" y="36" class="head">같은 토폴로지에서 메트릭이 다르게 보는 경로</text>
+<rect class="box" x="40" y="120" width="90" height="60" rx="8"/><text x="85" y="156" text-anchor="middle" class="head">R1</text>
+<rect class="box" x="360" y="60" width="90" height="50" rx="8"/><text x="405" y="90" text-anchor="middle" class="head">R2</text>
+<rect class="box" x="260" y="200" width="70" height="50" rx="8"/><text x="295" y="230" text-anchor="middle" class="head">R3</text>
+<rect class="box" x="480" y="200" width="70" height="50" rx="8"/><text x="515" y="230" text-anchor="middle" class="head">R4</text>
+<rect class="net" x="640" y="120" width="120" height="60" rx="8"/><text x="700" y="148" text-anchor="middle" class="head">목적지</text><text x="700" y="166" text-anchor="middle" class="small">10.9.9.0/24</text>
+<line class="arrow" x1="130" y1="135" x2="360" y2="90"/><line class="arrow" x1="450" y1="90" x2="640" y2="140"/>
+<line class="arrow" x1="110" y1="180" x2="260" y2="215"/><line class="arrow" x1="330" y1="225" x2="480" y2="225"/><line class="arrow" x1="550" y1="215" x2="660" y2="180"/>
+<text x="205" y="104" class="small">10 Mbps</text><text x="520" y="102" class="small">10 Mbps</text>
+<text x="150" y="212" class="small">1 Gbps</text><text x="385" y="218" class="small">1 Gbps</text><text x="580" y="212" class="small">1 Gbps</text>
+<text x="40" y="285" class="small">위 경로: 2홉(R2 경유), 비용 합 20(10+10). 아래 경로: 3홉(R3, R4 경유), 비용 합 3(1+1+1). RIP은 위 경로, OSPF는 아래 경로를 고른다</text>
+</svg>

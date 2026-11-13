@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 370" role="img" aria-labelledby="t d">
+  <title>프로토콜별 기본 AD</title>
+  <desc>Cisco 라우터의 기본 AD는 직접 연결 0, 정적 라우트 1, eBGP 20, 내부 EIGRP 90, OSPF 110, RIP 120, 외부 EIGRP 170, iBGP 200이며 값이 낮을수록 우선한다</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 11px; fill: #52606d; }
+    .head { font-size: 14px; font-weight: 700; }
+    .box { fill: #e3f2fd; stroke: #7aa5d2; stroke-width: 1.5; }
+    .ok { fill: #e8f5e9; stroke: #2e7d4f; stroke-width: 1.5; }
+    .net { fill: #fff8e1; stroke: #d9a441; stroke-width: 1.5; }
+    .arrow { stroke: #52606d; stroke-width: 2; fill: none; }
+  </style>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#52606d"/></marker></defs>
+  <rect width="800" height="370" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+<text x="40" y="36" class="head">기본 AD (낮을수록 우선)</text>
+<text x="150" y="72" text-anchor="end">직접 연결</text>
+<rect class="ok" x="165" y="55" width="3" height="24" rx="4"/>
+<text x="176" y="72">0</text>
+<text x="150" y="106" text-anchor="end">정적 라우트</text>
+<rect class="ok" x="165" y="89" width="3" height="24" rx="4"/>
+<text x="176" y="106">1</text>
+<text x="150" y="140" text-anchor="end">eBGP</text>
+<rect class="box" x="165" y="123" width="52" height="24" rx="4"/>
+<text x="225" y="140">20</text>
+<text x="150" y="174" text-anchor="end">EIGRP(내부)</text>
+<rect class="box" x="165" y="157" width="234" height="24" rx="4"/>
+<text x="407" y="174">90</text>
+<text x="150" y="208" text-anchor="end">OSPF</text>
+<rect class="box" x="165" y="191" width="286" height="24" rx="4"/>
+<text x="459" y="208">110</text>
+<text x="150" y="242" text-anchor="end">RIP</text>
+<rect class="box" x="165" y="225" width="312" height="24" rx="4"/>
+<text x="485" y="242">120</text>
+<text x="150" y="276" text-anchor="end">EIGRP(외부)</text>
+<rect class="box" x="165" y="259" width="442" height="24" rx="4"/>
+<text x="615" y="276">170</text>
+<text x="150" y="310" text-anchor="end">iBGP</text>
+<rect class="box" x="165" y="293" width="520" height="24" rx="4"/>
+<text x="693" y="310">200</text>
+<text x="40" y="350" class="small">AD 255는 신뢰할 수 없는 경로로 취급되어 테이블에 올라가지 않는다</text>
+</svg>

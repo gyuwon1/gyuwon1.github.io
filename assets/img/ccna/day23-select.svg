@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" role="img" aria-labelledby="t d">
+  <title>라우팅 테이블에 경로가 올라가는 순서</title>
+  <desc>같은 목적지에 여러 경로 후보가 있을 때 먼저 가장 긴 프리픽스가 일치하는 경로를 고르고, 길이가 같으면 AD가 낮은 프로토콜을, AD도 같으면 메트릭이 작은 경로를 선택한다</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 11px; fill: #52606d; }
+    .head { font-size: 14px; font-weight: 700; }
+    .box { fill: #e3f2fd; stroke: #7aa5d2; stroke-width: 1.5; }
+    .ok { fill: #e8f5e9; stroke: #2e7d4f; stroke-width: 1.5; }
+    .net { fill: #fff8e1; stroke: #d9a441; stroke-width: 1.5; }
+    .arrow { stroke: #52606d; stroke-width: 2; fill: none; }
+  </style>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#52606d"/></marker></defs>
+  <rect width="800" height="300" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+<text x="40" y="40" class="head">경로 선택 순서</text>
+<rect class="box" x="40" y="70" width="210" height="130" rx="8"/>
+<text x="145" y="100" text-anchor="middle" class="head">1. 프리픽스 길이</text>
+<text x="145" y="128" text-anchor="middle">가장 긴 프리픽스가</text>
+<text x="145" y="148" text-anchor="middle">일치하는 경로</text>
+<text x="145" y="182" text-anchor="middle" class="small">예: /24가 /16보다 우선</text>
+<line class="arrow" x1="252" y1="135" x2="286" y2="135" marker-end="url(#a)"/>
+<rect class="box" x="290" y="70" width="210" height="130" rx="8"/>
+<text x="395" y="100" text-anchor="middle" class="head">2. AD</text>
+<text x="395" y="128" text-anchor="middle">프로토콜 신뢰도가</text>
+<text x="395" y="148" text-anchor="middle">낮은 쪽</text>
+<text x="395" y="182" text-anchor="middle" class="small">예: OSPF 110 &lt; RIP 120</text>
+<line class="arrow" x1="502" y1="135" x2="536" y2="135" marker-end="url(#a)"/>
+<rect class="box" x="540" y="70" width="210" height="130" rx="8"/>
+<text x="645" y="100" text-anchor="middle" class="head">3. 메트릭</text>
+<text x="645" y="128" text-anchor="middle">같은 프로토콜 안에서</text>
+<text x="645" y="148" text-anchor="middle">값이 작은 경로</text>
+<text x="645" y="182" text-anchor="middle" class="small">예: 비용 10 &lt; 비용 20</text>
+<text x="400" y="240" text-anchor="middle" class="small">앞 단계에서 결정되면 뒤 단계는 비교하지 않는다. AD와 메트릭은 같은 목적지(같은 프리픽스 길이)의 후보끼리만 비교한다</text>
+<text x="400" y="262" text-anchor="middle" class="small">메트릭은 프로토콜마다 계산 방법이 달라서 다른 프로토콜끼리는 비교할 수 없다</text>
+</svg>
