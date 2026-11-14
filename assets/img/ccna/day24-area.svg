@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320" role="img" aria-labelledby="t d">
+  <title id="t">OSPF 영역 구조</title>
+  <desc id="d">Area 0 백본을 가운데 두고 ABR1과 ABR2가 각각 Area 1과 Area 2를 연결한다. ABR은 영역마다 별도 LSDB를 가진다</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 11px; fill: #52606d; }
+    .head { font-size: 14px; font-weight: 700; }
+    .box { fill: #e3f2fd; stroke: #7aa5d2; stroke-width: 1.5; }
+    .ok { fill: #e8f5e9; stroke: #2e7d4f; stroke-width: 1.5; }
+    .net { fill: #fff8e1; stroke: #d9a441; stroke-width: 1.5; }
+    .arrow { stroke: #52606d; stroke-width: 2; fill: none; }
+    .link { stroke: #7b8794; stroke-width: 1.5; fill: none; }
+  </style>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#52606d"/></marker></defs>
+  <rect width="800" height="320" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+<text x="40" y="36" class="head">영역과 ABR</text>
+<ellipse class="box" cx="120" cy="160" rx="95" ry="75"/><ellipse class="net" cx="400" cy="160" rx="130" ry="90"/><ellipse class="box" cx="680" cy="160" rx="95" ry="75"/>
+<text x="105" y="112" text-anchor="middle" class="head">Area 1</text><text x="400" y="100" text-anchor="middle" class="head">Area 0 (백본)</text><text x="695" y="112" text-anchor="middle" class="head">Area 2</text>
+<line class="link" x1="100" y1="165" x2="240" y2="160"/>
+<line class="link" x1="240" y1="160" x2="380" y2="135"/>
+<line class="link" x1="240" y1="160" x2="380" y2="195"/>
+<line class="link" x1="380" y1="135" x2="380" y2="195"/>
+<line class="link" x1="380" y1="135" x2="560" y2="160"/>
+<line class="link" x1="380" y1="195" x2="560" y2="160"/>
+<line class="link" x1="560" y1="160" x2="700" y2="165"/>
+<circle fill="#ffffff" stroke="#7aa5d2" stroke-width="1.5" cx="100" cy="165" r="18"/><text x="100" y="169" text-anchor="middle" class="head">R1</text>
+<rect class="ok" x="212" y="144" width="56" height="32" rx="8"/><text x="240" y="165" text-anchor="middle" class="head">ABR1</text>
+<circle fill="#ffffff" stroke="#7aa5d2" stroke-width="1.5" cx="380" cy="135" r="18"/><text x="380" y="139" text-anchor="middle" class="head">R3</text>
+<circle fill="#ffffff" stroke="#7aa5d2" stroke-width="1.5" cx="380" cy="195" r="18"/><text x="380" y="199" text-anchor="middle" class="head">R4</text>
+<rect class="ok" x="532" y="144" width="56" height="32" rx="8"/><text x="560" y="165" text-anchor="middle" class="head">ABR2</text>
+<circle fill="#ffffff" stroke="#7aa5d2" stroke-width="1.5" cx="700" cy="165" r="18"/><text x="700" y="169" text-anchor="middle" class="head">R5</text>
+<text x="40" y="285" class="small">ABR은 두 영역에 인터페이스를 걸치고 영역마다 LSDB를 따로 가진다</text>
+<text x="40" y="304" class="small">영역 사이 경로 정보는 반드시 Area 0을 거쳐 전달된다</text>
+</svg>

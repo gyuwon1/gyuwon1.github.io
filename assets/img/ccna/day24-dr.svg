@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 345" role="img" aria-labelledby="t d">
+  <title id="t">DR/BDR이 있을 때와 없을 때의 인접 관계 수</title>
+  <desc id="d">라우터 5대가 같은 세그먼트에 있을 때 DR 없이는 모든 쌍이 인접해 10개이고, DR과 BDR을 선출하면 DR과 BDR에만 인접해 7개가 된다</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 11px; fill: #52606d; }
+    .head { font-size: 14px; font-weight: 700; }
+    .box { fill: #e3f2fd; stroke: #7aa5d2; stroke-width: 1.5; }
+    .ok { fill: #e8f5e9; stroke: #2e7d4f; stroke-width: 1.5; }
+    .net { fill: #fff8e1; stroke: #d9a441; stroke-width: 1.5; }
+    .arrow { stroke: #52606d; stroke-width: 2; fill: none; }
+    .link { stroke: #7b8794; stroke-width: 1.5; fill: none; }
+  </style>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#52606d"/></marker></defs>
+  <rect width="800" height="345" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+<text x="40" y="36" class="head">DR 없이 (라우터 5대)</text><text x="440" y="36" class="head">DR/BDR 선출 후</text>
+<line x1="400" y1="50" x2="400" y2="320" stroke="#d9e2ec" stroke-width="1.5"/>
+<line class="link" x1="200.0" y1="100.0" x2="285.6" y2="162.2"/>
+<line class="link" x1="200.0" y1="100.0" x2="252.9" y2="262.8"/>
+<line class="link" x1="200.0" y1="100.0" x2="147.1" y2="262.8"/>
+<line class="link" x1="200.0" y1="100.0" x2="114.4" y2="162.2"/>
+<line class="link" x1="285.6" y1="162.2" x2="252.9" y2="262.8"/>
+<line class="link" x1="285.6" y1="162.2" x2="147.1" y2="262.8"/>
+<line class="link" x1="285.6" y1="162.2" x2="114.4" y2="162.2"/>
+<line class="link" x1="252.9" y1="262.8" x2="147.1" y2="262.8"/>
+<line class="link" x1="252.9" y1="262.8" x2="114.4" y2="162.2"/>
+<line class="link" x1="147.1" y1="262.8" x2="114.4" y2="162.2"/>
+<circle class="box" cx="200.0" cy="100.0" r="20"/><text x="200.0" y="104.0" text-anchor="middle" class="head">R1</text>
+<circle class="box" cx="285.6" cy="162.2" r="20"/><text x="285.6" y="166.2" text-anchor="middle" class="head">R2</text>
+<circle class="box" cx="252.9" cy="262.8" r="20"/><text x="252.9" y="266.8" text-anchor="middle" class="head">R3</text>
+<circle class="box" cx="147.1" cy="262.8" r="20"/><text x="147.1" y="266.8" text-anchor="middle" class="head">R4</text>
+<circle class="box" cx="114.4" cy="162.2" r="20"/><text x="114.4" y="166.2" text-anchor="middle" class="head">R5</text>
+<text x="200" y="312" text-anchor="middle">모든 쌍이 인접: 10개</text>
+<line class="link" x1="600.0" y1="100.0" x2="685.6" y2="162.2"/>
+<line class="link" x1="600.0" y1="100.0" x2="652.9" y2="262.8"/>
+<line class="link" x1="600.0" y1="100.0" x2="547.1" y2="262.8"/>
+<line class="link" x1="600.0" y1="100.0" x2="514.4" y2="162.2"/>
+<line class="link" x1="685.6" y1="162.2" x2="652.9" y2="262.8"/>
+<line class="link" x1="685.6" y1="162.2" x2="547.1" y2="262.8"/>
+<line class="link" x1="685.6" y1="162.2" x2="514.4" y2="162.2"/>
+<circle class="ok" cx="600.0" cy="100.0" r="22"/><text x="600.0" y="104.0" text-anchor="middle" class="head">DR</text>
+<circle class="net" cx="685.6" cy="162.2" r="22"/><text x="685.6" y="166.2" text-anchor="middle" class="head">BDR</text>
+<circle class="box" cx="652.9" cy="262.8" r="22"/><text x="652.9" y="266.8" text-anchor="middle" class="head">R3</text>
+<circle class="box" cx="547.1" cy="262.8" r="22"/><text x="547.1" y="266.8" text-anchor="middle" class="head">R4</text>
+<circle class="box" cx="514.4" cy="162.2" r="22"/><text x="514.4" y="166.2" text-anchor="middle" class="head">R5</text>
+<text x="600" y="312" text-anchor="middle">DR/BDR과만 인접: 7개</text>
+<text x="600" y="330" text-anchor="middle" class="small">R3, R4, R5(DROther)끼리는 2-Way</text>
+</svg>

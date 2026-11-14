@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 290" role="img" aria-labelledby="t d">
+  <title id="t">OSPF 이웃 상태 변화</title>
+  <desc id="d">Down, Init, 2-Way, ExStart, Exchange, Loading, Full 순서로 이웃 상태가 바뀌며 Full에서 LSDB가 동일해진다</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 11px; fill: #52606d; }
+    .head { font-size: 14px; font-weight: 700; }
+    .box { fill: #e3f2fd; stroke: #7aa5d2; stroke-width: 1.5; }
+    .ok { fill: #e8f5e9; stroke: #2e7d4f; stroke-width: 1.5; }
+    .net { fill: #fff8e1; stroke: #d9a441; stroke-width: 1.5; }
+    .arrow { stroke: #52606d; stroke-width: 2; fill: none; }
+    .link { stroke: #7b8794; stroke-width: 1.5; fill: none; }
+  </style>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#52606d"/></marker></defs>
+  <rect width="800" height="290" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+<text x="25" y="36" class="head">OSPF 이웃 관계가 Full이 되기까지</text>
+<rect class="box" x="25" y="70" width="90" height="44" rx="8"/><text x="70" y="97" text-anchor="middle" class="head">Down</text>
+<line class="arrow" x1="117" y1="92" x2="133" y2="92" marker-end="url(#a)"/>
+<text x="70" y="140" text-anchor="middle" class="small">Hello 없음</text>
+<rect class="box" x="135" y="70" width="90" height="44" rx="8"/><text x="180" y="97" text-anchor="middle" class="head">Init</text>
+<line class="arrow" x1="227" y1="92" x2="243" y2="92" marker-end="url(#a)"/>
+<text x="180" y="140" text-anchor="middle" class="small">Hello 수신</text>
+<text x="180" y="156" text-anchor="middle" class="small">내 ID 미포함</text>
+<rect class="box" x="245" y="70" width="90" height="44" rx="8"/><text x="290" y="97" text-anchor="middle" class="head">2-Way</text>
+<line class="arrow" x1="337" y1="92" x2="353" y2="92" marker-end="url(#a)"/>
+<text x="290" y="140" text-anchor="middle" class="small">양방향 확인</text>
+<text x="290" y="156" text-anchor="middle" class="small">DR 선출</text>
+<rect class="box" x="355" y="70" width="90" height="44" rx="8"/><text x="400" y="97" text-anchor="middle" class="head">ExStart</text>
+<line class="arrow" x1="447" y1="92" x2="463" y2="92" marker-end="url(#a)"/>
+<text x="400" y="140" text-anchor="middle" class="small">마스터 결정</text>
+<rect class="box" x="465" y="70" width="90" height="44" rx="8"/><text x="510" y="97" text-anchor="middle" class="head">Exchange</text>
+<line class="arrow" x1="557" y1="92" x2="573" y2="92" marker-end="url(#a)"/>
+<text x="510" y="140" text-anchor="middle" class="small">DBD 교환</text>
+<rect class="box" x="575" y="70" width="90" height="44" rx="8"/><text x="620" y="97" text-anchor="middle" class="head">Loading</text>
+<line class="arrow" x1="667" y1="92" x2="683" y2="92" marker-end="url(#a)"/>
+<text x="620" y="140" text-anchor="middle" class="small">LSR/LSU로</text>
+<text x="620" y="156" text-anchor="middle" class="small">누락분 요청</text>
+<rect class="ok" x="685" y="70" width="90" height="44" rx="8"/><text x="730" y="97" text-anchor="middle" class="head">Full</text>
+<text x="730" y="140" text-anchor="middle" class="small">LSDB 동일</text>
+<text x="730" y="156" text-anchor="middle" class="small">SPF 계산</text>
+<text x="25" y="220" class="small">Down에서 2-Way까지는 Hello 패킷으로 서로를 확인하는 단계이다</text>
+<text x="25" y="240" class="small">ExStart부터 Full까지는 LSDB를 맞추는 단계이다 (DBD: 목차, LSR: 요청, LSU: 전달)</text>
+<text x="25" y="260" class="small">브로드캐스트 망에서 DROther끼리는 2-Way에서 멈추는 것이 정상이다</text>
+</svg>
