@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img" aria-labelledby="t d">
+  <title id="t">OSPF 이웃 문제 확인 순서</title>
+  <desc id="d">증상별로 확인할 명령과 의심할 원인을 연결한 표. 이웃이 없으면 interface 출력의 영역과 타이머, Init이면 단방향 차단, ExStart나 Exchange면 MTU, Full인데 경로가 없으면 상대의 network 문을 본다</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 11px; fill: #52606d; }
+    .head { font-size: 14px; font-weight: 700; }
+    .mono { font-family: Consolas, "Courier New", monospace; font-size: 12px; }
+    .box { fill: #e3f2fd; stroke: #7aa5d2; stroke-width: 1.5; }
+    .ok { fill: #e8f5e9; stroke: #2e7d4f; stroke-width: 1.5; }
+    .net { fill: #fff8e1; stroke: #d9a441; stroke-width: 1.5; }
+    .bad { fill: #fdecea; stroke: #c0392b; stroke-width: 1.5; }
+    .code { fill: #f5f7fa; stroke: #cbd2d9; stroke-width: 1.2; }
+    .arrow { stroke: #52606d; stroke-width: 2; fill: none; }
+    .link { stroke: #7b8794; stroke-width: 2; fill: none; }
+  </style>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#52606d"/></marker></defs>
+  <rect width="800" height="400" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+  <text x="30" y="32" class="head">증상 → 확인 → 의심할 원인</text>
+  <rect class="bad" x="30" y="50" width="190" height="72" rx="8"/>
+  <text x="125" y="81" text-anchor="middle">이웃 목록에</text>
+  <text x="125" y="99" text-anchor="middle">아무것도 없음</text>
+  <rect class="box" x="270" y="50" width="260" height="72" rx="8"/>
+  <text x="400" y="81" text-anchor="middle">show ip ospf interface</text>
+  <text x="400" y="99" text-anchor="middle">영역, Hello/Dead 값, 서브넷 확인</text>
+  <rect class="ok" x="580" y="50" width="190" height="72" rx="8"/>
+  <text x="675" y="72" text-anchor="middle">영역, 타이머, 서브넷,</text>
+  <text x="675" y="90" text-anchor="middle">인증 불일치</text>
+  <text x="675" y="108" text-anchor="middle">또는 passive-interface</text>
+  <line class="arrow" x1="220" y1="86" x2="266" y2="86" marker-end="url(#a)"/>
+  <line class="arrow" x1="530" y1="86" x2="576" y2="86" marker-end="url(#a)"/>
+  <rect class="bad" x="30" y="136" width="190" height="72" rx="8"/>
+  <text x="125" y="167" text-anchor="middle">Init에서</text>
+  <text x="125" y="185" text-anchor="middle">멈춤</text>
+  <rect class="box" x="270" y="136" width="260" height="72" rx="8"/>
+  <text x="400" y="167" text-anchor="middle">양쪽에서 show ip ospf neighbor</text>
+  <text x="400" y="185" text-anchor="middle">Hello가 한쪽으로만 오가는지 확인</text>
+  <rect class="ok" x="580" y="136" width="190" height="72" rx="8"/>
+  <text x="675" y="167" text-anchor="middle">Hello 한 방향 차단</text>
+  <text x="675" y="185" text-anchor="middle">(ACL, 단방향 링크)</text>
+  <line class="arrow" x1="220" y1="172" x2="266" y2="172" marker-end="url(#a)"/>
+  <line class="arrow" x1="530" y1="172" x2="576" y2="172" marker-end="url(#a)"/>
+  <rect class="bad" x="30" y="222" width="190" height="72" rx="8"/>
+  <text x="125" y="253" text-anchor="middle">ExStart나 Exchange에서</text>
+  <text x="125" y="271" text-anchor="middle">멈춤</text>
+  <rect class="box" x="270" y="222" width="260" height="72" rx="8"/>
+  <text x="400" y="253" text-anchor="middle">show interface</text>
+  <text x="400" y="271" text-anchor="middle">양쪽 MTU 값 비교</text>
+  <rect class="ok" x="580" y="222" width="190" height="72" rx="8"/>
+  <text x="675" y="253" text-anchor="middle">MTU 불일치</text>
+  <text x="675" y="271" text-anchor="middle">(양쪽 MTU를 맞춘다)</text>
+  <line class="arrow" x1="220" y1="258" x2="266" y2="258" marker-end="url(#a)"/>
+  <line class="arrow" x1="530" y1="258" x2="576" y2="258" marker-end="url(#a)"/>
+  <rect class="bad" x="30" y="308" width="190" height="72" rx="8"/>
+  <text x="125" y="339" text-anchor="middle">Full인데</text>
+  <text x="125" y="357" text-anchor="middle">경로가 없음</text>
+  <rect class="box" x="270" y="308" width="260" height="72" rx="8"/>
+  <text x="400" y="339" text-anchor="middle">show ip protocols</text>
+  <text x="400" y="357" text-anchor="middle">show ip route ospf</text>
+  <rect class="ok" x="580" y="308" width="190" height="72" rx="8"/>
+  <text x="675" y="339" text-anchor="middle">상대의 network 문이</text>
+  <text x="675" y="357" text-anchor="middle">그 망을 포함하지 않음</text>
+  <line class="arrow" x1="220" y1="344" x2="266" y2="344" marker-end="url(#a)"/>
+  <line class="arrow" x1="530" y1="344" x2="576" y2="344" marker-end="url(#a)"/>
+</svg>
