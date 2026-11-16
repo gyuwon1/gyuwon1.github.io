@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 330" role="img" aria-labelledby="t d">
+  <title id="t">HSRP 상태 전이와 장애 조치</title>
+  <desc id="d">HSRP 라우터가 Initial, Learn, Listen, Speak, Standby, Active 순으로 상태가 바뀌고 Active의 Hello가 10초 동안 없으면 Standby가 Active가 된다</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 11px; fill: #52606d; }
+    .head { font-size: 14px; font-weight: 700; }
+    .mono { font-family: Consolas, "Courier New", monospace; font-size: 12px; }
+    .box { fill: #e3f2fd; stroke: #7aa5d2; stroke-width: 1.5; }
+    .ok { fill: #e8f5e9; stroke: #2e7d4f; stroke-width: 1.5; }
+    .net { fill: #fff8e1; stroke: #d9a441; stroke-width: 1.5; }
+    .bad { fill: #fdecea; stroke: #c0392b; stroke-width: 1.5; }
+    .code { fill: #f5f7fa; stroke: #cbd2d9; stroke-width: 1.2; }
+    .link { stroke: #7b8794; stroke-width: 2; fill: none; }
+    .dead { stroke: #c0392b; stroke-width: 2; fill: none; stroke-dasharray: 6 4; }
+    .vip { stroke: #2e7d4f; stroke-width: 2.5; fill: none; }
+  </style>
+  <rect width="800" height="330" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+  <text x="30" y="32" class="head">HSRP 상태</text>
+  <rect class="code" x="24" y="52" width="108" height="58" rx="8"/>
+  <text x="78" y="77" text-anchor="middle" class="head">Initial</text>
+  <text x="78" y="96" text-anchor="middle" class="small">시작 직후</text>
+  <line class="link" x1="132" y1="81" x2="152" y2="81"/>
+  <rect class="code" x="152" y="52" width="108" height="58" rx="8"/>
+  <text x="206" y="77" text-anchor="middle" class="head">Learn</text>
+  <text x="206" y="96" text-anchor="middle" class="small">가상 IP를 모름</text>
+  <line class="link" x1="260" y1="81" x2="280" y2="81"/>
+  <rect class="code" x="280" y="52" width="108" height="58" rx="8"/>
+  <text x="334" y="77" text-anchor="middle" class="head">Listen</text>
+  <text x="334" y="96" text-anchor="middle" class="small">가상 IP를 앎</text>
+  <line class="link" x1="388" y1="81" x2="408" y2="81"/>
+  <rect class="code" x="408" y="52" width="108" height="58" rx="8"/>
+  <text x="462" y="77" text-anchor="middle" class="head">Speak</text>
+  <text x="462" y="96" text-anchor="middle" class="small">선출에 참여</text>
+  <line class="link" x1="516" y1="81" x2="536" y2="81"/>
+  <rect class="box" x="536" y="52" width="108" height="58" rx="8"/>
+  <text x="590" y="77" text-anchor="middle" class="head">Standby</text>
+  <text x="590" y="96" text-anchor="middle" class="small">차기 Active</text>
+  <line class="link" x1="644" y1="81" x2="664" y2="81"/>
+  <rect class="ok" x="664" y="52" width="108" height="58" rx="8"/>
+  <text x="718" y="77" text-anchor="middle" class="head">Active</text>
+  <text x="718" y="96" text-anchor="middle" class="small">실제 전달</text>
+  <text x="30" y="140" class="small">보통은 Active와 Standby만 신경 쓰면 된다. 나머지 라우터는 Listen에 머문다</text>
+  <text x="30" y="176" class="head">Active 장애 시 타임라인</text>
+  <line class="link" x1="40" y1="230" x2="760" y2="230"/>
+  <circle cx="70" cy="230" r="6" fill="#2e7d4f"/>
+  <text x="70" y="256" text-anchor="middle" class="small">0초</text>
+  <text x="70" y="208" text-anchor="middle" class="small">R1 장애</text>
+  <circle cx="330" cy="230" r="6" fill="#d9a441"/>
+  <text x="330" y="208" text-anchor="middle" class="small">Hello가 오지 않음</text>
+  <text x="330" y="256" text-anchor="middle" class="small">hold time 카운트 중</text>
+  <circle cx="620" cy="230" r="6" fill="#c0392b"/>
+  <text x="620" y="208" text-anchor="middle" class="small">10초 경과, R1을 죽은 것으로 판단</text>
+  <text x="620" y="256" text-anchor="middle" class="small">R2가 Active가 됨</text>
+  <text x="30" y="290" class="small">hold time 기본값은 10초이다. 그동안 가상 IP로 가는 트래픽은 잠시 끊기고, R2가 Active가 된 뒤 같은 가상 MAC으로 다시 처리된다</text>
+  <text x="30" y="310" class="small">preempt가 꺼져 있으면 R1이 복구되어도 R2가 계속 Active이다</text>
+</svg>

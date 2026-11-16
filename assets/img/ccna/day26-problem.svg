@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320" role="img" aria-labelledby="t d">
+  <title id="t">기본 게이트웨이가 하나일 때의 문제</title>
+  <desc id="d">PC의 기본 게이트웨이가 R1 하나로 고정되어 있어 R1이 고장 나면 R2가 살아 있어도 PC가 밖으로 나가지 못한다</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 11px; fill: #52606d; }
+    .head { font-size: 14px; font-weight: 700; }
+    .mono { font-family: Consolas, "Courier New", monospace; font-size: 12px; }
+    .box { fill: #e3f2fd; stroke: #7aa5d2; stroke-width: 1.5; }
+    .ok { fill: #e8f5e9; stroke: #2e7d4f; stroke-width: 1.5; }
+    .net { fill: #fff8e1; stroke: #d9a441; stroke-width: 1.5; }
+    .bad { fill: #fdecea; stroke: #c0392b; stroke-width: 1.5; }
+    .code { fill: #f5f7fa; stroke: #cbd2d9; stroke-width: 1.2; }
+    .link { stroke: #7b8794; stroke-width: 2; fill: none; }
+    .dead { stroke: #c0392b; stroke-width: 2; fill: none; stroke-dasharray: 6 4; }
+    .vip { stroke: #2e7d4f; stroke-width: 2.5; fill: none; }
+  </style>
+  <rect width="800" height="320" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+  <text x="30" y="32" class="head">게이트웨이가 R1 하나뿐인 구성</text>
+  <rect class="net" x="30" y="120" width="130" height="70" rx="8"/>
+  <text x="95" y="148" text-anchor="middle" class="head">PC</text>
+  <text x="95" y="168" text-anchor="middle" class="small">gateway 10.0.0.1</text>
+  <rect class="bad" x="300" y="60" width="110" height="64" rx="10"/>
+  <text x="355" y="88" text-anchor="middle" class="head">R1</text>
+  <text x="355" y="108" text-anchor="middle" class="small">10.0.0.1 (고장)</text>
+  <rect class="box" x="300" y="186" width="110" height="64" rx="10"/>
+  <text x="355" y="214" text-anchor="middle" class="head">R2</text>
+  <text x="355" y="234" text-anchor="middle" class="small">10.0.0.2 (정상)</text>
+  <rect class="net" x="590" y="120" width="150" height="70" rx="8"/>
+  <text x="665" y="148" text-anchor="middle" class="head">외부 망</text>
+  <text x="665" y="168" text-anchor="middle" class="small">인터넷, 다른 서브넷</text>
+  <line class="dead" x1="160" y1="140" x2="300" y2="100"/>
+  <line class="link" x1="160" y1="170" x2="300" y2="218"/>
+  <line class="dead" x1="410" y1="92" x2="590" y2="140"/>
+  <line class="link" x1="410" y1="218" x2="590" y2="172"/>
+  <text x="190" y="108" class="small">실제 트래픽 (끊김)</text>
+  <text x="170" y="214" class="small">사용 안 됨</text>
+  <text x="30" y="282" class="small">R2로 가는 경로가 살아 있어도 PC의 기본 게이트웨이는 설정값 10.0.0.1 그대로라서 밖으로 나가지 못한다</text>
+  <text x="30" y="302" class="small">PC마다 게이트웨이를 10.0.0.2로 고쳐 주는 것은 현실적이지 않다. 그래서 주소를 라우터가 아니라 둘이 공유하는 가상 주소로 만든다</text>
+</svg>
