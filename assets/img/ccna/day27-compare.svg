@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 330" role="img" aria-labelledby="t d">
+  <title id="t">OSPF DR 선출과 HSRP Active 선출 비교</title>
+  <desc id="d">우선순위 기본값, 동점 처리, 선점 여부, 사용 주소와 포트를 OSPF DR과 HSRP Active로 나누어 비교한 표</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 11px; fill: #52606d; }
+    .head { font-size: 14px; font-weight: 700; }
+    .box { fill: #e3f2fd; stroke: #7aa5d2; stroke-width: 1.5; }
+    .ok { fill: #e8f5e9; stroke: #2e7d4f; stroke-width: 1.5; }
+    .net { fill: #fff8e1; stroke: #d9a441; stroke-width: 1.5; }
+    .bad { fill: #fdecea; stroke: #c0392b; stroke-width: 1.5; }
+    .link { stroke: #7b8794; stroke-width: 2; fill: none; }
+  </style>
+  <rect width="800" height="330" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+  <text x="30" y="32" class="head">두 선출 방식의 비교</text>
+  <rect class="box" x="30" y="50" width="740" height="36" rx="4"/>
+  <text x="45" y="73" class="head">항목</text>
+  <text x="270" y="73" class="head">OSPF DR</text>
+  <text x="530" y="73" class="head">HSRP Active</text>
+  <rect class="net" x="30" y="92" width="740" height="40" rx="4"/>
+  <text x="45" y="117">우선순위 기본값</text>
+  <text x="270" y="117">1</text>
+  <text x="530" y="117">100</text>
+  <rect class="net" x="30" y="138" width="740" height="40" rx="4"/>
+  <text x="45" y="163">동점일 때</text>
+  <text x="270" y="163">Router ID가 높은 쪽</text>
+  <text x="530" y="163">인터페이스 IP가 높은 쪽</text>
+  <rect class="net" x="30" y="184" width="740" height="40" rx="4"/>
+  <text x="45" y="209">나중에 더 높은 쪽이 오면</text>
+  <text x="270" y="209">자리를 뺏지 않는다</text>
+  <text x="530" y="209">기본은 안 뺏음, preempt를 켜면 뺏음</text>
+  <rect class="net" x="30" y="230" width="740" height="40" rx="4"/>
+  <text x="45" y="255">대표 메시지</text>
+  <text x="270" y="255">Hello (224.0.0.5)</text>
+  <text x="530" y="255">Hello (UDP 1985)</text>
+  <text x="30" y="302" class="small">OSPF는 우선순위 0이면 DR 후보에서 빠진다. 두 방식 모두 먼저 자리를 잡은 쪽이 유지되는 점이 시험에서 자주 묻는 부분이다</text>
+</svg>

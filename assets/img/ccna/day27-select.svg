@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" role="img" aria-labelledby="t d">
+  <title id="t">경로 선택 순서 예시</title>
+  <desc id="d">목적지 10.1.1.5에 대해 가장 긴 프리픽스, 낮은 AD, 낮은 메트릭 순서로 경로를 고르는 과정</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 11px; fill: #52606d; }
+    .head { font-size: 14px; font-weight: 700; }
+    .box { fill: #e3f2fd; stroke: #7aa5d2; stroke-width: 1.5; }
+    .ok { fill: #e8f5e9; stroke: #2e7d4f; stroke-width: 1.5; }
+    .net { fill: #fff8e1; stroke: #d9a441; stroke-width: 1.5; }
+    .bad { fill: #fdecea; stroke: #c0392b; stroke-width: 1.5; }
+    .link { stroke: #7b8794; stroke-width: 2; fill: none; }
+  </style>
+  <rect width="800" height="360" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+  <text x="30" y="32" class="head">목적지 10.1.1.5로 가는 패킷의 경로 선택</text>
+  <rect class="net" x="30" y="55" width="360" height="190" rx="8"/>
+  <text x="45" y="80" class="head">후보 경로</text>
+  <text x="45" y="106" class="small">경로</text>
+  <text x="160" y="106" class="small">출처</text>
+  <text x="240" y="106" class="small">AD</text>
+  <text x="310" y="106" class="small">메트릭</text>
+  <text x="45" y="130">10.0.0.0/8</text>
+  <text x="160" y="130">OSPF</text>
+  <text x="240" y="130">110</text>
+  <text x="310" y="130">30</text>
+  <text x="45" y="154">10.1.0.0/16</text>
+  <text x="160" y="154">정적</text>
+  <text x="240" y="154">1</text>
+  <text x="310" y="154">-</text>
+  <text x="45" y="178">10.1.1.0/24</text>
+  <text x="160" y="178">OSPF</text>
+  <text x="240" y="178">110</text>
+  <text x="310" y="178">20</text>
+  <text x="45" y="202">10.1.1.0/24</text>
+  <text x="160" y="202">RIP</text>
+  <text x="240" y="202">120</text>
+  <text x="310" y="202">2</text>
+  <text x="45" y="226" class="small">10.1.1.5가 속하는 경로는 네 개 모두이다</text>
+  <rect class="box" x="430" y="55" width="340" height="52" rx="8"/>
+  <text x="445" y="77" class="head">1단계 가장 긴 프리픽스</text>
+  <text x="445" y="96" class="small">/24가 가장 길다. /8과 /16은 탈락</text>
+  <rect class="box" x="430" y="127" width="340" height="52" rx="8"/>
+  <text x="445" y="149" class="head">2단계 AD가 낮은 쪽</text>
+  <text x="445" y="168" class="small">OSPF 110 대 RIP 120. RIP 탈락</text>
+  <rect class="box" x="430" y="199" width="340" height="52" rx="8"/>
+  <text x="445" y="221" class="head">3단계 메트릭이 낮은 쪽</text>
+  <text x="445" y="240" class="small">같은 프로토콜 안에서 경로가 여럿일 때만 적용</text>
+  <line class="link" x1="600" y1="107" x2="600" y2="127"/>
+  <line class="link" x1="600" y1="179" x2="600" y2="199"/>
+  <rect class="ok" x="30" y="275" width="740" height="60" rx="8"/>
+  <text x="400" y="301" text-anchor="middle" class="head">선택 결과: OSPF로 배운 10.1.1.0/24 (메트릭 20)</text>
+  <text x="400" y="322" text-anchor="middle" class="small">AD는 서로 다른 출처끼리, 메트릭은 같은 출처끼리 비교한다. 프리픽스 길이가 가장 먼저이다</text>
+</svg>

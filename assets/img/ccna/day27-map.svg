@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" role="img" aria-labelledby="t d">
+  <title id="t">3부 라우팅 학습 흐름</title>
+  <desc id="d">Day 21부터 Day 26까지 라우팅 테이블, 정적 라우팅, AD와 메트릭, OSPF 개념, OSPF 설정, HSRP가 이어지는 흐름</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 11px; fill: #52606d; }
+    .head { font-size: 14px; font-weight: 700; }
+    .box { fill: #e3f2fd; stroke: #7aa5d2; stroke-width: 1.5; }
+    .ok { fill: #e8f5e9; stroke: #2e7d4f; stroke-width: 1.5; }
+    .net { fill: #fff8e1; stroke: #d9a441; stroke-width: 1.5; }
+    .bad { fill: #fdecea; stroke: #c0392b; stroke-width: 1.5; }
+    .link { stroke: #7b8794; stroke-width: 2; fill: none; }
+  </style>
+  <rect width="800" height="300" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+  <text x="30" y="32" class="head">3부에서 다룬 순서</text>
+  <rect class="box" x="30" y="60" width="220" height="70" rx="8"/>
+  <text x="140" y="88" text-anchor="middle" class="head">Day 21 라우팅 테이블</text>
+  <text x="140" y="110" text-anchor="middle" class="small">경로를 찾는 방법</text>
+  <rect class="box" x="290" y="60" width="220" height="70" rx="8"/>
+  <text x="400" y="88" text-anchor="middle" class="head">Day 22 정적 라우팅</text>
+  <text x="400" y="110" text-anchor="middle" class="small">직접 적는 경로, 디폴트 라우트</text>
+  <rect class="box" x="550" y="60" width="220" height="70" rx="8"/>
+  <text x="660" y="88" text-anchor="middle" class="head">Day 23 AD와 메트릭</text>
+  <text x="660" y="110" text-anchor="middle" class="small">같은 목적지 경로 중 고르기</text>
+  <rect class="net" x="30" y="170" width="220" height="70" rx="8"/>
+  <text x="140" y="198" text-anchor="middle" class="head">Day 24 OSPF 개념</text>
+  <text x="140" y="220" text-anchor="middle" class="small">인접, DR/BDR, 영역</text>
+  <rect class="net" x="290" y="170" width="220" height="70" rx="8"/>
+  <text x="400" y="198" text-anchor="middle" class="head">Day 25 OSPF 설정</text>
+  <text x="400" y="220" text-anchor="middle" class="small">network 명령, show 명령</text>
+  <rect class="ok" x="550" y="170" width="220" height="70" rx="8"/>
+  <text x="660" y="198" text-anchor="middle" class="head">Day 26 HSRP</text>
+  <text x="660" y="220" text-anchor="middle" class="small">게이트웨이 이중화</text>
+  <line class="link" x1="250" y1="95" x2="290" y2="95"/>
+  <line class="link" x1="510" y1="95" x2="550" y2="95"/>
+  <line class="link" x1="250" y1="205" x2="290" y2="205"/>
+  <line class="link" x1="510" y1="205" x2="550" y2="205"/>
+  <line class="link" x1="660" y1="130" x2="660" y2="150"/>
+  <line class="link" x1="660" y1="150" x2="140" y2="150"/>
+  <line class="link" x1="140" y1="150" x2="140" y2="170"/>
+  <text x="30" y="276" class="small">위쪽 세 개는 경로를 고르는 규칙, 아래쪽 세 개는 그 경로를 자동으로 만들고 끊김 없이 쓰게 하는 기술이다</text>
+</svg>
