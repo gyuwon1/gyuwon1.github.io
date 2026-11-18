@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" role="img" aria-labelledby="t d">
+  <title id="t">NAT 설정에서 inside와 outside 인터페이스</title>
+  <desc id="d">라우터의 LAN 쪽 Gi0/0에 ip nat inside, 인터넷 쪽 Gi0/1에 ip nat outside를 지정하고 inside에서 outside로 나가는 패킷의 출발지가 변환되는 구성도</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 11px; fill: #52606d; }
+    .head { font-size: 14px; font-weight: 700; }
+    .box { fill: #e3f2fd; stroke: #7aa5d2; stroke-width: 1.5; }
+    .ok { fill: #e8f5e9; stroke: #2e7d4f; stroke-width: 1.5; }
+    .net { fill: #fff8e1; stroke: #d9a441; stroke-width: 1.5; }
+    .link { stroke: #7b8794; stroke-width: 2; fill: none; }
+    .out { stroke: #2e7d4f; stroke-width: 2.5; fill: none; }
+    .back { stroke: #c0762b; stroke-width: 2.5; fill: none; stroke-dasharray: 6 4; }
+  </style>
+  <rect width="800" height="300" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+  <text x="30" y="32" class="head">인터페이스에 방향을 지정한다</text>
+  <rect class="net" x="30" y="100" width="150" height="80" rx="8"/>
+  <text x="105" y="130" text-anchor="middle" class="head">LAN</text>
+  <text x="105" y="152" text-anchor="middle" class="small">192.168.1.0/24</text>
+  <rect class="ok" x="300" y="80" width="200" height="120" rx="10"/>
+  <text x="400" y="108" text-anchor="middle" class="head">R1</text>
+  <text x="400" y="134" text-anchor="middle" class="small">Gi0/0  ip nat inside</text>
+  <text x="400" y="156" text-anchor="middle" class="small">Gi0/1  ip nat outside</text>
+  <text x="400" y="180" text-anchor="middle" class="small">203.0.113.2/29</text>
+  <rect class="box" x="620" y="100" width="150" height="80" rx="8"/>
+  <text x="695" y="130" text-anchor="middle" class="head">인터넷</text>
+  <line class="out" x1="180" y1="130" x2="300" y2="130"/>
+  <line class="out" x1="500" y1="130" x2="620" y2="130"/>
+  <line class="back" x1="620" y1="156" x2="500" y2="156"/>
+  <line class="back" x1="300" y1="156" x2="180" y2="156"/>
+  <text x="240" y="120" text-anchor="middle" class="small">출발지 192.168.1.x</text>
+  <text x="560" y="120" text-anchor="middle" class="small">출발지 203.0.113.2</text>
+  <text x="560" y="176" text-anchor="middle" class="small">응답</text>
+  <text x="30" y="240" class="small">inside로 지정한 인터페이스로 들어와 outside로 나가는 패킷은 출발지 주소가 변환된다</text>
+  <text x="30" y="262" class="small">반대로 outside로 들어온 응답은 변환 테이블을 보고 목적지 주소가 원래대로 돌아간다</text>
+  <text x="30" y="284" class="small">변환 규칙이 있어도 인터페이스에 inside, outside 지정이 없으면 NAT는 동작하지 않는다</text>
+</svg>

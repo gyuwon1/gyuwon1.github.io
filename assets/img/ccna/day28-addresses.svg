@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" role="img" aria-labelledby="t d">
+  <title id="t">NAT의 네 가지 주소 용어</title>
+  <desc id="d">내부 PC 192.168.1.10이 NAT 라우터를 거쳐 서버 198.51.100.5로 나갈 때 Inside Local, Inside Global, Outside Local, Outside Global이 각각 어느 구간의 어떤 주소인지 보여 준다</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 11px; fill: #52606d; }
+    .head { font-size: 14px; font-weight: 700; }
+    .box { fill: #e3f2fd; stroke: #7aa5d2; stroke-width: 1.5; }
+    .ok { fill: #e8f5e9; stroke: #2e7d4f; stroke-width: 1.5; }
+    .net { fill: #fff8e1; stroke: #d9a441; stroke-width: 1.5; }
+    .link { stroke: #7b8794; stroke-width: 2; fill: none; }
+    .out { stroke: #2e7d4f; stroke-width: 2.5; fill: none; }
+    .back { stroke: #c0762b; stroke-width: 2.5; fill: none; stroke-dasharray: 6 4; }
+  </style>
+  <rect width="800" height="340" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+  <text x="30" y="32" class="head">NAT 라우터를 기준으로 안쪽과 바깥쪽을 나눈다</text>
+  <rect class="net" x="30" y="110" width="150" height="80" rx="8"/>
+  <text x="105" y="140" text-anchor="middle" class="head">내부 PC</text>
+  <text x="105" y="162" text-anchor="middle" class="small">192.168.1.10</text>
+  <rect class="ok" x="320" y="100" width="160" height="100" rx="10"/>
+  <text x="400" y="132" text-anchor="middle" class="head">NAT 라우터</text>
+  <text x="400" y="154" text-anchor="middle" class="small">inside 쪽 192.168.1.1</text>
+  <text x="400" y="172" text-anchor="middle" class="small">outside 쪽 203.0.113.2</text>
+  <rect class="box" x="620" y="110" width="150" height="80" rx="8"/>
+  <text x="695" y="140" text-anchor="middle" class="head">외부 서버</text>
+  <text x="695" y="162" text-anchor="middle" class="small">198.51.100.5</text>
+  <line class="link" x1="180" y1="150" x2="320" y2="150"/>
+  <line class="link" x1="480" y1="150" x2="620" y2="150"/>
+  <text x="250" y="90" text-anchor="middle" class="small">inside 구간</text>
+  <text x="550" y="90" text-anchor="middle" class="small">outside 구간</text>
+  <line x1="400" y1="60" x2="400" y2="100" stroke="#b0bac5" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <rect x="30" y="220" width="740" height="100" rx="8" fill="#f5f7fa" stroke="#cbd2d9" stroke-width="1.2"/>
+  <text x="46" y="244" class="small">Inside Local : 내부 호스트의 실제 주소, inside 구간에서 보이는 값 (192.168.1.10)</text>
+  <text x="46" y="266" class="small">Inside Global : 내부 호스트가 outside 구간에서 가지는 주소, 변환된 공인 주소 (203.0.113.2)</text>
+  <text x="46" y="288" class="small">Outside Global : 외부 호스트의 실제 주소 (198.51.100.5)</text>
+  <text x="46" y="310" class="small">Outside Local : 외부 호스트가 inside 구간에서 보이는 주소. 보통 Outside Global과 같다 (198.51.100.5)</text>
+</svg>
