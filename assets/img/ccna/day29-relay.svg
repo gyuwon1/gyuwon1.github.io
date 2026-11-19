@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" role="img" aria-labelledby="t d">
+  <title id="t">DHCP Relay</title>
+  <desc id="d">서로 다른 서브넷에 있는 클라이언트의 브로드캐스트를 라우터가 유니캐스트로 바꿔 DHCP 서버로 전달하고, giaddr로 어느 대역인지 알린다</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 11px; fill: #52606d; }
+    .head { font-size: 14px; font-weight: 700; }
+    .box { fill: #e3f2fd; stroke: #7aa5d2; stroke-width: 1.5; }
+    .ok { fill: #e8f5e9; stroke: #2e7d4f; stroke-width: 1.5; }
+    .net { fill: #fff8e1; stroke: #d9a441; stroke-width: 1.5; }
+    .life { stroke: #9aa5b1; stroke-width: 1.5; stroke-dasharray: 5 4; }
+    .a1 { stroke: #2e7d4f; stroke-width: 2.2; fill: none; }
+    .a2 { stroke: #c0762b; stroke-width: 2.2; fill: none; }
+    .link { stroke: #7b8794; stroke-width: 2; fill: none; }
+  </style>
+  <rect width="800" height="340" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+  <text x="30" y="32" class="head">브로드캐스트는 라우터를 넘지 못한다</text>
+  <rect class="net" x="30" y="110" width="170" height="70" rx="8"/>
+  <text x="115" y="138" text-anchor="middle" class="head">PC</text>
+  <text x="115" y="158" text-anchor="middle" class="small">192.168.10.0/24</text>
+  <rect class="ok" x="320" y="100" width="160" height="90" rx="10"/>
+  <text x="400" y="128" text-anchor="middle" class="head">R1</text>
+  <text x="400" y="148" text-anchor="middle" class="small">Gi0/0 192.168.10.1</text>
+  <text x="400" y="166" text-anchor="middle" class="small">ip helper-address</text>
+  <rect class="box" x="600" y="110" width="170" height="70" rx="8"/>
+  <text x="685" y="138" text-anchor="middle" class="head">DHCP 서버</text>
+  <text x="685" y="158" text-anchor="middle" class="small">10.0.0.5</text>
+  <line class="link" x1="200" y1="145" x2="320" y2="145"/>
+  <line class="link" x1="480" y1="145" x2="600" y2="145"/>
+  <text x="260" y="136" text-anchor="middle" class="small">브로드캐스트</text>
+  <text x="540" y="136" text-anchor="middle" class="small">유니캐스트</text>
+  <text x="260" y="168" text-anchor="middle" class="small">Discover</text>
+  <text x="540" y="168" text-anchor="middle" class="small">dst 10.0.0.5</text>
+  <rect x="30" y="220" width="740" height="94" rx="8" fill="#f5f7fa" stroke="#cbd2d9" stroke-width="1.2"/>
+  <text x="46" y="244" class="head">릴레이가 하는 일</text>
+  <text x="46" y="266" class="small">1. 받은 브로드캐스트의 목적지를 서버 주소 10.0.0.5 로 바꿔 유니캐스트로 보낸다</text>
+  <text x="46" y="286" class="small">2. 메시지의 giaddr 칸에 받은 인터페이스의 주소 192.168.10.1 을 적는다</text>
+  <text x="46" y="306" class="small">3. 서버는 giaddr 를 보고 192.168.10.0/24 풀에서 주소를 골라 라우터로 응답하고, 라우터가 PC에 전달한다</text>
+</svg>

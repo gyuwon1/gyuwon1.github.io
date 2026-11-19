@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 280" role="img" aria-labelledby="t d">
+  <title id="t">임대 기간과 갱신 시점</title>
+  <desc id="d">임대 시작부터 50퍼센트 지점에서 서버에 유니캐스트로 갱신을 요청하고, 87.5퍼센트 지점에서 브로드캐스트로 다른 서버에 요청하며, 100퍼센트에서 만료된다</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 11px; fill: #52606d; }
+    .head { font-size: 14px; font-weight: 700; }
+    .box { fill: #e3f2fd; stroke: #7aa5d2; stroke-width: 1.5; }
+    .ok { fill: #e8f5e9; stroke: #2e7d4f; stroke-width: 1.5; }
+    .net { fill: #fff8e1; stroke: #d9a441; stroke-width: 1.5; }
+    .life { stroke: #9aa5b1; stroke-width: 1.5; stroke-dasharray: 5 4; }
+    .a1 { stroke: #2e7d4f; stroke-width: 2.2; fill: none; }
+    .a2 { stroke: #c0762b; stroke-width: 2.2; fill: none; }
+    .link { stroke: #7b8794; stroke-width: 2; fill: none; }
+  </style>
+  <rect width="800" height="280" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+  <text x="30" y="32" class="head">임대 기간 흐름</text>
+  <rect x="60" y="100" width="680" height="28" rx="6" fill="#e8f5e9" stroke="#2e7d4f" stroke-width="1.5"/>
+  <line x1="400" y1="88" x2="400" y2="140" stroke="#c0762b" stroke-width="2"/>
+  <line x1="655" y1="88" x2="655" y2="140" stroke="#c0762b" stroke-width="2"/>
+  <text x="60" y="82" text-anchor="middle" class="head">0</text>
+  <text x="60" y="160" text-anchor="middle" class="small">임대 시작</text>
+  <text x="400" y="82" text-anchor="middle" class="head">50%</text>
+  <text x="400" y="160" text-anchor="middle" class="small">T1</text>
+  <text x="655" y="82" text-anchor="middle" class="head">87.5%</text>
+  <text x="655" y="160" text-anchor="middle" class="small">T2</text>
+  <text x="740" y="82" text-anchor="middle" class="head">100%</text>
+  <text x="740" y="160" text-anchor="middle" class="small">만료</text>
+  <rect x="30" y="190" width="740" height="76" rx="8" fill="#f5f7fa" stroke="#cbd2d9" stroke-width="1.2"/>
+  <text x="46" y="212" class="small">T1: 받았던 서버에 유니캐스트로 Request를 보내 갱신한다. 서버가 Ack를 주면 기간이 처음부터 다시 시작된다</text>
+  <text x="46" y="232" class="small">T2: T1에서 갱신하지 못했으면 브로드캐스트로 Request를 보내 다른 서버에도 갱신을 부탁한다</text>
+  <text x="46" y="252" class="small">만료: 주소를 쓸 수 없게 되고 처음부터 DORA를 다시 한다</text>
+</svg>
