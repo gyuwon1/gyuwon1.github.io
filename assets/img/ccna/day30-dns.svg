@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" role="img" aria-labelledby="t d">
+  <title id="t">DNS 이름 풀이 과정</title>
+  <desc id="d">PC가 리졸버에 www.example.com을 묻고, 리졸버가 루트, com, example.com 권한 서버에 차례로 물어 IP 주소를 얻어 PC에 돌려준다</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 11px; fill: #52606d; }
+    .head { font-size: 14px; font-weight: 700; }
+    .box { fill: #e3f2fd; stroke: #7aa5d2; stroke-width: 1.5; }
+    .ok { fill: #e8f5e9; stroke: #2e7d4f; stroke-width: 1.5; }
+    .net { fill: #fff8e1; stroke: #d9a441; stroke-width: 1.5; }
+    .a1 { stroke: #2e7d4f; stroke-width: 2.2; fill: none; }
+    .a2 { stroke: #c0762b; stroke-width: 2.2; fill: none; }
+  </style>
+  <rect width="800" height="380" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+  <text x="30" y="32" class="head">www.example.com의 주소를 알아내는 과정</text>
+  <rect class="net" x="40" y="150" width="120" height="60" rx="8"/><text x="100" y="176" text-anchor="middle" class="head">PC</text><text x="100" y="196" text-anchor="middle" class="small">주소를 모른다</text>
+  <rect class="box" x="260" y="150" width="140" height="60" rx="8"/><text x="330" y="176" text-anchor="middle" class="head">리졸버</text><text x="330" y="196" text-anchor="middle" class="small">DNS 서버, 캐시 보유</text>
+  <rect class="ok" x="560" y="60" width="200" height="50" rx="8"/><text x="660" y="82" text-anchor="middle" class="head">루트 서버</text><text x="660" y="100" text-anchor="middle" class="small">com 담당 서버를 알려 준다</text>
+  <rect class="ok" x="560" y="165" width="200" height="50" rx="8"/><text x="660" y="187" text-anchor="middle" class="head">com 서버</text><text x="660" y="205" text-anchor="middle" class="small">example.com 담당 서버를 알려 준다</text>
+  <rect class="ok" x="560" y="270" width="200" height="50" rx="8"/><text x="660" y="292" text-anchor="middle" class="head">example.com 서버</text><text x="660" y="310" text-anchor="middle" class="small">권한 서버, 실제 주소를 안다</text>
+  <line class="a1" x1="160" y1="170" x2="254" y2="170"/><polygon points="260,170 246,164 246,176" fill="#2e7d4f"/>
+  <text x="210" y="160" text-anchor="middle" class="small">1 질의</text>
+  <line class="a2" x1="260" y1="195" x2="166" y2="195"/><polygon points="160,195 174,189 174,201" fill="#c0762b"/>
+  <text x="210" y="215" text-anchor="middle" class="small">6 응답</text>
+  <line class="a1" x1="400" y1="160" x2="554" y2="90"/><polygon points="560,88 546,86 551,97" fill="#2e7d4f"/>
+  <text x="455" y="110" class="small">2</text>
+  <line class="a1" x1="400" y1="180" x2="554" y2="185"/><polygon points="560,185 546,179 546,191" fill="#2e7d4f"/>
+  <text x="470" y="173" class="small">3</text>
+  <line class="a1" x1="400" y1="200" x2="554" y2="285"/><polygon points="560,288 546,279 551,290" fill="#2e7d4f"/>
+  <text x="455" y="263" class="small">4</text>
+  <text x="30" y="300" class="small">2 3 4: 리졸버가 차례로 묻는다. 5: 주소를 받아 캐시에 저장한다</text>
+  <text x="30" y="352" class="small">PC는 리졸버에 한 번만 묻는다(재귀 질의). 리졸버는 서버를 차례로 찾아간다(반복 질의). 답은 TTL 동안 캐시에 남는다.</text>
+</svg>
