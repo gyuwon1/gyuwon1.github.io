@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 370" role="img" aria-labelledby="t d">
+  <title id="t">QoS의 네 가지 지표</title>
+  <desc id="d">송신 측에서 일정한 간격으로 보낸 패킷 5개가 수신 측에 도착할 때 지연이 생기고, 도착 간격이 달라지며(지터), 4번 패킷은 중간에 사라지는(손실) 모습</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 11px; fill: #52606d; }
+    .head { font-size: 14px; font-weight: 700; }
+    .num { font-size: 12px; fill: #ffffff; font-weight: 700; }
+    .box { fill: #e3f2fd; stroke: #7aa5d2; stroke-width: 1.5; }
+    .hot { fill: #fff3e0; stroke: #d9822b; stroke-width: 1.5; }
+    .gray { fill: #eceff1; stroke: #90a4ae; stroke-width: 1.5; }
+    .ok { fill: #e8f5e9; stroke: #2e7d4f; stroke-width: 1.5; }
+    .lane { stroke: #9aa5b1; stroke-width: 2; }
+    .a1 { stroke: #1f6fb2; stroke-width: 2; fill: none; }
+    .a2 { stroke: #c0392b; stroke-width: 2.2; fill: none; }
+    .a3 { stroke: #52606d; stroke-width: 1.5; fill: none; }
+  </style>
+  <rect width="700" height="370" fill="#ffffff"/>
+  <text x="12" y="28" class="head">같은 간격으로 보낸 패킷 5개</text>
+  <text x="12" y="100">송신</text>
+  <text x="12" y="230">수신</text>
+  <line x1="70" y1="95" x2="660" y2="95" class="lane"/>
+  <line x1="70" y1="225" x2="660" y2="225" class="lane"/>
+  <path d="M100 95 L160 225" class="a1"/>
+  <path d="M200 95 L260 225" class="a1"/>
+  <path d="M300 95 L390 225" class="a1"/>
+  <path d="M400 95 L430 160" class="a2"/>
+  <path d="M500 95 L560 225" class="a1"/>
+  <path d="M422 152 L438 168 M438 152 L422 168" class="a2"/>
+  <circle cx="100" cy="95" r="11" fill="#1f6fb2"/><text x="100" y="99" text-anchor="middle" class="num">1</text>
+  <circle cx="200" cy="95" r="11" fill="#1f6fb2"/><text x="200" y="99" text-anchor="middle" class="num">2</text>
+  <circle cx="300" cy="95" r="11" fill="#1f6fb2"/><text x="300" y="99" text-anchor="middle" class="num">3</text>
+  <circle cx="400" cy="95" r="11" fill="#1f6fb2"/><text x="400" y="99" text-anchor="middle" class="num">4</text>
+  <circle cx="500" cy="95" r="11" fill="#1f6fb2"/><text x="500" y="99" text-anchor="middle" class="num">5</text>
+  <circle cx="160" cy="225" r="11" fill="#1f6fb2"/><text x="160" y="229" text-anchor="middle" class="num">1</text>
+  <circle cx="260" cy="225" r="11" fill="#1f6fb2"/><text x="260" y="229" text-anchor="middle" class="num">2</text>
+  <circle cx="390" cy="225" r="11" fill="#1f6fb2"/><text x="390" y="229" text-anchor="middle" class="num">3</text>
+  <circle cx="560" cy="225" r="11" fill="#1f6fb2"/><text x="560" y="229" text-anchor="middle" class="num">5</text>
+  <text x="140" y="165">지연</text>
+  <text x="446" y="165" fill="#c0392b" style="fill:#c0392b">손실</text>
+  <path d="M160 255 L260 255 M160 249 L160 261 M260 249 L260 261" class="a3"/>
+  <path d="M260 255 L390 255 M390 249 L390 261" class="a3"/>
+  <text x="210" y="273" text-anchor="middle" class="small">도착 간격 A</text>
+  <text x="325" y="273" text-anchor="middle" class="small">도착 간격 B</text>
+  <text x="12" y="305">보낼 때 간격은 일정했지만 받을 때는 A와 B가 다르다. 이 들쭉날쭉함이 지터이다.</text>
+  <text x="12" y="332" class="small">대역폭: 단위 시간에 보낼 수 있는 양  |  지연: 도착까지 걸리는 시간  |  지터: 지연의 흔들림  |  손실: 도착하지 못한 패킷</text>
+</svg>

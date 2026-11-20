@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 450" role="img" aria-labelledby="t d">
+  <title id="t">CoS와 DSCP 표시 위치</title>
+  <desc id="d">이더넷 프레임의 802.1Q 태그에 CoS 3비트가 있고, IP 헤더의 ToS 바이트 상위 6비트가 DSCP, 하위 2비트가 ECN이다. EF는 101110으로 10진수 46이다</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 11px; fill: #52606d; }
+    .head { font-size: 14px; font-weight: 700; }
+    .num { font-size: 12px; fill: #ffffff; font-weight: 700; }
+    .box { fill: #e3f2fd; stroke: #7aa5d2; stroke-width: 1.5; }
+    .hot { fill: #fff3e0; stroke: #d9822b; stroke-width: 1.5; }
+    .gray { fill: #eceff1; stroke: #90a4ae; stroke-width: 1.5; }
+    .ok { fill: #e8f5e9; stroke: #2e7d4f; stroke-width: 1.5; }
+    .lane { stroke: #9aa5b1; stroke-width: 2; }
+    .a1 { stroke: #1f6fb2; stroke-width: 2; fill: none; }
+    .a2 { stroke: #c0392b; stroke-width: 2.2; fill: none; }
+    .a3 { stroke: #52606d; stroke-width: 1.5; fill: none; }
+  </style>
+  <rect width="760" height="450" fill="#ffffff"/>
+  <text x="20" y="30" class="head">이더넷 프레임 (2계층)</text>
+  <rect x="20" y="42" width="90" height="46" class="gray"/><text x="65" y="70" text-anchor="middle">목적지 MAC</text>
+  <rect x="110" y="42" width="90" height="46" class="gray"/><text x="155" y="70" text-anchor="middle">출발지 MAC</text>
+  <rect x="200" y="42" width="150" height="46" class="hot"/><text x="275" y="62" text-anchor="middle">802.1Q 태그</text><text x="275" y="79" text-anchor="middle" class="small">CoS 3비트 (0~7)</text>
+  <rect x="350" y="42" width="70" height="46" class="gray"/><text x="385" y="70" text-anchor="middle">타입</text>
+  <rect x="420" y="42" width="230" height="46" class="box"/><text x="535" y="62" text-anchor="middle">IP 패킷</text><text x="535" y="79" text-anchor="middle" class="small">헤더 안에 ToS 바이트</text>
+  <rect x="650" y="42" width="90" height="46" class="gray"/><text x="695" y="70" text-anchor="middle">FCS</text>
+  <path d="M420 88 L140 140 M650 88 L620 140" stroke="#9aa5b1" stroke-width="1" stroke-dasharray="4 3" fill="none"/>
+  <text x="14" y="172" class="small">ToS 바이트</text>
+  <rect x="140" y="140" width="60" height="44" class="box"/><text x="170" y="168" text-anchor="middle" class="head">1</text>
+  <rect x="200" y="140" width="60" height="44" class="box"/><text x="230" y="168" text-anchor="middle" class="head">0</text>
+  <rect x="260" y="140" width="60" height="44" class="box"/><text x="290" y="168" text-anchor="middle" class="head">1</text>
+  <rect x="320" y="140" width="60" height="44" class="box"/><text x="350" y="168" text-anchor="middle" class="head">1</text>
+  <rect x="380" y="140" width="60" height="44" class="box"/><text x="410" y="168" text-anchor="middle" class="head">1</text>
+  <rect x="440" y="140" width="60" height="44" class="box"/><text x="470" y="168" text-anchor="middle" class="head">0</text>
+  <rect x="500" y="140" width="60" height="44" class="gray"/><text x="530" y="168" text-anchor="middle" class="head">0</text>
+  <rect x="560" y="140" width="60" height="44" class="gray"/><text x="590" y="168" text-anchor="middle" class="head">0</text>
+  <path d="M140 196 L140 204 L500 204 L500 196" class="a3"/>
+  <text x="320" y="222" text-anchor="middle">DSCP 6비트 (0~63)  101110 = 46 = EF</text>
+  <path d="M500 196 L500 204 L620 204 L620 196" class="a3"/>
+  <text x="560" y="222" text-anchor="middle">ECN 2비트</text>
+  <rect x="20" y="250" width="140" height="26" fill="#cfd8dc"/>
+  <rect x="160" y="250" width="100" height="26" fill="#cfd8dc"/>
+  <rect x="260" y="250" width="140" height="26" fill="#cfd8dc"/>
+  <rect x="400" y="250" width="340" height="26" fill="#cfd8dc"/>
+  <text x="90" y="268" text-anchor="middle" class="head">이름</text>
+  <text x="210" y="268" text-anchor="middle" class="head">10진수</text>
+  <text x="330" y="268" text-anchor="middle" class="head">2진수</text>
+  <text x="570" y="268" text-anchor="middle" class="head">주로 쓰는 곳</text>
+  <rect x="20" y="276" width="720" height="112" fill="none" stroke="#90a4ae" stroke-width="1.2"/>
+  <path d="M20 304 H740 M20 332 H740 M20 360 H740 M160 250 V388 M260 250 V388 M400 250 V388" stroke="#90a4ae" stroke-width="1" fill="none"/>
+  <text x="90" y="295" text-anchor="middle">Default</text><text x="210" y="295" text-anchor="middle">0</text><text x="330" y="295" text-anchor="middle">000000</text><text x="570" y="295" text-anchor="middle">일반 트래픽 (표시 없음)</text>
+  <text x="90" y="323" text-anchor="middle">CS3</text><text x="210" y="323" text-anchor="middle">24</text><text x="330" y="323" text-anchor="middle">011000</text><text x="570" y="323" text-anchor="middle">호 설정 등 신호</text>
+  <text x="90" y="351" text-anchor="middle">AF41</text><text x="210" y="351" text-anchor="middle">34</text><text x="330" y="351" text-anchor="middle">100010</text><text x="570" y="351" text-anchor="middle">화상 회의</text>
+  <text x="90" y="379" text-anchor="middle">EF</text><text x="210" y="379" text-anchor="middle">46</text><text x="330" y="379" text-anchor="middle">101110</text><text x="570" y="379" text-anchor="middle">음성</text>
+  <text x="20" y="418" class="small">CoS는 802.1Q 태그에 있어서 트렁크 구간에서만 유지된다.</text>
+  <text x="20" y="436" class="small">DSCP는 IP 헤더에 있어서 라우터를 지나도 그대로 남는다.</text>
+</svg>

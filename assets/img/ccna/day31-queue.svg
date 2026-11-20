@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" role="img" aria-labelledby="t d">
+  <title id="t">분류와 큐잉 흐름</title>
+  <desc id="d">들어온 패킷이 분류기에서 음성 우선 큐, 업무 큐, 기본 큐로 나뉘고, 스케줄러가 음성 큐를 먼저 꺼내 출력 인터페이스로 내보내는 구조</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 11px; fill: #52606d; }
+    .head { font-size: 14px; font-weight: 700; }
+    .num { font-size: 12px; fill: #ffffff; font-weight: 700; }
+    .box { fill: #e3f2fd; stroke: #7aa5d2; stroke-width: 1.5; }
+    .hot { fill: #fff3e0; stroke: #d9822b; stroke-width: 1.5; }
+    .gray { fill: #eceff1; stroke: #90a4ae; stroke-width: 1.5; }
+    .ok { fill: #e8f5e9; stroke: #2e7d4f; stroke-width: 1.5; }
+    .lane { stroke: #9aa5b1; stroke-width: 2; }
+    .a1 { stroke: #1f6fb2; stroke-width: 2; fill: none; }
+    .a2 { stroke: #c0392b; stroke-width: 2.2; fill: none; }
+    .a3 { stroke: #52606d; stroke-width: 1.5; fill: none; }
+  </style>
+  <rect width="760" height="400" fill="#ffffff"/>
+  <text x="14" y="28" class="head">출력 인터페이스에서의 큐잉</text>
+  <path d="M10 195 L68 195" class="a1"/><path d="M62 189 L70 195 L62 201" class="a1"/>
+  <text x="10" y="178" class="small">들어온 패킷</text>
+  <rect x="70" y="150" width="120" height="90" class="box"/>
+  <text x="130" y="188" text-anchor="middle" class="head">분류</text>
+  <text x="130" y="206" text-anchor="middle" class="small">class-map</text>
+  <text x="130" y="222" text-anchor="middle" class="small">DSCP 등으로 구분</text>
+  <path d="M190 195 L250 90" class="a3"/><path d="M190 195 L250 200" class="a3"/><path d="M190 195 L250 310" class="a3"/>
+  <rect x="250" y="60" width="230" height="60" class="hot"/>
+  <text x="365" y="85" text-anchor="middle" class="head">음성 큐 (LLQ)</text>
+  <text x="365" y="105" text-anchor="middle" class="small">엄격 우선, 비어 있지 않으면 먼저 전송</text>
+  <rect x="250" y="170" width="230" height="60" class="box"/>
+  <text x="365" y="195" text-anchor="middle" class="head">업무 큐 (CBWFQ)</text>
+  <text x="365" y="215" text-anchor="middle" class="small">대역폭 일정 비율 보장</text>
+  <rect x="250" y="280" width="230" height="60" class="gray"/>
+  <text x="365" y="305" text-anchor="middle" class="head">기본 큐 (class-default)</text>
+  <text x="365" y="325" text-anchor="middle" class="small">남는 대역폭을 나눠 쓴다</text>
+  <path d="M480 90 L530 190" class="a3"/><path d="M480 200 L530 200" class="a3"/><path d="M480 310 L530 210" class="a3"/>
+  <rect x="530" y="150" width="100" height="90" class="ok"/>
+  <text x="580" y="190" text-anchor="middle" class="head">스케줄러</text>
+  <text x="580" y="210" text-anchor="middle" class="small">꺼낼 순서 결정</text>
+  <path d="M630 195 L660 195" class="a1"/><path d="M654 189 L662 195 L654 201" class="a1"/>
+  <rect x="662" y="150" width="90" height="90" class="gray"/>
+  <text x="707" y="192" text-anchor="middle">출력</text>
+  <text x="707" y="210" text-anchor="middle">인터페이스</text>
+  <text x="14" y="370" class="small">혼잡할 때만 큐가 쌓이므로 큐잉은 회선이 막힐 때 효과가 나타난다.</text>
+  <text x="14" y="388" class="small">음성이 대역폭을 독점하지 않도록 priority 에는 비율이나 속도로 상한을 둔다.</text>
+</svg>
