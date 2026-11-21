@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 220" role="img" aria-labelledby="t d">
+  <title id="t">4부 IP 서비스 학습 흐름</title>
+  <desc id="d">Day 28 NAT/PAT, Day 29 DHCP, Day 30 DNS NTP SNMP Syslog, Day 31 QoS가 이어지는 흐름</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 11px; fill: #52606d; }
+    .head { font-size: 14px; font-weight: 700; }
+    .box { fill: #e3f2fd; stroke: #7aa5d2; stroke-width: 1.5; }
+    .ok { fill: #e8f5e9; stroke: #2e7d4f; stroke-width: 1.5; }
+    .net { fill: #fff8e1; stroke: #d9a441; stroke-width: 1.5; }
+    .link { stroke: #7b8794; stroke-width: 2; fill: none; }
+  </style>
+  <rect width="800" height="220" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+  <text x="30" y="32" class="head">4부에서 다룬 순서</text>
+  <rect class="box" x="30" y="60" width="160" height="110" rx="8"/>
+  <text x="110" y="90" text-anchor="middle" class="head">Day 28 NAT/PAT</text>
+  <text x="110" y="116" text-anchor="middle" class="small">사설 주소를</text>
+  <text x="110" y="134" text-anchor="middle" class="small">공인 주소로 변환</text>
+  <rect class="box" x="220" y="60" width="160" height="110" rx="8"/>
+  <text x="300" y="90" text-anchor="middle" class="head">Day 29 DHCP</text>
+  <text x="300" y="116" text-anchor="middle" class="small">주소 자동 할당</text>
+  <text x="300" y="134" text-anchor="middle" class="small">DORA, Relay</text>
+  <rect class="net" x="410" y="60" width="160" height="110" rx="8"/>
+  <text x="490" y="90" text-anchor="middle" class="head">Day 30 관리 서비스</text>
+  <text x="490" y="116" text-anchor="middle" class="small">DNS, NTP</text>
+  <text x="490" y="134" text-anchor="middle" class="small">SNMP, Syslog</text>
+  <rect class="ok" x="600" y="60" width="170" height="110" rx="8"/>
+  <text x="685" y="90" text-anchor="middle" class="head">Day 31 QoS</text>
+  <text x="685" y="116" text-anchor="middle" class="small">분류, 표시, 큐잉</text>
+  <text x="685" y="134" text-anchor="middle" class="small">폴리싱, 셰이핑</text>
+  <line class="link" x1="190" y1="115" x2="220" y2="115"/>
+  <line class="link" x1="380" y1="115" x2="410" y2="115"/>
+  <line class="link" x1="570" y1="115" x2="600" y2="115"/>
+  <text x="30" y="200" class="small">주소 부여와 변환, 이름과 시간, 감시와 기록, 트래픽 우선 처리까지 한 장비의 IP 서비스를 순서대로 훑는다</text>
+</svg>

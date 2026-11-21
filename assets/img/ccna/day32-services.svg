@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" role="img" aria-labelledby="t d">
+  <title id="t">IP 서비스별 프로토콜과 포트</title>
+  <desc id="d">DHCP, DNS, NTP, SNMP, Syslog가 사용하는 전송 프로토콜과 포트 번호를 정리한 표</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 11px; fill: #52606d; }
+    .head { font-size: 14px; font-weight: 700; }
+    .box { fill: #e3f2fd; stroke: #7aa5d2; stroke-width: 1.5; }
+    .ok { fill: #e8f5e9; stroke: #2e7d4f; stroke-width: 1.5; }
+    .net { fill: #fff8e1; stroke: #d9a441; stroke-width: 1.5; }
+    .link { stroke: #7b8794; stroke-width: 2; fill: none; }
+  </style>
+  <rect width="800" height="300" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+  <text x="30" y="32" class="head">서비스별 전송 프로토콜과 포트</text>
+  <rect class="net" x="30" y="50" width="740" height="30" rx="4"/>
+  <text x="44" y="70" class="head">서비스</text>
+  <text x="200" y="70" class="head">프로토콜/포트</text>
+  <text x="400" y="70" class="head">역할</text>
+  <rect class="box" x="30" y="84" width="740" height="30" rx="4"/>
+  <text x="44" y="104">DHCP</text><text x="200" y="104">UDP 67(서버), 68(클라이언트)</text><text x="400" y="104">IP 주소 자동 할당</text>
+  <rect class="box" x="30" y="118" width="740" height="30" rx="4"/>
+  <text x="44" y="138">DNS</text><text x="200" y="138">UDP/TCP 53</text><text x="400" y="138">이름을 IP로 바꿈 (큰 응답과 존 전송은 TCP)</text>
+  <rect class="box" x="30" y="152" width="740" height="30" rx="4"/>
+  <text x="44" y="172">NTP</text><text x="200" y="172">UDP 123</text><text x="400" y="172">시각 동기화 (Stratum이 낮을수록 원본에 가깝다)</text>
+  <rect class="box" x="30" y="186" width="740" height="30" rx="4"/>
+  <text x="44" y="206">SNMP</text><text x="200" y="206">UDP 161(질의), 162(트랩)</text><text x="400" y="206">장비 상태 조회와 알림 (v3만 인증과 암호화)</text>
+  <rect class="box" x="30" y="220" width="740" height="30" rx="4"/>
+  <text x="44" y="240">Syslog</text><text x="200" y="240">UDP 514</text><text x="400" y="240">로그 전송 (심각도 0 Emergency ~ 7 Debug)</text>
+  <text x="30" y="276" class="small">심각도는 숫자가 작을수록 심각하다. 레벨 하나를 지정하면 그 레벨과 더 심각한 레벨이 모두 전달된다</text>
+</svg>
