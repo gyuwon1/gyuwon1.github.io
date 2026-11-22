@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" role="img" aria-labelledby="t d">
+  <title id="t">위협, 취약점, 익스플로잇, 자산, 완화의 관계</title>
+  <desc id="d">위협이 취약점을 익스플로잇으로 이용해 자산에 피해를 주며, 완화 조치는 취약점을 막거나 줄여서 이 경로를 끊는다</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 11px; fill: #52606d; }
+    .head { font-size: 14px; font-weight: 700; }
+    .red { fill: #fdecea; stroke: #c0392b; stroke-width: 1.5; }
+    .hot { fill: #fff3e0; stroke: #d9822b; stroke-width: 1.5; }
+    .box { fill: #e3f2fd; stroke: #7aa5d2; stroke-width: 1.5; }
+    .ok { fill: #e8f5e9; stroke: #2e7d4f; stroke-width: 1.5; }
+    .gray { fill: #eceff1; stroke: #90a4ae; stroke-width: 1.5; }
+    .a2 { stroke: #c0392b; stroke-width: 2.2; fill: none; }
+    .a3 { stroke: #2e7d4f; stroke-width: 2; fill: none; }
+  </style>
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0 L10 4 L0 8 z" fill="#c0392b"/></marker>
+    <marker id="ag" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0 L10 4 L0 8 z" fill="#2e7d4f"/></marker>
+  </defs>
+  <rect width="760" height="380" fill="#ffffff"/>
+  <rect x="20" y="60" width="180" height="100" class="red"/>
+  <text x="110" y="88" text-anchor="middle" class="head">위협 (Threat)</text>
+  <text x="110" y="112" text-anchor="middle">피해를 줄 수 있는</text>
+  <text x="110" y="130" text-anchor="middle">행위자나 사건</text>
+  <text x="110" y="148" text-anchor="middle" class="small">해커, 악성코드, 내부자</text>
+  <rect x="290" y="60" width="180" height="100" class="hot"/>
+  <text x="380" y="88" text-anchor="middle" class="head">취약점 (Vulnerability)</text>
+  <text x="380" y="112" text-anchor="middle">시스템의 약한 부분</text>
+  <text x="380" y="132" text-anchor="middle" class="small">패치 안 된 OS, 기본 비밀번호,</text>
+  <text x="380" y="148" text-anchor="middle" class="small">열려 있는 불필요한 포트</text>
+  <rect x="560" y="60" width="180" height="100" class="box"/>
+  <text x="650" y="88" text-anchor="middle" class="head">자산 (Asset)</text>
+  <text x="650" y="112" text-anchor="middle">지켜야 하는 대상</text>
+  <text x="650" y="132" text-anchor="middle" class="small">데이터, 서비스, 장비,</text>
+  <text x="650" y="148" text-anchor="middle" class="small">평판</text>
+  <path d="M200 110 L288 110" class="a2" marker-end="url(#ar)"/>
+  <text x="244" y="100" text-anchor="middle" class="small">익스플로잇</text>
+  <path d="M470 110 L558 110" class="a2" marker-end="url(#ar)"/>
+  <text x="514" y="100" text-anchor="middle" class="small">침해</text>
+  <text x="380" y="46" text-anchor="middle" class="small">익스플로잇 = 취약점을 실제로 이용하는 코드나 방법</text>
+  <rect x="290" y="210" width="180" height="70" class="ok"/>
+  <text x="380" y="236" text-anchor="middle" class="head">완화 (Mitigation)</text>
+  <text x="380" y="256" text-anchor="middle" class="small">패치, ACL, 비밀번호 변경,</text>
+  <text x="380" y="272" text-anchor="middle" class="small">불필요한 서비스 끄기</text>
+  <path d="M380 210 L380 164" class="a3" marker-end="url(#ag)"/>
+  <text x="392" y="190" class="small">취약점을 줄이거나 막는다</text>
+  <rect x="20" y="310" width="720" height="50" class="gray"/>
+  <text x="380" y="332" text-anchor="middle" class="head">위험 (Risk)</text>
+  <text x="380" y="350" text-anchor="middle">위협이 취약점을 이용해 자산에 피해를 줄 가능성과 그 피해의 크기</text>
+</svg>

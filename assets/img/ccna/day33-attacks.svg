@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" role="img" aria-labelledby="t d">
+  <title id="t">중간자 공격과 DDoS의 동작</title>
+  <desc id="d">왼쪽은 공격자가 위조 ARP 응답으로 PC와 게이트웨이 사이에 끼어드는 중간자 공격, 오른쪽은 감염된 여러 장비가 한 서버에 동시에 요청을 보내는 DDoS이다</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 11px; fill: #52606d; }
+    .head { font-size: 14px; font-weight: 700; }
+    .red { fill: #fdecea; stroke: #c0392b; stroke-width: 1.5; }
+    .box { fill: #e3f2fd; stroke: #7aa5d2; stroke-width: 1.5; }
+    .hot { fill: #fff3e0; stroke: #d9822b; stroke-width: 1.5; }
+    .a2 { stroke: #c0392b; stroke-width: 2.2; fill: none; }
+    .a3 { stroke: #9aa5b1; stroke-width: 2; fill: none; stroke-dasharray: 6 4; }
+    .div { stroke: #cfd8dc; stroke-width: 1.5; }
+  </style>
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0 L10 4 L0 8 z" fill="#c0392b"/></marker>
+  </defs>
+  <rect width="760" height="420" fill="#ffffff"/>
+  <line x1="380" y1="14" x2="380" y2="406" class="div"/>
+  <text x="20" y="30" class="head">중간자 공격 (ARP 스푸핑)</text>
+  <rect x="20" y="70" width="110" height="52" class="box"/>
+  <text x="75" y="93" text-anchor="middle">PC</text>
+  <text x="75" y="110" text-anchor="middle" class="small">192.168.1.10</text>
+  <rect x="240" y="70" width="110" height="52" class="box"/>
+  <text x="295" y="93" text-anchor="middle">게이트웨이</text>
+  <text x="295" y="110" text-anchor="middle" class="small">192.168.1.1</text>
+  <rect x="130" y="230" width="110" height="52" class="red"/>
+  <text x="185" y="253" text-anchor="middle">공격자</text>
+  <text x="185" y="270" text-anchor="middle" class="small">192.168.1.66</text>
+  <path d="M132 96 L238 96" class="a3"/>
+  <text x="185" y="86" text-anchor="middle" class="small">원래 경로</text>
+  <path d="M75 124 L160 228" class="a2" marker-end="url(#ar)"/>
+  <path d="M212 228 L295 124" class="a2" marker-end="url(#ar)"/>
+  <text x="185" y="302" text-anchor="middle" class="small">트래픽이 공격자를 거친다</text>
+  <text x="20" y="320">① 공격자가 위조 ARP 응답을 보낸다</text>
+  <text x="20" y="344">② PC는 게이트웨이의 MAC으로</text>
+  <text x="38" y="362">공격자의 MAC을 저장한다</text>
+  <text x="20" y="386">③ 공격자가 통신을 읽고 바꿀 수 있다</text>
+  <text x="400" y="30" class="head">DDoS (분산 서비스 거부)</text>
+  <rect x="400" y="62" width="110" height="40" class="red"/>
+  <text x="455" y="86" text-anchor="middle">감염 장비 1</text>
+  <rect x="400" y="122" width="110" height="40" class="red"/>
+  <text x="455" y="146" text-anchor="middle">감염 장비 2</text>
+  <rect x="400" y="182" width="110" height="40" class="red"/>
+  <text x="455" y="206" text-anchor="middle">감염 장비 3</text>
+  <rect x="400" y="242" width="110" height="40" class="red"/>
+  <text x="455" y="266" text-anchor="middle">감염 장비 N</text>
+  <rect x="620" y="142" width="120" height="60" class="hot"/>
+  <text x="680" y="168" text-anchor="middle">대상 서버</text>
+  <text x="680" y="186" text-anchor="middle" class="small">회선, CPU, 연결 수</text>
+  <path d="M512 82 L618 160" class="a2" marker-end="url(#ar)"/>
+  <path d="M512 142 L618 168" class="a2" marker-end="url(#ar)"/>
+  <path d="M512 202 L618 182" class="a2" marker-end="url(#ar)"/>
+  <path d="M512 262 L618 194" class="a2" marker-end="url(#ar)"/>
+  <text x="400" y="320">① 공격자가 감염 장비(봇넷)에 명령한다</text>
+  <text x="400" y="344">② 장비들이 같은 서버에 동시에 요청한다</text>
+  <text x="400" y="368">③ 서버 자원이 바닥나 정상 사용자가</text>
+  <text x="418" y="386">접속하지 못한다</text>
+</svg>

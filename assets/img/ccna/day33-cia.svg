@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360" role="img" aria-labelledby="t d">
+  <title id="t">보안의 세 목표 CIA</title>
+  <desc id="d">기밀성은 도청과 유출, 무결성은 변조, 가용성은 서비스 거부와 랜섬웨어로 깨지며 각각 암호화와 접근 통제, 해시와 디지털 서명, 이중화와 백업으로 지킨다</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 12px; fill: #52606d; }
+    .head { font-size: 15px; font-weight: 700; }
+    .lab { font-size: 12px; font-weight: 700; fill: #c0392b; }
+    .lab2 { font-size: 12px; font-weight: 700; fill: #2e7d4f; }
+    .c1 { fill: #e3f2fd; stroke: #7aa5d2; stroke-width: 1.5; }
+    .c2 { fill: #fff3e0; stroke: #d9822b; stroke-width: 1.5; }
+    .c3 { fill: #e8f5e9; stroke: #2e7d4f; stroke-width: 1.5; }
+    .sep { stroke: #b0bec5; stroke-width: 1; stroke-dasharray: 4 3; }
+  </style>
+  <rect width="760" height="360" fill="#ffffff"/>
+  <rect x="20" y="20" width="226" height="320" class="c1"/>
+  <text x="133" y="52" text-anchor="middle" class="head">기밀성</text>
+  <text x="133" y="72" text-anchor="middle" class="small">Confidentiality</text>
+  <text x="133" y="106" text-anchor="middle">허가된 사람만</text>
+  <text x="133" y="124" text-anchor="middle">내용을 볼 수 있다</text>
+  <line x1="36" y1="148" x2="230" y2="148" class="sep"/>
+  <text x="36" y="172" class="lab">깨지는 경우</text>
+  <text x="36" y="194">도청, 정보 유출,</text>
+  <text x="36" y="212">비밀번호 노출</text>
+  <line x1="36" y1="236" x2="230" y2="236" class="sep"/>
+  <text x="36" y="260" class="lab2">지키는 방법</text>
+  <text x="36" y="282">암호화, 접근 통제,</text>
+  <text x="36" y="300">인증</text>
+  <rect x="267" y="20" width="226" height="320" class="c2"/>
+  <text x="380" y="52" text-anchor="middle" class="head">무결성</text>
+  <text x="380" y="72" text-anchor="middle" class="small">Integrity</text>
+  <text x="380" y="106" text-anchor="middle">데이터가 허가 없이</text>
+  <text x="380" y="124" text-anchor="middle">바뀌지 않는다</text>
+  <line x1="283" y1="148" x2="477" y2="148" class="sep"/>
+  <text x="283" y="172" class="lab">깨지는 경우</text>
+  <text x="283" y="194">파일이나 패킷 변조,</text>
+  <text x="283" y="212">설정 임의 수정</text>
+  <line x1="283" y1="236" x2="477" y2="236" class="sep"/>
+  <text x="283" y="260" class="lab2">지키는 방법</text>
+  <text x="283" y="282">해시 값 비교,</text>
+  <text x="283" y="300">디지털 서명, 변경 기록</text>
+  <rect x="514" y="20" width="226" height="320" class="c3"/>
+  <text x="627" y="52" text-anchor="middle" class="head">가용성</text>
+  <text x="627" y="72" text-anchor="middle" class="small">Availability</text>
+  <text x="627" y="106" text-anchor="middle">필요할 때 언제든</text>
+  <text x="627" y="124" text-anchor="middle">쓸 수 있다</text>
+  <line x1="530" y1="148" x2="724" y2="148" class="sep"/>
+  <text x="530" y="172" class="lab">깨지는 경우</text>
+  <text x="530" y="194">DoS와 DDoS,</text>
+  <text x="530" y="212">랜섬웨어, 장비 고장</text>
+  <line x1="530" y1="236" x2="724" y2="236" class="sep"/>
+  <text x="530" y="260" class="lab2">지키는 방법</text>
+  <text x="530" y="282">이중화, 백업,</text>
+  <text x="530" y="300">방어 장비, 용량 계획</text>
+</svg>
