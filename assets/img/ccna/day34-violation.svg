@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 330" role="img" aria-labelledby="t d">
+  <title id="t">violation 모드 세 가지 비교</title>
+  <desc id="d">protect, restrict, shutdown 모드가 위반 프레임, 로그 메시지, 위반 카운터, 포트 상태, 기존 장비의 통신에서 어떻게 다른지 비교한 표이다. 기본값은 shutdown이다</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 11px; fill: #52606d; }
+    .head { font-size: 14px; font-weight: 700; }
+    .h1 { fill: #e3f2fd; stroke: #7aa5d2; stroke-width: 1.5; }
+    .h2 { fill: #fff3e0; stroke: #d9822b; stroke-width: 1.5; }
+    .h3 { fill: #fdecea; stroke: #c0392b; stroke-width: 1.5; }
+    .cell { fill: #ffffff; stroke: #cfd8dc; stroke-width: 1.2; }
+    .lab { fill: #f5f7fa; stroke: #cfd8dc; stroke-width: 1.2; }
+  </style>
+  <rect width="760" height="330" fill="#ffffff"/>
+  <text x="20" y="28" class="head">위반이 발생했을 때 모드별 동작</text>
+  <rect x="20" y="44" width="150" height="48" class="lab"/>
+  <text x="95" y="73" text-anchor="middle" class="head">항목</text>
+  <rect x="170" y="44" width="180" height="48" class="h1"/>
+  <text x="260" y="73" text-anchor="middle" class="head">protect</text>
+  <rect x="350" y="44" width="180" height="48" class="h2"/>
+  <text x="440" y="73" text-anchor="middle" class="head">restrict</text>
+  <rect x="530" y="44" width="210" height="48" class="h3"/>
+  <text x="635" y="66" text-anchor="middle" class="head">shutdown</text>
+  <text x="635" y="84" text-anchor="middle" class="small">기본값</text>
+  <rect x="20" y="92" width="150" height="46" class="lab"/><text x="95" y="120" text-anchor="middle">위반 프레임</text>
+  <rect x="170" y="92" width="180" height="46" class="cell"/><text x="260" y="120" text-anchor="middle">폐기</text>
+  <rect x="350" y="92" width="180" height="46" class="cell"/><text x="440" y="120" text-anchor="middle">폐기</text>
+  <rect x="530" y="92" width="210" height="46" class="cell"/><text x="635" y="120" text-anchor="middle">폐기</text>
+  <rect x="20" y="138" width="150" height="46" class="lab"/><text x="95" y="166" text-anchor="middle">로그 메시지</text>
+  <rect x="170" y="138" width="180" height="46" class="cell"/><text x="260" y="166" text-anchor="middle">없음</text>
+  <rect x="350" y="138" width="180" height="46" class="cell"/><text x="440" y="166" text-anchor="middle">남긴다</text>
+  <rect x="530" y="138" width="210" height="46" class="cell"/><text x="635" y="166" text-anchor="middle">남긴다</text>
+  <rect x="20" y="184" width="150" height="46" class="lab"/><text x="95" y="212" text-anchor="middle">위반 카운터</text>
+  <rect x="170" y="184" width="180" height="46" class="cell"/><text x="260" y="212" text-anchor="middle">증가하지 않음</text>
+  <rect x="350" y="184" width="180" height="46" class="cell"/><text x="440" y="212" text-anchor="middle">증가</text>
+  <rect x="530" y="184" width="210" height="46" class="cell"/><text x="635" y="212" text-anchor="middle">증가</text>
+  <rect x="20" y="230" width="150" height="46" class="lab"/><text x="95" y="258" text-anchor="middle">포트 상태</text>
+  <rect x="170" y="230" width="180" height="46" class="cell"/><text x="260" y="258" text-anchor="middle">up 유지</text>
+  <rect x="350" y="230" width="180" height="46" class="cell"/><text x="440" y="258" text-anchor="middle">up 유지</text>
+  <rect x="530" y="230" width="210" height="46" class="cell"/><text x="635" y="258" text-anchor="middle">err-disabled</text>
+  <rect x="20" y="276" width="150" height="46" class="lab"/><text x="95" y="304" text-anchor="middle">기존 허용 장비</text>
+  <rect x="170" y="276" width="180" height="46" class="cell"/><text x="260" y="304" text-anchor="middle">통신 유지</text>
+  <rect x="350" y="276" width="180" height="46" class="cell"/><text x="440" y="304" text-anchor="middle">통신 유지</text>
+  <rect x="530" y="276" width="210" height="46" class="cell"/><text x="635" y="304" text-anchor="middle">통신 끊김</text>
+</svg>

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" role="img" aria-labelledby="t d">
+  <title id="t">포트 시큐리티의 허용과 위반</title>
+  <desc id="d">왼쪽은 허용된 MAC 주소의 PC가 보낸 프레임이 Gi0/1 포트를 통과하는 모습, 오른쪽은 허용 목록에 없는 MAC 주소의 PC가 보낸 프레임이 차단되고 위반 모드에 따라 처리되는 모습이다</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 11px; fill: #52606d; }
+    .head { font-size: 14px; font-weight: 700; }
+    .box { fill: #e3f2fd; stroke: #7aa5d2; stroke-width: 1.5; }
+    .ok { fill: #e8f5e9; stroke: #4c9a5a; stroke-width: 1.5; }
+    .red { fill: #fdecea; stroke: #c0392b; stroke-width: 1.5; }
+    .tbl { fill: #f5f7fa; stroke: #cfd8dc; stroke-width: 1.2; }
+    .g { stroke: #2e7d32; stroke-width: 2.2; fill: none; }
+    .r { stroke: #c0392b; stroke-width: 2.2; fill: none; }
+    .div { stroke: #cfd8dc; stroke-width: 1.5; }
+  </style>
+  <defs>
+    <marker id="ag" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0 L10 4 L0 8 z" fill="#2e7d32"/></marker>
+    <marker id="ar" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0 L10 4 L0 8 z" fill="#c0392b"/></marker>
+  </defs>
+  <rect width="760" height="400" fill="#ffffff"/>
+  <line x1="380" y1="14" x2="380" y2="386" class="div"/>
+  <text x="20" y="30" class="head">허용 목록에 있는 MAC</text>
+  <rect x="20" y="70" width="120" height="52" class="ok"/>
+  <text x="80" y="93" text-anchor="middle">PC A</text>
+  <text x="80" y="110" text-anchor="middle" class="small">aaaa.bbbb.0011</text>
+  <rect x="240" y="70" width="110" height="52" class="box"/>
+  <text x="295" y="93" text-anchor="middle">스위치</text>
+  <text x="295" y="110" text-anchor="middle" class="small">Gi0/1</text>
+  <path d="M142 96 L238 96" class="g" marker-end="url(#ag)"/>
+  <text x="190" y="86" text-anchor="middle" class="small">프레임</text>
+  <rect x="20" y="170" width="330" height="80" class="tbl"/>
+  <text x="34" y="192" class="head">Gi0/1 보안 MAC 테이블</text>
+  <text x="34" y="214">최대 MAC 수: 1</text>
+  <text x="34" y="234">등록된 MAC: aaaa.bbbb.0011</text>
+  <text x="20" y="290">출발지 MAC이 등록된 MAC과 같다</text>
+  <text x="20" y="312">프레임을 정상적으로 전달한다</text>
+  <text x="400" y="30" class="head">허용 목록에 없는 MAC</text>
+  <rect x="400" y="70" width="120" height="52" class="red"/>
+  <text x="460" y="93" text-anchor="middle">PC B</text>
+  <text x="460" y="110" text-anchor="middle" class="small">aaaa.bbbb.0066</text>
+  <rect x="620" y="70" width="110" height="52" class="box"/>
+  <text x="675" y="93" text-anchor="middle">스위치</text>
+  <text x="675" y="110" text-anchor="middle" class="small">Gi0/1</text>
+  <path d="M522 96 L590 96" class="r"/>
+  <path d="M590 84 L604 108 M604 84 L590 108" class="r"/>
+  <text x="560" y="86" text-anchor="middle" class="small">프레임</text>
+  <rect x="400" y="170" width="330" height="80" class="tbl"/>
+  <text x="414" y="192" class="head">Gi0/1 보안 MAC 테이블</text>
+  <text x="414" y="214">최대 MAC 수: 1 (이미 1개 등록됨)</text>
+  <text x="414" y="234">새 MAC aaaa.bbbb.0066은 초과</text>
+  <text x="400" y="290">등록 수가 최대에 찼고 새 MAC이 왔다</text>
+  <text x="400" y="312">위반이 발생해 violation 모드대로 처리한다</text>
+  <text x="400" y="334">protect, restrict는 프레임만 버리고</text>
+  <text x="400" y="356">shutdown은 포트를 err-disabled로 만든다</text>
+</svg>

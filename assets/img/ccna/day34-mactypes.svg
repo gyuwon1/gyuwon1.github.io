@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 340" role="img" aria-labelledby="t d">
+  <title id="t">보안 MAC 주소의 세 종류</title>
+  <desc id="d">정적, 동적, 스티키 보안 MAC 주소가 어떻게 만들어지고 어디에 저장되며 스위치를 재부팅하면 어떻게 되는지 비교한 표이다</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 11px; fill: #52606d; }
+    .head { font-size: 14px; font-weight: 700; }
+    .h1 { fill: #e3f2fd; stroke: #7aa5d2; stroke-width: 1.5; }
+    .h2 { fill: #e8f5e9; stroke: #4c9a5a; stroke-width: 1.5; }
+    .h3 { fill: #fff3e0; stroke: #d9822b; stroke-width: 1.5; }
+    .cell { fill: #ffffff; stroke: #cfd8dc; stroke-width: 1.2; }
+    .lab { fill: #f5f7fa; stroke: #cfd8dc; stroke-width: 1.2; }
+  </style>
+  <rect width="760" height="340" fill="#ffffff"/>
+  <text x="20" y="28" class="head">보안 MAC 주소 종류</text>
+  <rect x="20" y="44" width="130" height="48" class="lab"/>
+  <text x="85" y="73" text-anchor="middle" class="head">항목</text>
+  <rect x="150" y="44" width="190" height="48" class="h1"/>
+  <text x="245" y="66" text-anchor="middle" class="head">정적</text>
+  <text x="245" y="84" text-anchor="middle" class="small">static</text>
+  <rect x="340" y="44" width="190" height="48" class="h2"/>
+  <text x="435" y="66" text-anchor="middle" class="head">동적</text>
+  <text x="435" y="84" text-anchor="middle" class="small">dynamic, 기본값</text>
+  <rect x="530" y="44" width="210" height="48" class="h3"/>
+  <text x="635" y="66" text-anchor="middle" class="head">스티키</text>
+  <text x="635" y="84" text-anchor="middle" class="small">sticky</text>
+  <rect x="20" y="92" width="130" height="70" class="lab"/><text x="85" y="132" text-anchor="middle">만드는 방법</text>
+  <rect x="150" y="92" width="190" height="70" class="cell"/><text x="245" y="123" text-anchor="middle">관리자가</text><text x="245" y="143" text-anchor="middle">직접 입력한다</text>
+  <rect x="340" y="92" width="190" height="70" class="cell"/><text x="435" y="123" text-anchor="middle">프레임을 받으며</text><text x="435" y="143" text-anchor="middle">자동으로 배운다</text>
+  <rect x="530" y="92" width="210" height="70" class="cell"/><text x="635" y="123" text-anchor="middle">자동으로 배우고</text><text x="635" y="143" text-anchor="middle">설정으로도 남긴다</text>
+  <rect x="20" y="162" width="130" height="70" class="lab"/><text x="85" y="202" text-anchor="middle">저장되는 곳</text>
+  <rect x="150" y="162" width="190" height="70" class="cell"/><text x="245" y="193" text-anchor="middle">보안 MAC 테이블,</text><text x="245" y="213" text-anchor="middle">running-config</text>
+  <rect x="340" y="162" width="190" height="70" class="cell"/><text x="435" y="202" text-anchor="middle">보안 MAC 테이블</text>
+  <rect x="530" y="162" width="210" height="70" class="cell"/><text x="635" y="193" text-anchor="middle">보안 MAC 테이블,</text><text x="635" y="213" text-anchor="middle">running-config</text>
+  <rect x="20" y="232" width="130" height="90" class="lab"/><text x="85" y="282" text-anchor="middle">재부팅 후</text>
+  <rect x="150" y="232" width="190" height="90" class="cell"/><text x="245" y="266" text-anchor="middle">startup-config에</text><text x="245" y="286" text-anchor="middle">저장했으면 유지된다</text>
+  <rect x="340" y="232" width="190" height="90" class="cell"/><text x="435" y="266" text-anchor="middle">모두 사라지고</text><text x="435" y="286" text-anchor="middle">다시 배운다</text>
+  <rect x="530" y="232" width="210" height="90" class="cell"/><text x="635" y="266" text-anchor="middle">startup-config에</text><text x="635" y="286" text-anchor="middle">저장했으면 유지된다</text>
+</svg>
