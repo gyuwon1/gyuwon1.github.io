@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360" role="img" aria-labelledby="t d">
+  <title id="t">표준 ACL 적용 위치</title>
+  <desc id="d">PC1과 PC2가 R1과 R2를 거쳐 서버 네트워크에 연결된 구성이다. 표준 ACL은 출발지 주소만 보기 때문에 목적지에 가까운 R2의 서버 쪽 인터페이스 outbound에 적용한다. R1 가까이에 적용하면 허용해야 하는 다른 목적지로의 통신까지 막힌다.</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 11px; fill: #52606d; }
+    .head { font-size: 14px; font-weight: 700; }
+    .host { fill: #e8f5e9; stroke: #4c9a5a; stroke-width: 1.5; }
+    .bad { fill: #fdecea; stroke: #c0392b; stroke-width: 1.5; }
+    .rt { fill: #e3f2fd; stroke: #7aa5d2; stroke-width: 1.5; }
+    .net { fill: #f5f7fa; stroke: #cfd8dc; stroke-width: 1.5; }
+    .ln { stroke: #52606d; stroke-width: 1.8; fill: none; }
+    .acl { fill: #fff3e0; stroke: #e0a050; stroke-width: 1.5; }
+    .r { stroke: #c0392b; stroke-width: 2.2; fill: none; }
+  </style>
+  <rect width="760" height="360" fill="#ffffff"/>
+  <text x="20" y="28" class="head">표준 ACL은 목적지에 가까운 곳에 적용한다</text>
+
+  <rect x="20" y="60" width="130" height="46" class="host"/>
+  <text x="85" y="80" text-anchor="middle">PC1</text>
+  <text x="85" y="96" text-anchor="middle" class="small">192.168.1.10 (허용)</text>
+  <rect x="20" y="140" width="130" height="46" class="bad"/>
+  <text x="85" y="160" text-anchor="middle">PC2</text>
+  <text x="85" y="176" text-anchor="middle" class="small">192.168.2.10 (차단)</text>
+
+  <rect x="240" y="90" width="90" height="60" class="rt"/>
+  <text x="285" y="116" text-anchor="middle">R1</text>
+  <text x="285" y="134" text-anchor="middle" class="small">Gi0/0</text>
+  <rect x="440" y="90" width="90" height="60" class="rt"/>
+  <text x="485" y="116" text-anchor="middle">R2</text>
+  <text x="485" y="134" text-anchor="middle" class="small">Gi0/1 (서버 쪽)</text>
+  <rect x="610" y="60" width="130" height="46" class="net"/>
+  <text x="675" y="80" text-anchor="middle">서버 네트워크</text>
+  <text x="675" y="96" text-anchor="middle" class="small">10.0.0.0/24</text>
+  <rect x="610" y="140" width="130" height="46" class="net"/>
+  <text x="675" y="160" text-anchor="middle">다른 네트워크</text>
+  <text x="675" y="176" text-anchor="middle" class="small">172.16.0.0/24</text>
+
+  <path d="M150 83 L240 112" class="ln"/>
+  <path d="M150 163 L240 130" class="ln"/>
+  <path d="M330 120 L440 120" class="ln"/>
+  <path d="M530 108 L610 85" class="ln"/>
+  <path d="M530 132 L610 163" class="ln"/>
+
+  <rect x="544" y="52" width="60" height="22" class="acl"/>
+  <text x="574" y="68" text-anchor="middle" class="small">ACL out</text>
+
+  <text x="20" y="232" class="head">이유</text>
+  <text x="20" y="256">표준 ACL은 출발지 주소만 본다. 목적지를 구분하지 못한다.</text>
+  <text x="20" y="278">R1 가까이에 PC2 차단을 걸면 PC2가 172.16.0.0/24로 가는 통신까지 막힌다.</text>
+  <text x="20" y="300">서버 네트워크로 나가는 R2 Gi0/1 outbound에 걸면 서버로 가는 PC2만 막는다.</text>
+  <text x="20" y="330" class="small">확장 ACL은 출발지와 목적지를 모두 볼 수 있어 출발지에 가깝게 적용한다 (다음 글).</text>
+</svg>

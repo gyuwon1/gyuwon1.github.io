@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" role="img" aria-labelledby="t d">
+  <title id="t">와일드카드 마스크의 비트 의미</title>
+  <desc id="d">와일드카드 마스크에서 0인 비트는 주소와 일치해야 하고 1인 비트는 무시한다. 마지막 옥텟이 0.0.0.255이면 192.168.1.0부터 192.168.1.255까지, 0.0.0.15이면 192.168.1.0부터 192.168.1.15까지 일치한다.</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 11px; fill: #52606d; }
+    .head { font-size: 14px; font-weight: 700; }
+    .mono { font-family: "Consolas", "Courier New", monospace; font-size: 15px; }
+    .fix { fill: #e3f2fd; stroke: #7aa5d2; stroke-width: 1.2; }
+    .ign { fill: #fff3e0; stroke: #e0a050; stroke-width: 1.2; }
+    .tbl { fill: #f5f7fa; stroke: #cfd8dc; stroke-width: 1.2; }
+  </style>
+  <rect width="760" height="380" fill="#ffffff"/>
+  <text x="20" y="28" class="head">와일드카드 마스크: 0은 일치해야 하는 비트, 1은 무시하는 비트</text>
+
+  <text x="20" y="64" class="head">예 1  192.168.1.0  0.0.0.255</text>
+  <text x="20" y="84" class="small">마지막 옥텟 8비트를 모두 무시한다</text>
+  <text x="20" y="116">주소</text>
+  <text x="20" y="150">와일드카드</text>
+  <text x="20" y="184">비교 결과</text>
+  <g class="mono">
+    <rect x="150" y="98" width="320" height="26" class="fix"/>
+    <text x="160" y="117" xml:space="preserve">11000000.10101000.00000001.00000000</text>
+    <rect x="150" y="132" width="320" height="26" class="fix"/>
+    <text x="160" y="151" xml:space="preserve">00000000.00000000.00000000.11111111</text>
+  </g>
+  <rect x="150" y="166" width="240" height="26" class="fix"/>
+  <rect x="390" y="166" width="80" height="26" class="ign"/>
+  <text x="160" y="185" class="small">앞 24비트는 일치해야 함</text>
+  <text x="410" y="185" class="small">무시</text>
+  <text x="490" y="117">192.168.1.0</text>
+  <text x="490" y="151">0.0.0.255</text>
+  <text x="490" y="185">192.168.1.0 ~ 192.168.1.255</text>
+
+  <text x="20" y="236" class="head">예 2  192.168.1.0  0.0.0.15</text>
+  <text x="20" y="256" class="small">마지막 옥텟의 아래 4비트만 무시한다</text>
+  <text x="20" y="288">주소</text>
+  <text x="20" y="322">와일드카드</text>
+  <text x="20" y="356">비교 결과</text>
+  <g class="mono">
+    <rect x="150" y="270" width="320" height="26" class="fix"/>
+    <text x="160" y="289" xml:space="preserve">11000000.10101000.00000001.00000000</text>
+    <rect x="150" y="304" width="320" height="26" class="fix"/>
+    <text x="160" y="323" xml:space="preserve">00000000.00000000.00000000.00001111</text>
+  </g>
+  <rect x="150" y="338" width="276" height="26" class="fix"/>
+  <rect x="426" y="338" width="44" height="26" class="ign"/>
+  <text x="160" y="357" class="small">앞 28비트는 일치해야 함</text>
+  <text x="430" y="357" class="small">무시</text>
+  <text x="490" y="289">192.168.1.0</text>
+  <text x="490" y="323">0.0.0.15</text>
+  <text x="490" y="357">192.168.1.0 ~ 192.168.1.15</text>
+</svg>
