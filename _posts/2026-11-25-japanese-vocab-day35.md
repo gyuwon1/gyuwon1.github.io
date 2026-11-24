@@ -10,7 +10,7 @@ categories: [japanese]
 | 1 | **無断** | むだん | 무단 | <ruby>無断<rt>むだん</rt></ruby>でACLを<ruby>書<rt>か</rt></ruby>き<ruby>換<rt>か</rt></ruby>えてはいけない。<br>무단으로 ACL을 고쳐 쓰면 안 된다. |
 | 2 | **取り締まる** | とりしまる | 단속하다 | <ruby>送信元<rt>そうしんもと</rt></ruby>のアドレスで<ruby>通信<rt>つうしん</rt></ruby>を<ruby>取<rt>と</rt></ruby>り<ruby>締<rt>し</rt></ruby>まる。<br>출발지 주소로 통신을 단속한다. |
 | 3 | **拒む** | こばむ | 거부하다 | <ruby>指定<rt>してい</rt></ruby>したネットワークからの<ruby>通信<rt>つうしん</rt></ruby>を<ruby>拒<rt>こば</rt></ruby>む。<br>지정한 네트워크에서 오는 통신을 거부한다. |
-| 4 | **認める** | みとめる | 인정하다, 허용하다 | <ruby>管理<rt>かんり</rt></ruby>用のPCだけを<ruby>認<rt>みと</rt></ruby>める。<br>관리용 PC만 허용한다. |
+| 4 | **認める** | みとめる | 인정하다, 허용하다 | <ruby>管理用<rt>かんりよう</rt></ruby>のPCだけを<ruby>認<rt>みと</rt></ruby>める。<br>관리용 PC만 허용한다. |
 | 5 | **絞り込む** | しぼりこむ | 좁히다 | <ruby>許可<rt>きょか</rt></ruby>する<ruby>範囲<rt>はんい</rt></ruby>を<ruby>必要<rt>ひつよう</rt></ruby>な<ruby>分<rt>ぶん</rt></ruby>だけに<ruby>絞<rt>しぼ</rt></ruby>り<ruby>込<rt>こ</rt></ruby>む。<br>허용하는 범위를 필요한 만큼으로 좁힌다. |
 | 6 | **直ちに** | ただちに | 즉시 | <ruby>変更<rt>へんこう</rt></ruby>は<ruby>直<rt>ただ</rt></ruby>ちに<ruby>反映<rt>はんえい</rt></ruby>される。<br>변경은 즉시 반영된다. |
 | 7 | 並べる | ならべる | 나열하다 | <ruby>条件<rt>じょうけん</rt></ruby>を<ruby>上<rt>うえ</rt></ruby>から<ruby>順<rt>じゅん</rt></ruby>に<ruby>並<rt>なら</rt></ruby>べる。<br>조건을 위에서부터 순서대로 나열한다. |
