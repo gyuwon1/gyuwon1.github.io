@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 270" role="img" aria-labelledby="t d">
+  <title id="t">표준 ACL과 확장 ACL 비교</title>
+  <desc id="d">표준 ACL은 번호 1부터 99, 출발지 주소만 확인, 목적지에 가깝게 적용한다. 확장 ACL은 번호 100부터 199, 출발지와 목적지 주소와 프로토콜과 포트를 확인, 출발지에 가깝게 적용한다.</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 11px; fill: #52606d; }
+    .head { font-size: 14px; font-weight: 700; }
+    .mono { font-family: Consolas, Menlo, monospace; font-size: 13px; }
+    .host { fill: #e8f5e9; stroke: #4c9a5a; stroke-width: 1.5; }
+    .bad { fill: #fdecea; stroke: #c0392b; stroke-width: 1.5; }
+    .rt { fill: #e3f2fd; stroke: #7aa5d2; stroke-width: 1.5; }
+    .net { fill: #f5f7fa; stroke: #cfd8dc; stroke-width: 1.5; }
+    .ln { stroke: #52606d; stroke-width: 1.8; fill: none; }
+    .acl { fill: #fff3e0; stroke: #e0a050; stroke-width: 1.5; }
+    .r { stroke: #c0392b; stroke-width: 2.2; fill: none; }
+    .g { stroke: #4c9a5a; stroke-width: 2.2; fill: none; }
+  </style>
+  <rect width="760" height="270" fill="#ffffff"/>
+  <text x="20" y="28" class="head">표준 ACL과 확장 ACL</text>
+  <rect x="20" y="44" width="720" height="34" class="rt"/>
+  <text x="40" y="66" class="head">항목</text>
+  <text x="250" y="66" class="head">표준 ACL</text>
+  <text x="500" y="66" class="head">확장 ACL</text>
+  <rect x="20" y="78" width="720" height="34" class="net"/>
+  <text x="40" y="100">번호 범위</text>
+  <text x="250" y="100">1~99, 1300~1999</text>
+  <text x="500" y="100">100~199, 2000~2699</text>
+  <rect x="20" y="112" width="720" height="34" fill="#ffffff" stroke="#cfd8dc" stroke-width="1.5"/>
+  <text x="40" y="134">확인하는 항목</text>
+  <text x="250" y="134">출발지 주소</text>
+  <text x="500" y="134">출발지, 목적지, 프로토콜, 포트</text>
+  <rect x="20" y="146" width="720" height="34" class="net"/>
+  <text x="40" y="168">적용 위치</text>
+  <text x="250" y="168">목적지에 가깝게</text>
+  <text x="500" y="168">출발지에 가깝게</text>
+  <rect x="20" y="180" width="720" height="34" fill="#ffffff" stroke="#cfd8dc" stroke-width="1.5"/>
+  <text x="40" y="202">이름 ACL 명령</text>
+  <text x="250" y="202" class="mono">ip access-list standard</text>
+  <text x="500" y="202" class="mono">ip access-list extended</text>
+  <text x="20" y="246" class="small">두 종류 모두 위에서부터 평가하고, 일치한 줄에서 끝나고, 끝에 암묵적 deny any가 있다.</text>
+</svg>

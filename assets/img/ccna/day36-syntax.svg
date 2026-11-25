@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 330" role="img" aria-labelledby="t d">
+  <title id="t">확장 ACL 한 줄의 구성</title>
+  <desc id="d">확장 ACL 한 줄은 동작, 프로토콜, 출발지 주소, 출발지 포트, 목적지 주소, 목적지 포트 순서로 구성된다. 표준 ACL은 이 중 동작과 출발지 주소만 쓴다.</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 11px; fill: #52606d; }
+    .head { font-size: 14px; font-weight: 700; }
+    .mono { font-family: Consolas, Menlo, monospace; font-size: 13px; }
+    .host { fill: #e8f5e9; stroke: #4c9a5a; stroke-width: 1.5; }
+    .bad { fill: #fdecea; stroke: #c0392b; stroke-width: 1.5; }
+    .rt { fill: #e3f2fd; stroke: #7aa5d2; stroke-width: 1.5; }
+    .net { fill: #f5f7fa; stroke: #cfd8dc; stroke-width: 1.5; }
+    .ln { stroke: #52606d; stroke-width: 1.8; fill: none; }
+    .acl { fill: #fff3e0; stroke: #e0a050; stroke-width: 1.5; }
+    .r { stroke: #c0392b; stroke-width: 2.2; fill: none; }
+    .g { stroke: #4c9a5a; stroke-width: 2.2; fill: none; }
+  </style>
+  <rect width="760" height="330" fill="#ffffff"/>
+  <text x="20" y="28" class="head">확장 ACL 한 줄의 구성</text>
+  <text x="20" y="52" class="mono">access-list 100 permit tcp 192.168.1.0 0.0.0.255 host 10.0.0.10 eq 80</text>
+
+  <rect x="20" y="80" width="90" height="56" class="acl"/>
+  <text x="65" y="104" text-anchor="middle">동작</text>
+  <text x="65" y="124" text-anchor="middle" class="small">permit / deny</text>
+  <rect x="125" y="80" width="90" height="56" class="rt"/>
+  <text x="170" y="104" text-anchor="middle">프로토콜</text>
+  <text x="170" y="124" text-anchor="middle" class="small">ip tcp udp icmp</text>
+  <rect x="230" y="80" width="170" height="56" class="host"/>
+  <text x="315" y="104" text-anchor="middle">출발지 주소</text>
+  <text x="315" y="124" text-anchor="middle" class="small">주소 + 와일드카드</text>
+  <rect x="415" y="80" width="110" height="56" class="net"/>
+  <text x="470" y="104" text-anchor="middle">출발지 포트</text>
+  <text x="470" y="124" text-anchor="middle" class="small">생략 가능</text>
+  <rect x="540" y="80" width="110" height="56" class="host"/>
+  <text x="595" y="104" text-anchor="middle">목적지 주소</text>
+  <text x="595" y="124" text-anchor="middle" class="small">주소 + 와일드카드</text>
+  <rect x="665" y="80" width="80" height="56" class="net"/>
+  <text x="705" y="104" text-anchor="middle">목적지 포트</text>
+  <text x="705" y="124" text-anchor="middle" class="small">eq 80</text>
+
+  <text x="20" y="176" class="head">포트 연산자</text>
+  <text x="20" y="200">eq 80 : 80번과 같다</text>
+  <text x="200" y="200">neq 80 : 80번이 아니다</text>
+  <text x="400" y="200">gt 1023 : 1023보다 크다</text>
+  <text x="20" y="222">lt 1024 : 1024보다 작다</text>
+  <text x="200" y="222">range 20 21 : 20번부터 21번까지</text>
+  <text x="20" y="262" class="head">표준 ACL과의 차이</text>
+  <text x="20" y="286">표준 ACL은 동작과 출발지 주소만 쓴다. 프로토콜, 목적지, 포트는 확장 ACL에서만 쓴다.</text>
+  <text x="20" y="308" class="small">포트 번호는 프로토콜이 tcp 또는 udp일 때만 쓸 수 있다. ip, icmp에는 쓰지 않는다.</text>
+</svg>
