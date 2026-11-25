@@ -7,7 +7,7 @@ categories: [japanese]
 
 | # | 한자 | 히라가나 | 뜻 | 예문 |
 |---|------|----------|-----|------|
-| 1 | **当てはまる** | あてはまる | 들어맞다 | 拡張ACLは<ruby>条件<rt>じょうけん</rt></ruby>のすべてに<ruby>当<rt>あ</rt></ruby>てはまったときだけ<ruby>一致<rt>いっち</rt></ruby>する。<br>확장 ACL은 조건 전부에 들어맞을 때만 일치한다. |
+| 1 | **当てはまる** | あてはまる | 들어맞다 | <ruby>拡張<rt>かくちょう</rt></ruby>ACLは<ruby>条件<rt>じょうけん</rt></ruby>のすべてに<ruby>当<rt>あ</rt></ruby>てはまったときだけ<ruby>一致<rt>いっち</rt></ruby>する。<br>확장 ACL은 조건 전부에 들어맞을 때만 일치한다. |
 | 2 | **合致** | がっち | 합치 | ポート<ruby>番号<rt>ばんごう</rt></ruby>まで<ruby>合致<rt>がっち</rt></ruby>した<ruby>行<rt>ぎょう</rt></ruby>だけが<ruby>適用<rt>てきよう</rt></ruby>される。<br>포트 번호까지 합치한 줄만 적용된다. |
 | 3 | **通す** | とおす | 통과시키다 | Webの<ruby>通信<rt>つうしん</rt></ruby>だけを<ruby>通<rt>とお</rt></ruby>す。<br>웹 통신만 통과시킨다. |
 | 4 | **弾く** | はじく | 튕겨내다 | Telnetの<ruby>通信<rt>つうしん</rt></ruby>を<ruby>入口<rt>いりぐち</rt></ruby>で<ruby>弾<rt>はじ</rt></ruby>く。<br>Telnet 통신을 입구에서 튕겨낸다. |
