@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360" role="img" aria-labelledby="t d">
+  <title id="t">DAI가 ARP 패킷을 검사하는 과정</title>
+  <desc id="d">공격자가 Fa0/2 포트에서 192.168.10.1의 MAC 주소가 자신의 MAC이라는 거짓 ARP 응답을 보낸다. 스위치는 DHCP Snooping 바인딩 테이블과 비교해 Fa0/2의 항목이 192.168.10.20이므로 불일치로 판단하고 패킷을 버린다.</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 11px; fill: #52606d; }
+    .head { font-size: 14px; font-weight: 700; }
+    .bad { fill: #fdecea; stroke: #c0392b; stroke-width: 1.5; }
+    .sw { fill: #e3f2fd; stroke: #7aa5d2; stroke-width: 1.5; }
+    .th { fill: #e3f2fd; stroke: #7aa5d2; stroke-width: 1; }
+    .td { fill: #ffffff; stroke: #cfd8dc; stroke-width: 1; }
+    .hit { fill: #fff3e0; stroke: #e0a050; stroke-width: 1; }
+    .ln { stroke: #52606d; stroke-width: 1.8; fill: none; }
+    .r { stroke: #c0392b; stroke-width: 2.4; fill: none; }
+  </style>
+  <rect width="760" height="360" fill="#ffffff"/>
+  <text x="20" y="28" class="head">ARP 응답을 바인딩 테이블과 비교한다</text>
+
+  <rect x="20" y="60" width="200" height="80" class="bad"/>
+  <text x="120" y="84" text-anchor="middle">공격자 (Fa0/2)</text>
+  <text x="120" y="104" text-anchor="middle" class="small">ARP 응답을 보낸다</text>
+  <text x="120" y="122" text-anchor="middle" class="small">192.168.10.1 is-at 00:AA:BB:CC:DD:EE</text>
+
+  <rect x="290" y="60" width="150" height="80" class="sw"/>
+  <text x="365" y="88" text-anchor="middle">SW1</text>
+  <text x="365" y="108" text-anchor="middle" class="small">DAI 활성 (VLAN 10)</text>
+  <text x="365" y="124" text-anchor="middle" class="small">untrusted 포트</text>
+
+  <path d="M220 100 L290 100" class="ln"/>
+  <path d="M440 100 L500 100" class="ln" stroke-dasharray="5 4"/>
+  <path d="M458 86 L482 114" class="r"/>
+  <path d="M482 86 L458 114" class="r"/>
+  <text x="560" y="96">버려진다</text>
+  <text x="560" y="114" class="small">다른 호스트에 전달되지 않는다</text>
+
+  <text x="20" y="180" class="head">DHCP Snooping 바인딩 테이블</text>
+  <rect x="20" y="194" width="150" height="28" class="th"/>
+  <text x="95" y="213" text-anchor="middle">IpAddress</text>
+  <rect x="170" y="194" width="190" height="28" class="th"/>
+  <text x="265" y="213" text-anchor="middle">MacAddress</text>
+  <rect x="360" y="194" width="130" height="28" class="th"/>
+  <text x="425" y="213" text-anchor="middle">Interface</text>
+  <rect x="20" y="222" width="150" height="28" class="td"/>
+  <text x="95" y="241" text-anchor="middle">192.168.10.11</text>
+  <rect x="170" y="222" width="190" height="28" class="td"/>
+  <text x="265" y="241" text-anchor="middle">00:11:22:33:44:55</text>
+  <rect x="360" y="222" width="130" height="28" class="td"/>
+  <text x="425" y="241" text-anchor="middle">Fa0/1</text>
+  <rect x="20" y="250" width="150" height="28" class="hit"/>
+  <text x="95" y="269" text-anchor="middle">192.168.10.20</text>
+  <rect x="170" y="250" width="190" height="28" class="hit"/>
+  <text x="265" y="269" text-anchor="middle">00:AA:BB:CC:DD:EE</text>
+  <rect x="360" y="250" width="130" height="28" class="hit"/>
+  <text x="425" y="269" text-anchor="middle">Fa0/2</text>
+
+  <text x="520" y="214">Fa0/2에서 온 ARP의</text>
+  <text x="520" y="234">송신 IP는 192.168.10.1</text>
+  <text x="520" y="254">표의 Fa0/2 항목은</text>
+  <text x="520" y="274">192.168.10.20</text>
+  <text x="520" y="294" class="head">IP가 달라서 불일치</text>
+
+  <text x="20" y="324">공격자의 MAC 주소는 맞아도, 그 포트에 배정된 IP는 192.168.10.20뿐이다.</text>
+  <text x="20" y="346" class="small">값은 설명용 예시이다.</text>
+</svg>

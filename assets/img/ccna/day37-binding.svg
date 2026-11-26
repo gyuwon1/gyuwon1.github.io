@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 330" role="img" aria-labelledby="t d">
+  <title id="t">DHCP Snooping 바인딩 테이블</title>
+  <desc id="d">DHCP의 Discover, Offer, Request, ACK 네 단계 중 서버의 ACK가 스위치를 지나갈 때 스위치가 클라이언트의 MAC 주소, IP 주소, VLAN, 포트, 임대 시간을 바인딩 테이블에 기록한다.</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 11px; fill: #52606d; }
+    .head { font-size: 14px; font-weight: 700; }
+    .step { fill: #f5f7fa; stroke: #cfd8dc; stroke-width: 1.5; }
+    .key { fill: #fff3e0; stroke: #e0a050; stroke-width: 1.5; }
+    .th { fill: #e3f2fd; stroke: #7aa5d2; stroke-width: 1; }
+    .td { fill: #ffffff; stroke: #cfd8dc; stroke-width: 1; }
+    .ln { stroke: #52606d; stroke-width: 1.8; fill: none; }
+  </style>
+  <rect width="760" height="330" fill="#ffffff"/>
+  <text x="20" y="28" class="head">ACK를 보고 스위치가 대응표를 만든다</text>
+
+  <rect x="20" y="48" width="150" height="46" class="step"/>
+  <text x="95" y="68" text-anchor="middle">1 DISCOVER</text>
+  <text x="95" y="84" text-anchor="middle" class="small">클라이언트, 브로드캐스트</text>
+  <rect x="200" y="48" width="150" height="46" class="step"/>
+  <text x="275" y="68" text-anchor="middle">2 OFFER</text>
+  <text x="275" y="84" text-anchor="middle" class="small">서버가 주소를 제안</text>
+  <rect x="380" y="48" width="150" height="46" class="step"/>
+  <text x="455" y="68" text-anchor="middle">3 REQUEST</text>
+  <text x="455" y="84" text-anchor="middle" class="small">클라이언트가 선택</text>
+  <rect x="560" y="48" width="180" height="46" class="key"/>
+  <text x="650" y="68" text-anchor="middle">4 ACK</text>
+  <text x="650" y="84" text-anchor="middle" class="small">서버가 확정, 스위치가 기록</text>
+  <path d="M170 71 L200 71" class="ln"/>
+  <path d="M350 71 L380 71" class="ln"/>
+  <path d="M530 71 L560 71" class="ln"/>
+
+  <text x="20" y="136" class="head">show ip dhcp snooping binding</text>
+
+  <rect x="20" y="150" width="170" height="30" class="th"/>
+  <text x="105" y="170" text-anchor="middle">MacAddress</text>
+  <rect x="190" y="150" width="150" height="30" class="th"/>
+  <text x="265" y="170" text-anchor="middle">IpAddress</text>
+  <rect x="340" y="150" width="110" height="30" class="th"/>
+  <text x="395" y="170" text-anchor="middle">Lease(sec)</text>
+  <rect x="450" y="150" width="70" height="30" class="th"/>
+  <text x="485" y="170" text-anchor="middle">VLAN</text>
+  <rect x="520" y="150" width="220" height="30" class="th"/>
+  <text x="630" y="170" text-anchor="middle">Interface</text>
+
+  <rect x="20" y="180" width="170" height="30" class="td"/>
+  <text x="105" y="200" text-anchor="middle">00:11:22:33:44:55</text>
+  <rect x="190" y="180" width="150" height="30" class="td"/>
+  <text x="265" y="200" text-anchor="middle">192.168.10.11</text>
+  <rect x="340" y="180" width="110" height="30" class="td"/>
+  <text x="395" y="200" text-anchor="middle">86000</text>
+  <rect x="450" y="180" width="70" height="30" class="td"/>
+  <text x="485" y="200" text-anchor="middle">10</text>
+  <rect x="520" y="180" width="220" height="30" class="td"/>
+  <text x="630" y="200" text-anchor="middle">FastEthernet0/1</text>
+
+  <rect x="20" y="210" width="170" height="30" class="td"/>
+  <text x="105" y="230" text-anchor="middle">00:AA:BB:CC:DD:EE</text>
+  <rect x="190" y="210" width="150" height="30" class="td"/>
+  <text x="265" y="230" text-anchor="middle">192.168.10.20</text>
+  <rect x="340" y="210" width="110" height="30" class="td"/>
+  <text x="395" y="230" text-anchor="middle">85200</text>
+  <rect x="450" y="210" width="70" height="30" class="td"/>
+  <text x="485" y="230" text-anchor="middle">10</text>
+  <rect x="520" y="210" width="220" height="30" class="td"/>
+  <text x="630" y="230" text-anchor="middle">FastEthernet0/2</text>
+
+  <text x="20" y="274">한 줄이 한 대의 클라이언트에 해당한다. MAC 주소, IP 주소, VLAN, 연결된 포트가 한 줄로 묶인다.</text>
+  <text x="20" y="296">임대 시간이 끝나면 줄이 지워진다. 이 표는 DAI가 ARP를 검사할 때 기준이 된다.</text>
+  <text x="20" y="318" class="small">값은 설명용 예시이다.</text>
+</svg>
