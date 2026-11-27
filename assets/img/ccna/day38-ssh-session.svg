@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" role="img" aria-labelledby="t d">
+  <title id="t">SSH 접속 순서</title>
+  <desc id="d">클라이언트가 TCP 22로 연결한 뒤 버전과 암호 방식을 협상하고, 서버의 공개키를 받아 키 교환으로 세션 키를 정하고, 암호화된 채널에서 사용자 인증을 거쳐 CLI 세션이 시작된다.</desc>
+  <defs>
+    <marker id="ar" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0 0 L8 4 L0 8 z" fill="#52606d"/>
+    </marker>
+  </defs>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 11px; fill: #52606d; }
+    .head { font-size: 14px; font-weight: 700; }
+    .box { fill: #f5f7fa; stroke: #cfd8dc; stroke-width: 1.5; }
+    .key { fill: #fff3e0; stroke: #e0a050; stroke-width: 1.5; }
+    .life { stroke: #cfd8dc; stroke-width: 1.5; stroke-dasharray: 5 4; }
+    .ln { stroke: #52606d; stroke-width: 1.6; fill: none; marker-end: url(#ar); }
+  </style>
+  <rect width="760" height="300" fill="#ffffff"/>
+  <rect x="50" y="14" width="140" height="34" class="box"/>
+  <text x="120" y="36" text-anchor="middle">관리자 PC (클라이언트)</text>
+  <rect x="570" y="14" width="140" height="34" class="box"/>
+  <text x="640" y="36" text-anchor="middle">라우터 (서버)</text>
+  <path d="M120 48 L120 290" class="life"/>
+  <path d="M640 48 L640 290" class="life"/>
+
+  <text x="380" y="78" text-anchor="middle">1 TCP 22 연결 요청</text>
+  <path d="M120 84 L636 84" class="ln"/>
+  <text x="380" y="118" text-anchor="middle">2 SSH 버전과 암호 방식 협상</text>
+  <path d="M636 124 L124 124" class="ln"/>
+  <text x="380" y="158" text-anchor="middle">3 서버 공개키 전달, 키 교환으로 세션 키 결정</text>
+  <path d="M636 164 L124 164" class="ln"/>
+  <rect x="150" y="178" width="460" height="64" class="key"/>
+  <text x="380" y="198" text-anchor="middle">여기부터 모든 통신이 세션 키로 암호화된다</text>
+  <text x="380" y="220" text-anchor="middle">4 사용자 이름과 비밀번호로 인증</text>
+  <path d="M170 228 L590 228" class="ln"/>
+  <text x="380" y="270" text-anchor="middle">5 인증 성공, CLI 프롬프트 시작</text>
+  <path d="M636 278 L124 278" class="ln"/>
+</svg>

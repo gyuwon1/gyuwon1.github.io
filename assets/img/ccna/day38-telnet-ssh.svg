@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 310" role="img" aria-labelledby="t d">
+  <title id="t">Telnet과 SSH의 차이</title>
+  <desc id="d">Telnet은 TCP 23으로 계정과 비밀번호를 평문으로 보내서 중간의 도청자가 내용을 읽을 수 있고, SSH는 TCP 22에서 암호화된 데이터를 보내서 도청자가 읽을 수 없다.</desc>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 13px; fill: #1f2933; }
+    .small { font-size: 11px; fill: #52606d; }
+    .head { font-size: 14px; font-weight: 700; }
+    .box { fill: #f5f7fa; stroke: #cfd8dc; stroke-width: 1.5; }
+    .bad { fill: #fdecea; stroke: #d9534f; stroke-width: 1.5; }
+    .good { fill: #e8f5e9; stroke: #5aa469; stroke-width: 1.5; }
+    .ln { stroke: #52606d; stroke-width: 1.8; fill: none; }
+    .dash { stroke: #52606d; stroke-width: 1.2; stroke-dasharray: 4 3; fill: none; }
+  </style>
+  <rect width="760" height="310" fill="#ffffff"/>
+
+  <text x="20" y="28" class="head">Telnet (TCP 23)</text>
+  <rect x="20" y="44" width="110" height="44" class="box"/>
+  <text x="75" y="70" text-anchor="middle">관리자 PC</text>
+  <rect x="630" y="44" width="110" height="44" class="box"/>
+  <text x="685" y="70" text-anchor="middle">라우터</text>
+  <path d="M130 66 L630 66" class="ln"/>
+  <text x="380" y="58" text-anchor="middle">admin / Pa55word</text>
+  <path d="M380 66 L380 104" class="dash"/>
+  <rect x="290" y="104" width="180" height="40" class="bad"/>
+  <text x="380" y="121" text-anchor="middle">중간의 도청자</text>
+  <text x="380" y="137" text-anchor="middle" class="small">내용이 그대로 읽힌다</text>
+
+  <text x="20" y="184" class="head">SSH (TCP 22)</text>
+  <rect x="20" y="200" width="110" height="44" class="box"/>
+  <text x="75" y="226" text-anchor="middle">관리자 PC</text>
+  <rect x="630" y="200" width="110" height="44" class="box"/>
+  <text x="685" y="226" text-anchor="middle">라우터</text>
+  <path d="M130 222 L630 222" class="ln"/>
+  <text x="380" y="214" text-anchor="middle">암호화된 데이터</text>
+  <path d="M380 222 L380 260" class="dash"/>
+  <rect x="290" y="260" width="180" height="40" class="good"/>
+  <text x="380" y="277" text-anchor="middle">중간의 도청자</text>
+  <text x="380" y="293" text-anchor="middle" class="small">읽을 수 없다</text>
+</svg>
